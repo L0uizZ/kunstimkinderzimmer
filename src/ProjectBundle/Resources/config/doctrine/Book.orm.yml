@@ -1,6 +1,6 @@
 ProjectBundle\Entity\Book:
     type: entity
-    table: kikdb
+    table: book
     repositoryClass: ProjectBundle\Repository\BookRepository
 
     fields:

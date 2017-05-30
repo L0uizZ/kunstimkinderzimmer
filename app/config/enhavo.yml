@@ -70,4 +70,4 @@ sylius_resource:
                 model: ProjectBundle\Entity\Book
                 controller: Enhavo\Bundle\AppBundle\Controller\ResourceController
                 form:
-                    default: ProjectBundle\Form\Type\BookType
+                    default: ProjectBundle\Form\BookType

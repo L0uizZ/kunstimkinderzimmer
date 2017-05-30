@@ -4,4 +4,4 @@ project_default_index:
 
 project_book:
     prefix:   /admin
-    resource: "@ProjectBundle/Resources/config/routing.yml"
+    resource: "@ProjectBundle/Resources/config/routing/book.yml"
