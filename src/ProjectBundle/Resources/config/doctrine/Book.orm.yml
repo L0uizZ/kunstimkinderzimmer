@@ -1,0 +1,48 @@
+ProjectBundle\Entity\Book:
+    type: entity
+    table: kikdb
+    repositoryClass: ProjectBundle\Repository\BookRepository
+
+    fields:
+        year:
+            type: string
+            length: 255
+
+    manyToMany:
+            pictures:
+                cascade: ['persist', 'refresh', 'remove']
+                targetEntity: Enhavo\Bundle\MediaBundle\Model\FileInterface
+                orderBy: { 'order': 'ASC' }
+                joinTable:
+                      name: project_book_link
+                      joinColumns:
+                          gallery_id:
+                                referencedColumnName: id
+                                onDelete: cascade
+                      inverseJoinColumns:
+                          file_id:
+                                referencedColumnName: id
+                                onDelete: cascade
+
+    oneToOne:
+            content:
+                cascade: ['persist', 'refresh', 'remove']
+                targetEntity: Enhavo\Bundle\GridBundle\Model\GridInterface
+            biography:
+                cascade: ['persist', 'refresh', 'remove']
+                targetEntity: Enhavo\Bundle\GridBundle\Model\GridInterface
+
+    oneToMany:
+            author:
+                cascade: ['persist']
+                targetEntity: ProjectBundle\Entity\Author
+                mappedBy: link
+
+            link:
+                cascade: ['persist']
+                targetEntity: ProjectBundle\Entity\Link
+                mappedBy: book
+                orderBy:
+                    position: ASC
+
+    lifecycleCallbacks: {  }

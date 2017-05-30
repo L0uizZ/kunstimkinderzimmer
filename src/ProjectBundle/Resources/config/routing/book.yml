@@ -1,0 +1,47 @@
+project_book_index:
+    options:
+        expose: true
+    path: /project/book/index
+    methods: [GET]
+    defaults:
+        _controller: project.controller.book:indexAction
+        _sylius:
+            viewer:
+
+project_book_create:
+    options:
+        expose: true
+    path: /project/book/create
+    methods: [GET,POST]
+    defaults:
+        _controller: project.controller.book:createAction
+        _sylius:
+            viewer:
+
+project_book_read:
+    options:
+        expose: true
+    path: /project/book/create
+    methods: [GET,POST]
+    defaults:
+        _controller: project.controller.book:createAction
+        _sylius:
+            viewer:
+
+project_book_update:
+    options:
+        expose: true
+    path: /project/book/update/{id}
+    methods: [GET,POST]
+    defaults:
+        _controller: project.controller.book:updateAction
+        _sylius:
+            viewer:
+
+project_book_delete:
+    options:
+        expose: true
+    path: /project/book/delete/{id}
+    methods: [DELETE]
+    defaults:
+        _controller: project.controller.book:deleteAction

@@ -1,0 +1,5 @@
+services:
+    project.form.book:
+        class:  ProjectBundle\Form\BookType
+        tags:
+            - { name: form.type, alias: 'project_book' }
