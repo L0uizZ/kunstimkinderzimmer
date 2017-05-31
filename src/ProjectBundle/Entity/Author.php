@@ -4,6 +4,8 @@ namespace ProjectBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+
+
 /**
  * Author
  */
@@ -23,11 +25,11 @@ class Author
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
-        return $this->id;
+       return $this->id;
     }
 
     /**

@@ -6,4 +6,4 @@ services:
     project.form.author:
         class:  ProjectBundle\Form\AuthorType
         tags:
-            - { name: form.type, alias: 'project_book' }
+            - { name: form.type, alias: 'project_author' }
