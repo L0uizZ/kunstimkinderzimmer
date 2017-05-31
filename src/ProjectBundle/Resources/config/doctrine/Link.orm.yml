@@ -1,7 +1,7 @@
 ProjectBundle\Entity\Link:
     type: entity
     table: project_link
-    repositoryClass: ProjectBundle\Repository\LinksRepository
+    repositoryClass: ProjectBundle\Repository\LinkRepository
     id:
         id:
             type: integer

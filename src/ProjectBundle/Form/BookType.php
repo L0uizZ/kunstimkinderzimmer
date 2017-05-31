@@ -1,13 +1,17 @@
 <?php
 
-namespace ProjectBundle\Form\Type;
+namespace ProjectBundle\Form;
+
 
 use Enhavo\Bundle\AppBundle\Form\Type\ListType;
 use Enhavo\Bundle\GridBundle\Form\Type\GridType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\AbstractType;
 use ProjectBundle\Entity\Book;
+
 
 class BookType extends AbstractType
 {
@@ -15,19 +19,11 @@ class BookType extends AbstractType
     {
         $builder->add('title', TextType::class, array('label' => 'Title'));
         $builder->add('year', TextType::class, array('label' => 'Year'));
-        $builder->add('pictures', 'enhavo_files', array('label' => 'Pictures',
-            'translation_domain' => 'FileInterface',
-            'information' => array(
-                'You can upload your files here'),
-            'multiple' => true,
-            'fields' => array(
-                'title' => array(
-                    'label' => 'media.form.label.title',
-                    'translationDomain' => 'FileInterface'
-                ))));
+        $builder->add('pictures', 'enhavo_files', array('label' => 'Pictures', 'translation_domain' => 'FileInterface', 'information' => array('You can upload your files here'),
+                      'multiple' => true, 'fields' => array('title' => array('label' => 'media.form.label.title', 'translationDomain' => 'FileInterface'))));
         $builder->add('content', GridType::class, array('label' => 'Content'));
         $builder->add('biography', GridType::class, array('label' => 'Biography'));
-        #$builder->add('author', GridType::class, array('label' => 'Content'));
+        $builder->add('author', EntityType::class, array('class' => 'ProjectBundle:Book', 'choice_label' => 'username'));
         $builder->add('link', ListType::class, array('label' => 'Links'));
         $builder->getForm();
     }

@@ -1,58 +1,58 @@
-project_book_index:
+project_author_index:
     options:
         expose: true
-    path: /project/book/index
+    path: /project/author/index
     methods: [GET]
     defaults:
-        _controller: project.controller.book:indexAction
+        _controller: project.controller.author:indexAction
         _sylius:
             viewer:
 
-project_book_create:
+project_author_create:
     options:
         expose: true
-    path: /project/book/create
+    path: /project/author/create
     methods: [GET,POST]
     defaults:
-        _controller: project.controller.book:createAction
+        _controller: project.controller.author:createAction
         _sylius:
             viewer:
 
-project_book_update:
+project_author_update:
     options:
         expose: true
-    path: /project/book/update/{id}
+    path: /project/author/update/{id}
     methods: [GET,POST]
     defaults:
-        _controller: project.controller.book:updateAction
+        _controller: project.controller.author:updateAction
         _sylius:
             viewer:
 
-project_book_table:
+project_author_table:
     options:
         expose: true
-    path: /project/book/table
+    path: /project/author/table
     methods: [GET]
     defaults:
-        _controller: project.controller.book:tableAction
+        _controller: project.controller.author:tableAction
         _sylius:
             viewer:
 
-project_book_delete:
+project_author_delete:
     options:
         expose: true
-    path: /project/book/delete/{id}
+    path: /project/author/delete/{id}
     methods: [DELETE]
     defaults:
-        _controller: project.controller.book:deleteAction
+        _controller: project.controller.author:deleteAction
 
-project_book_batch:
+project_author_batch:
     options:
         expose: true
-    path: /project/book/batch
+    path: /project/author/batch
     methods: [POST]
     defaults:
-        _controller: project.controller.book:batchAction
+        _controller: project.controller.author:batchAction
         _sylius:
             paginate: false
             criteria:
@@ -61,13 +61,13 @@ project_book_batch:
                 delete:
                     type: delete
 
-project_book_preview:
+project_author_preview:
     options:
         expose: true
-    path: /project/book/preview
+    path: /project/author/preview
     methods: [POST]
     defaults:
-        _controller: project.controller.book:previewAction
+        _controller: project.controller.author:previewAction
         _sylius:
             viewer:
 

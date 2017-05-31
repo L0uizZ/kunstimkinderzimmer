@@ -1,6 +1,6 @@
 ProjectBundle\Entity\Book:
     type: entity
-    table: book
+    table: project_book
     repositoryClass: ProjectBundle\Repository\BookRepository
 
     fields:

@@ -35,9 +35,15 @@ enhavo_app:
             type: translation
         book:
             type: base
-            label: Books
+            label: Book
             route: project_book_index
             role: ROLE_ENHAVO_PROJECT_BOOK_INDEX
+            icon: book
+        author:
+            type: base
+            label: Author
+            route: project_author_index
+            role: ROLE_ENHAVO_PROJECT_AUTHOR_INDEX
             icon: book
 
 enhavo_grid:
@@ -71,3 +77,9 @@ sylius_resource:
                 controller: Enhavo\Bundle\AppBundle\Controller\ResourceController
                 form:
                     default: ProjectBundle\Form\BookType
+        project.author:
+            classes:
+                model: ProjectBundle\Entity\Author
+                controller: Enhavo\Bundle\AppBundle\Controller\ResourceController
+                form:
+                    default: ProjectBundle\Form\AuthorType
