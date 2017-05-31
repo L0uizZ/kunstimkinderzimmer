@@ -1,0 +1,9 @@
+project_list_index:
+    options:
+        expose: true
+    path: /list
+    methods: [GET, POST]
+    defaults:
+        _controller: project.controller.list:indexAction
+        _sylius:
+            viewer:

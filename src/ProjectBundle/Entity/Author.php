@@ -5,12 +5,10 @@ namespace ProjectBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 
-
 /**
  * Author
  */
-class Author
-{
+class Author{
     /**
      * @var int
      */
