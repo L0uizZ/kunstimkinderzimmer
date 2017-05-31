@@ -37,6 +37,22 @@ project_book_table:
         _controller: project.controller.book:tableAction
         _sylius:
             viewer:
+                translationDomain: EnhavoArticleBundle
+                columns:
+                    public:
+                        label: article.label.public
+                        property: public
+                        width: 2
+                        type: boolean
+                    title:
+                        label: article.label.title
+                        property: title
+                        width: 7
+                    publicationDate:
+                        label: article.label.publicationDate
+                        property: publicationDate
+                        type: date
+                        width: 3
 
 project_book_delete:
     options:
