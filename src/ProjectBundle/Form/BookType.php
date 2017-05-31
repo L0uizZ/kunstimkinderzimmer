@@ -27,7 +27,7 @@ class BookType extends AbstractType
         $builder->add('biography', GridType::class, array('label' => 'Biography'));
         $builder->add('author', EntityType::class, array('class' => 'ProjectBundle:Author',
                                                          'query_builder' => function(EntityRepository $er){
-                                                             return $er->createQueryBuilder('u')->orderBy('u.name', 'ASC');
+                                                              return $er->createQueryBuilder('u')->orderBy('u.name', 'ASC');
                                                           },
                                                           'choice_label' => 'name'));
         $builder->add('link', ListType::class, array('label' => 'Links'));
