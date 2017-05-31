@@ -16,6 +16,7 @@ class Author{
 
     /**
      * @var string
+     *
      */
     private $name;
 

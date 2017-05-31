@@ -12,7 +12,6 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\AbstractType;
 use ProjectBundle\Entity\Book;
-use ProjectBundle\Entity\Author;
 
 
 class BookType extends AbstractType
