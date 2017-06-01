@@ -2,7 +2,7 @@ project_list_index:
     options:
         expose: true
     path: /list
-    methods: [GET, POST]
+    methods: [GET]
     defaults:
         _controller: project.controller.list:indexAction
         _sylius:

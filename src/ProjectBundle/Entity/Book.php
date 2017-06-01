@@ -6,6 +6,7 @@ use Sylius\Component\Resource\Model\ResourceInterface;
 use Enhavo\Bundle\MediaBundle\Model\FileInterface;
 use Doctrine\ORM\Mapping as ORM;
 use Enhavo\Bundle\ContentBundle\Entity\Content;
+use ProjectBundle\Entity\Link;
 
 /**
  * Book
@@ -39,7 +40,7 @@ class Book extends Content implements ResourceInterface
     private $author;
 
     /**
-     * @var \stdClass
+     * @var string
      */
     private $link;
 
@@ -128,10 +129,10 @@ class Book extends Content implements ResourceInterface
     /**
      * Add link
      *
-     * @param \Enhavo\Bundle\ProjectBundle\Entity\Content $link
+     * @param \ProjectBundle\Entity\Link $link
      * @return Link
      */
-    public function addLink(\Enhavo\Bundle\ProjectBundle\Entity\Content $link)
+    public function addLink(\ProjectBundle\Entity\Link $link)
     {
         $this->link[] = $link;
 
@@ -141,9 +142,9 @@ class Book extends Content implements ResourceInterface
     /**
      * Remove link
      *
-     * @param \Enhavo\Bundle\ProjectBundle\Entity\Content $link
+     * @param \ProjectBundle\Entity\Link $link
      */
-    public function removeLink(\Enhavo\Bundle\ProjectBundle\Entity\Content $link)
+    public function removeLink(\ProjectBundle\Entity\Link $link)
     {
         $this->link->removeElement($link);
     }

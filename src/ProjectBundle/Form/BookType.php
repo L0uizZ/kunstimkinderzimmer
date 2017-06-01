@@ -29,7 +29,7 @@ class BookType extends AbstractType
                                                               return $er->createQueryBuilder('u')->orderBy('u.name', 'ASC');
                                                           },
                                                           'choice_label' => 'name'));
-        $builder->add('link', ListType::class, array('label' => 'Links'));
+        $builder->add('link', ListType::class, array('label' => 'Links', 'sortable' => 'sortable'));
         $builder->getForm();
     }
 
