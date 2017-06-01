@@ -32,12 +32,13 @@ ProjectBundle\Entity\Book:
                 cascade: ['persist', 'refresh', 'remove']
                 targetEntity: Enhavo\Bundle\GridBundle\Model\GridInterface
 
-    oneToMany:
+    manyToOne:
             author:
                 cascade: ['persist']
                 targetEntity: ProjectBundle\Entity\Author
                 mappedBy: link
 
+    oneToMany:
             link:
                 cascade: ['persist']
                 targetEntity: ProjectBundle\Entity\Link

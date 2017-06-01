@@ -20,7 +20,7 @@ class BookType extends AbstractType
     {
         $builder->add('title', TextType::class, array('label' => 'Title'));
         $builder->add('year', TextType::class, array('label' => 'Year'));
-        $builder->add('pictures', 'enhavo_files', array('label' => 'Pictures', 'translation_domain' => 'FileInterface', 'information' => array('You can upload your files here'),
+        $builder->add('pictures', 'enhavo_files', array('label' => 'Pictures', 'translation_domain' => 'FileInterface', 'information' => array('You can upload your pictures here'),
                       'multiple' => true, 'fields' => array('title' => array('label' => 'media.form.label.title', 'translationDomain' => 'FileInterface'))));
         $builder->add('content', GridType::class, array('label' => 'Content'));
         $builder->add('biography', GridType::class, array('label' => 'Biography'));

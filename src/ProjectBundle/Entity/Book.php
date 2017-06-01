@@ -105,27 +105,13 @@ class Book extends Content implements ResourceInterface
     }
 
     /**
-     * Add author
-     *
-     * @param \Enhavo\Bundle\ProjectBundle\Entity\Content $author
-     * @return Book
+     * @param \stdClass $author
      */
-    public function addAuthor(\Enhavo\Bundle\ProjectBundle\Entity\Content $author)
+    public function setAuthor($author)
     {
-        $this->author[] = $author;
-
-        return $this;
+        $this->author = $author;
     }
 
-    /**
-     * Remove author
-     *
-     * @param \Enhavo\Bundle\ProjectBundle\Entity\Content $author
-     */
-    public function removeAuthor(\Enhavo\Bundle\ProjectBundle\Entity\Content $author)
-    {
-        $this->author->removeElement($author);
-    }
 
     /**
      * Get author
@@ -137,11 +123,13 @@ class Book extends Content implements ResourceInterface
         return $this->author;
     }
 
+
+
     /**
      * Add link
      *
      * @param \Enhavo\Bundle\ProjectBundle\Entity\Content $link
-     * @return Book
+     * @return Link
      */
     public function addLink(\Enhavo\Bundle\ProjectBundle\Entity\Content $link)
     {
@@ -159,6 +147,8 @@ class Book extends Content implements ResourceInterface
     {
         $this->link->removeElement($link);
     }
+
+
 
     /**
      * Get link

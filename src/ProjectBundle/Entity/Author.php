@@ -3,12 +3,12 @@
 namespace ProjectBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
+use Sylius\Component\Resource\Model\ResourceInterface;
 
 /**
  * Author
  */
-class Author{
+class Author implements ResourceInterface{
     /**
      * @var int
      */
@@ -81,4 +81,6 @@ class Author{
     {
         return $this->condition;
     }
+
+
 }

@@ -39,20 +39,10 @@ project_book_table:
             viewer:
                 translationDomain: EnhavoArticleBundle
                 columns:
-                    public:
-                        label: article.label.public
-                        property: public
-                        width: 2
-                        type: boolean
                     title:
-                        label: article.label.title
+                        label: Title
                         property: title
-                        width: 7
-                    publicationDate:
-                        label: article.label.publicationDate
-                        property: publicationDate
-                        type: date
-                        width: 3
+                        width: 6
 
 project_book_delete:
     options:
