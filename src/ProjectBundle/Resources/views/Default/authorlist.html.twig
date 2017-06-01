@@ -1,6 +1,6 @@
 <ul>
     <h3>K&uuml;nstler</h3>
-    {% for author in authors|sort %}
+    {% for author in authors %}
         <li><a href="/list/{{author.name}}" />{{ author.name }}</a></li>
     {% endfor %}
 </ul>

@@ -12,7 +12,8 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\AbstractType;
 use ProjectBundle\Entity\Book;
-
+use ProjectBundle\Form\LinkType;
+use ProjectBundle\Entity\Link;
 
 class BookType extends AbstractType
 {
@@ -29,7 +30,8 @@ class BookType extends AbstractType
                                                               return $er->createQueryBuilder('u')->orderBy('u.name', 'ASC');
                                                           },
                                                           'choice_label' => 'name'));
-        $builder->add('link', ListType::class, array('label' => 'Links', 'sortable' => true));
+        #Type richtig definieren!
+        $builder->add('link', ListType::class, array('label' => 'Links', 'sortable' => true, 'border' => true, /**'type' => 'ProjectBundle\Form\LinkType'**/));
         $builder->getForm();
     }
 
