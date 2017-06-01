@@ -30,6 +30,7 @@ class BookType extends AbstractType
                                                               return $er->createQueryBuilder('u')->orderBy('u.name', 'ASC');
                                                           },
                                                           'choice_label' => 'name'));
+
         #Type richtig definieren!
         $builder->add('link', ListType::class, array('label' => 'Links', 'sortable' => true, 'border' => true, /**'type' => 'ProjectBundle\Form\LinkType'**/));
         $builder->getForm();

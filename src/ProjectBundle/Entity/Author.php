@@ -20,7 +20,6 @@ class Author implements ResourceInterface{
      */
     private $name;
 
-
     /**
      * Get id
      *
@@ -81,6 +80,5 @@ class Author implements ResourceInterface{
     {
         return $this->condition;
     }
-
 
 }

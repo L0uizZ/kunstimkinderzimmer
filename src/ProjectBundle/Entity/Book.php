@@ -6,7 +6,7 @@ use Sylius\Component\Resource\Model\ResourceInterface;
 use Enhavo\Bundle\MediaBundle\Model\FileInterface;
 use Doctrine\ORM\Mapping as ORM;
 use Enhavo\Bundle\ContentBundle\Entity\Content;
-use ProjectBundle\Entity\Link;
+
 
 /**
  * Book
