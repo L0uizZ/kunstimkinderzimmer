@@ -13,6 +13,10 @@ ProjectBundle\Entity\Link:
             type: string
             length: 255
 
+        position:
+            type: integer
+
+
     manyToOne:
         book:
             cascade: ['persist']

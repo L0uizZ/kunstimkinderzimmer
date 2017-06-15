@@ -46,7 +46,7 @@ class Author implements ResourceInterface{
     /**
      * Get name
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
