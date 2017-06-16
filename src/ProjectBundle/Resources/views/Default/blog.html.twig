@@ -13,6 +13,16 @@
             height: 1863px;
             background-color: #ffffff;
         }
+        .Lang {
+            font-family: Cousine;
+            font-size: 14px;
+            letter-spacing: 2.2px;
+            text-align: right;
+            color: #9c9494;
+            margin-top: 39px;
+            margin-right: 5px;
+
+        }
         .Nav {
             font-family: AktivGrotesk;
             font-size: 28px;
@@ -21,18 +31,33 @@
             color: #605959;
             margin-top: 132px;
         }
+        .Rect {
+            width: 1750px;
+            height: 594px;
+            background-color: #f4f8fa;
+            text-align: center;
+        }
+        .Rect2 {
+            width: 270px;
+            height: 270px;
+            background-color: #ffffff;
+            text-align: center;
+            margin-top: 75px;
+        }
+        .Rectcap {
+            font-family: Cousine;
+            font-size: 14px;
+            letter-spacing: 2.2px;
+            text-align: center;
+            color: #9c9494;
+            margin-top: 111px;
+        }
         .Linesh{
             border: solid 3px #303030;
-            width: 1290px;
+            width: 88px;
             height: 0px;
-            margin-top: 50px;
-            margin-bottom: 80px;
-        }
-        .Initial{
-            font-family: AktivGrotesk;
-            font-size: 76px;
-            font-weight: bold;
-            margin-bottom: 50px;
+            margin-top: 30px;
+            margin-bottom: 70px;
         }
         .Cont{
             font-family: AktivGrotesk;
@@ -46,11 +71,9 @@
             font-size: 51px;
             font-weight: 500;
             line-height: 60px;
-            text-align: left;
+            text-align: center;
             color: #303030;
-            margin-top: 30px;
-            margin-left: 250px;
-            margin-bottom: 80px;
+            margin-top: 530px;
         }
         .Linelo{
             border: solid 3px #303030;
@@ -77,52 +100,16 @@
 <body class="Site">
 <div class="Lang row">
     <div class="col-xs-12 col-sm-6 col-md-9">&nbsp;</div>
-    <div class="col-xs-12 col-sm-6 col-md-1">&nbsp;</div>
+    <div class="col-xs-12 col-sm-6 col-md-1"></div>
     <div class="col-xs-12 col-sm-6 col-md-2">&nbsp;</div>
 </div>
-<br/><br/>
-<div class="Nav row">
-    <div class="col-xs-12 col-sm-6 col-md-5"><img src="pagebanner.png"></div>
-    <div class="col-xs-12 col-sm-6 col-md-1">&nbsp;</div>
-    <div class="col-xs-12 col-sm-6 col-md-1"><a href="/">Home</a></div>
-    <div class="col-xs-12 col-sm-6 col-md-1"><a href="/collection">Sammlung</a></div>
-    <div class="col-xs-12 col-sm-6 col-md-1"><a href="/blog">Blog</a></div>
-    <div class="col-xs-12 col-sm-6 col-md-1"><a href="/list"><u>K&uuml;nstler</u></a></div>
-    <div class="col-xs-12 col-sm-6 col-md-2">&nbsp;</div>
-</div>
-    <hr class="Linesh"/>
-    <div class="Contcap">K&uuml;nstlerverzeichnis</div><br/>
-    <div class="Cont row">
-        <div class="col-xs-12 col-sm-6 col-md-2">&nbsp;</div>
-        <div class="col-xs-12 col-sm-6 col-md-2">
-            <div class="Initial">A</div>
-            <ul>
-                {% for author in authors %}
-                    <li><a href="/list/{{author.name}}" />{{ author.name }}</a></li>
-                {% endfor %}
-            </ul>
-            <div class="Initial">_</div>
-        </div>
+    <div class="Nav row">
+        <div class="col-xs-12 col-sm-6 col-md-5"><img src="pagebanner.png"></div>
         <div class="col-xs-12 col-sm-6 col-md-1">&nbsp;</div>
-        <div class="col-xs-12 col-sm-6 col-md-2">
-            <div class="Initial">B</div>
-            <ul>
-                {% for author in authors %}
-                    <li><a href="/list/{{author.name}}" />{{ author.name }}</a></li>
-                {% endfor %}
-            </ul>
-            <div class="Initial">_</div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-1">&nbsp;</div>
-        <div class="col-xs-12 col-sm-6 col-md-2">
-            <div class="Initial">C</div>
-            <ul>
-                {% for author in authors %}
-                    <li><a href="/list/{{author.name}}" />{{ author.name }}</a></li>
-                {% endfor %}
-            </ul>
-            <div class="Initial">_</div>
-        </div>
+        <div class="col-xs-12 col-sm-6 col-md-1"><a href="/">Home</a></div>
+        <div class="col-xs-12 col-sm-6 col-md-1"><a href="/collection">Sammlung</a></div>
+        <div class="col-xs-12 col-sm-6 col-md-1"><a href="/blog"><u>Blog</u></a></div>
+        <div class="col-xs-12 col-sm-6 col-md-1"><a href="/list">K&uuml;nstler</a></div>
         <div class="col-xs-12 col-sm-6 col-md-2">&nbsp;</div>
     </div>
 
