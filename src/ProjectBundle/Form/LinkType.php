@@ -2,6 +2,7 @@
 
 namespace ProjectBundle\Form;
 
+use Enhavo\Bundle\AppBundle\Form\Type\PositionType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -15,7 +16,7 @@ class LinkType extends AbstractType
     {
         $builder->add('name', TextType::class, array('label' => 'Name'));
         $builder->add('link', TextType::class, array('label' => 'Link'));
-        $builder->getForm();
+        $builder->add('position', PositionType::class);
     }
 
     public function configureOptions(OptionsResolver $resolver)

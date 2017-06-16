@@ -135,6 +135,7 @@ class Book extends Content implements ResourceInterface
     public function addLink(\ProjectBundle\Entity\Link $link)
     {
         $this->link[] = $link;
+        $link->setBook($this);
 
         return $this;
     }
@@ -147,6 +148,7 @@ class Book extends Content implements ResourceInterface
     public function removeLink(\ProjectBundle\Entity\Link $link)
     {
         $this->link->removeElement($link);
+        $link->setLink(null);
     }
 
 

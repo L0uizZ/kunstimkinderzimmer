@@ -12,9 +12,12 @@ ProjectBundle\Entity\Link:
         name:
             type: string
             length: 255
-
+        link:
+            type: string
+            length: 255
         position:
             type: integer
+            nullable: true
 
 
     manyToOne:
