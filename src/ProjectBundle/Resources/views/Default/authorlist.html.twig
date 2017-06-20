@@ -8,80 +8,75 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <style>
-        .Site {
+        .default-font {
+            font-family: AktivGrotesk;
+            color: #303030;
+            font-size: 28px;
+            font-weight: 500;
+            text-align: center;
+        }
+        .thin-font {
+            font-family: Cousine;
+            font-size: 14px;
+            letter-spacing: 2.2px;
+            color: #9c9494;
+            text-align: center;
+        }
+        .site {
             width: 1750px;
             height: 1863px;
             background-color: #ffffff;
         }
-        .Nav {
-            font-family: AktivGrotesk;
-            font-size: 28px;
-            font-weight: 500;
-            text-align: center;
-            color: #605959;
+        .language {
+            text-align: right;
+            margin-top: 39px;
+            margin-right: 5px;
+        }
+        .navigation {
             margin-top: 132px;
         }
-        .Linesh{
-            border: solid 3px #303030;
-            width: 1290px;
-            height: 0px;
-            margin-top: 50px;
-            margin-bottom: 80px;
+        .content-heading {
+            text-align: left;
+            font-size: 51px;
+            line-height: 60px;
+            margin-top: 10px;
+            margin-left: 225px;
         }
-        .Initial{
-            font-family: AktivGrotesk;
-            font-size: 76px;
-            font-weight: bold;
-            margin-bottom: 50px;
-        }
-        .Cont{
-            font-family: AktivGrotesk;
+        .content {
             font-size: 21px;
             line-height: 31px;
             text-align: left;
-            color: #303030;
         }
-        .Contcap {
-            font-family: AktivGrotesk;
-            font-size: 51px;
-            font-weight: 500;
-            line-height: 60px;
-            text-align: left;
-            color: #303030;
-            margin-top: 30px;
-            margin-left: 250px;
-            margin-bottom: 80px;
-        }
-        .Linelo{
+        .line-long {
             border: solid 3px #303030;
             width: 1290px;
             height: 0px;
-            margin-top: 650px;
+            margin-top: 270px;
             margin-bottom: 130px;
-
         }
-        .Contact{
+        .contact-impressum {
             width: 94px;
             height: 18px;
-            font-family: AktivGrotesk;
             font-size: 18px;
-            font-weight: 500;
-            text-align: center;
-            color: #303030;
             margin-left: 800px;
             margin-top: -100px;
+        }
+        /**MOBILE**/
+        @media only screen and (max-width: 780px) {
+            .Lang{ display: none; }
+            .Nav{ display: none; }
         }
 
     </style>
 </head>
-<body class="Site">
-<div class="Lang row">
+<body class="site">
+<div class="language thin-font row">
     <div class="col-xs-12 col-sm-6 col-md-9">&nbsp;</div>
     <div class="col-xs-12 col-sm-6 col-md-1">&nbsp;</div>
     <div class="col-xs-12 col-sm-6 col-md-2">&nbsp;</div>
 </div>
 <br/><br/>
-<div class="Nav row">
+<div class="navigation default-font row">
     <div class="col-xs-12 col-sm-6 col-md-5"><img src="pagebanner.png"></div>
     <div class="col-xs-12 col-sm-6 col-md-1">&nbsp;</div>
     <div class="col-xs-12 col-sm-6 col-md-1"><a href="/">Home</a></div>
@@ -90,9 +85,8 @@
     <div class="col-xs-12 col-sm-6 col-md-1"><a href="/list"><u>K&uuml;nstler</u></a></div>
     <div class="col-xs-12 col-sm-6 col-md-2">&nbsp;</div>
 </div>
-    <hr class="Linesh"/>
-    <div class="Contcap">K&uuml;nstlerverzeichnis</div><br/>
-    <div class="Cont row">
+    <div class="content-heading default-font">K&uuml;nstlerverzeichnis</div><br/>
+    <div class="content default-font row">
         <div class="col-xs-12 col-sm-6 col-md-2">&nbsp;</div>
         <div class="col-xs-12 col-sm-6 col-md-2">
             <div class="Initial">A</div>
@@ -101,33 +95,12 @@
                     <li><a href="/list/{{author.name}}" />{{ author.name }}</a></li>
                 {% endfor %}
             </ul>
-            <div class="Initial">_</div>
+            <div class="default-font">_</div>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-1">&nbsp;</div>
-        <div class="col-xs-12 col-sm-6 col-md-2">
-            <div class="Initial">B</div>
-            <ul>
-                {% for author in authors %}
-                    <li><a href="/list/{{author.name}}" />{{ author.name }}</a></li>
-                {% endfor %}
-            </ul>
-            <div class="Initial">_</div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-1">&nbsp;</div>
-        <div class="col-xs-12 col-sm-6 col-md-2">
-            <div class="Initial">C</div>
-            <ul>
-                {% for author in authors %}
-                    <li><a href="/list/{{author.name}}" />{{ author.name }}</a></li>
-                {% endfor %}
-            </ul>
-            <div class="Initial">_</div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-2">&nbsp;</div>
     </div>
-
-    <hr class="Linelo"/>
-    <div class="Contact"><a href="">Impressum&nbsp;/&nbsp;Kontakt</a></div>
+    <hr class="line-long"/>
+    <div class="contact-impressum"><a href="">Impressum&nbsp;/&nbsp;Kontakt</a></div>
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
