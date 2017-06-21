@@ -10,6 +10,10 @@ project_default_blog:
     path:     /blog
     defaults: { _controller: ProjectBundle:Default:blog }
 
+project_default_contact:
+    path:     /contact
+    defaults: { _controller: ProjectBundle:Default:contact }
+
 project_list_index:
     path:     /list
     defaults: { _controller: ProjectBundle:List:index }

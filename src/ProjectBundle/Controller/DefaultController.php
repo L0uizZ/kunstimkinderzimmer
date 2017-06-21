@@ -18,5 +18,9 @@ class DefaultController extends Controller
     {
         return $this->render('ProjectBundle:Default:blog.html.twig');
     }
+    public function contactAction()
+    {
+        return $this->render('ProjectBundle:Default:contact.html.twig');
+    }
 
 }

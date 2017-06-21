@@ -18,6 +18,9 @@
             margin-left: 90px;
             margin-bottom: -150px;
         }
+        .site{
+            height: 600px;
+        }
         .content-heading {
             margin-top: 0px;
             text-align: left;
@@ -31,6 +34,9 @@
         }
         .line-bottom {
             margin-top: 150px;
+        }
+        textarea {
+            resize: none;
         }
         /**Mobile and XS-Screens**/
         @media only screen and (max-width: 767px) {
@@ -49,6 +55,9 @@
             }
             .line-bottom {
                 margin-top: 100px;
+            }
+            textarea {
+                resize: none;
             }
         }
     </style>
@@ -84,7 +93,7 @@
     <div class="col-sm-5">&nbsp;</div>
     <div class="col-sm-1">&nbsp</div>
     <div class="col-sm-1"><a href="/">Home</a></div>
-    <div class="col-sm-1"><u><a href="/collection">Sammlung</a></u></div>
+    <div class="col-sm-1"><a href="/collection">Sammlung</a></div>
     <div class="col-sm-1"><a href="/blog">Blog</a></div>
     <div class="col-sm-1"><a href="/list">K&uuml;nstler</a></div>
     <div class="col-sm-2">&nbsp;</div>
@@ -94,73 +103,36 @@
 
 <div class="content default-font row">
     <div class="col-sm-1"></div>
-    <div class="col-sm-7">
-        <div class="content-heading default-font">Sammlung<br/></div>
-        Diese internationale Sammlung von KünstlerBilderBüchern besteht aus Zufallsfunden in Spezialbibliotheken,
-        Buchhandlungen, Antiquariaten, Archiven und Museen, in Büchern über Kunst und Künstler oder auch durch
-        persönliche Kontakte. Sie umfasst einen Zeitraum von über 100 Jahren und Künstler aus mehr als 20 Ländern.
+    <div class="col-sm-5">
+        <div class="content-heading default-font">Kontaktformular</div>
+        <div>Für Feedback, Hinweise und Anregungen:</div>
+        <form id="contact-form">
+            <br/><br/>
+            <input type="text" name="firstname" size="50" placeholder="VORNAME"><br/><br/>
+            <input type="text" name="lastname" size="50" placeholder="NACHNAME"><br/><br/>
+            <input type="email" name="mail" size="50" placeholder="EMAIL ADRESSE"><br/><br/>
+            <textarea name="message" form="contact-form" cols="49" rows="10"></textarea><br/><br/>
+            <input type="submit" value="Absenden" border="0">
+        </form>
     </div>
-    <div class="col-sm-4"></div>
-
-</div>
-
-<div class="books-mobile">
-    <div class="bookrow-1-mobile row">
-        <div class="col-xs-1">&nbsp;</div>
-        <div class="col-xs-5"><div class="books-rectangle"></div></div>
-        <div class="col-xs-5"><div class="books-rectangle"></div></div>
-        <div class="col-xs-1">&nbsp;</div>
+    <div class="col-sm-5">
+        <div class="content-heading default-font">Impressum</div>
+        <div>
+            © Alle Texte dieser Website sind urheberrechtlich geschützt.<br/><br/>
+            Die Bildrechte liegen bei den Verlagen, bzw. den Künstlern und<br/>
+            ihren Rechtsnachfolgern.<br/><br/>
+            Die Rechte an den Texten liegen bei Barbara Scharioth/<br/>
+            KunstimKinderzimmer.<br/><br/>
+            Für die Inhalte externer Links wird trotz sorgfältiger inhaltlicher<br/>
+            Kontrolle keine Haftung übernommen.
+        </div>
     </div>
+    <div class="col-sm-2"></div>
 
-    <div class="bookrow-2-mobile row">
-        <div class="col-xs-1">&nbsp;</div>
-        <div class="col-xs-5"><div class="books-rectangle"></div></div>
-        <div class="col-xs-5"><div class="books-rectangle"></div></div>
-        <div class="col-xs-1">&nbsp;</div>
-    </div>
-
-    <div class="bookrow-3-mobile row">
-        <div class="col-xs-1">&nbsp;</div>
-        <div class="col-xs-5"><div class="books-rectangle"></div></div>
-        <div class="col-xs-5"><div class="books-rectangle"></div></div>
-        <div class="col-xs-1">&nbsp;</div>
-    </div>
-</div>
-
-<div class="books">
-    <div class="bookrow-1 row">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-2"><div class="books-rectangle"></div></div>
-        <div class="col-sm-1"></div>
-        <div class="col-sm-2"><div class="books-rectangle"></div></div>
-        <div class="col-sm-1"></div>
-        <div class="col-sm-2"><div class="books-rectangle"></div></div>
-        <div class="col-sm-1"></div>
-    </div>
-
-    <div class="bookrow-2 row">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-2"><div class="books-rectangle"></div></div>
-        <div class="col-sm-1"></div>
-        <div class="col-sm-2"><div class="books-rectangle"></div></div>
-        <div class="col-sm-1"></div>
-        <div class="col-sm-2"><div class="books-rectangle"></div></div>
-        <div class="col-sm-1"></div>
-    </div>
-
-    <div class="bookrow-3 row">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-2"><div class="books-rectangle"></div></div>
-        <div class="col-sm-1"></div>
-        <div class="col-sm-2"><div class="books-rectangle"></div></div>
-        <div class="col-sm-1"></div>
-        <div class="col-sm-2"><div class="books-rectangle"></div></div>
-        <div class="col-sm-1"></div>
-    </div>
 </div>
 
 <hr class="line-bottom"/>
-<div class="contact-impressum"><a href="/contact">Impressum&nbsp;/&nbsp;Kontakt</a></div>
+<div class="contact-impressum"><u><a href="/contact">Impressum&nbsp;/&nbsp;Kontakt</a></u></div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
