@@ -3,23 +3,20 @@
 namespace ProjectBundle\Controller;
 
 use Enhavo\Bundle\AppBundle\Controller\AppController;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class AuthorController extends AppController{
-
-    public function createAction()
+class AuthorController extends Controller
+{
+    public function indexAction()
     {
+        $repository = $this->getDoctrine()->getRepository('ProjectBundle:Author');
+        $letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        foreach(str_split($letters) as $letter) {
+            $authors[$letter] = $repository->findWithStartLetter($letter);
+        }
 
-    }
-    public function readAction()
-    {
-
-    }
-    public function updateAction()
-    {
-
-    }
-    public function deleteAction()
-    {
-
+        return $this->render('ProjectBundle:Default:authorlist.html.twig', [
+            'authors' => $authors
+        ]);
     }
 }

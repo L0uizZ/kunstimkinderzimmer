@@ -16,7 +16,7 @@ project_default_contact:
 
 project_list_index:
     path:     /list
-    defaults: { _controller: ProjectBundle:List:index }
+    defaults: { _controller: ProjectBundle:Author:index }
 
 project_book:
     prefix:   /admin

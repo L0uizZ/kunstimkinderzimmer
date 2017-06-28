@@ -70,15 +70,21 @@
             }
             .content {
                 text-align: left;
-                margin-left: 2px;
+                margin-left: 200px;
             }
             .content-heading {
-                margin-left: 2px;
+                margin-left: 10px;
                 margin-top: 50px;
                 text-align: center;
             }
             .line-bottom {
                 margin-top: 100px;
+            }
+            .language-mobile {
+                margin-left: 680px;
+            }
+            .thin-font a{
+                color: #303030;
             }
         }
     </style>
@@ -101,7 +107,7 @@
         <a href="/blog">Blog</a>
         <a href="/list">K&uuml;nstler</a>
     </div>
-    <div class="language-mobile">
+    <div class="language-mobile thin-font">
         <a href="">DE</a>/<a href="">EN</a>
     </div>
 </div>
@@ -124,28 +130,20 @@
 
 <div class="content-heading default-font">K&uuml;nstlerverzeichnis</div><br/>
 <div class="content default-font row">
-    <div class="col-xs-12 col-sm-1">&nbsp;</div>
-    <div class="col-xs-12 col-sm-3">
-        <div class="initial">A</div>
-            {% for author in authors %}
-                <a class="authors default-font" href="/list/{{author.name}}" />{{ author.name }}</a><br/>
+    <div class="col-xs-12 col-sm-1">&nbsp</div>
+    <div class="col-xs-12 col-sm-4">
+            {% for letter, authorData in authors %}
+                {% if authorData %}
+                    <div class="initial">{{ letter }}</div>
+                    {% for author in authorData %}
+                            <a class="authors default-font" href="/list/{{author.name}}">{{ author.name }}<br/></a>
+                    {% endfor %}
+                    <div class="spacer-line default-font"></div>
+                {% endif %}
             {% endfor %}
-        <div class="spacer-line default-font"></div>
+
     </div>
-    <div class="col-xs-12 col-sm-3">
-        <div class="initial">B</div>
-        {% for author in authors %}
-            <a class="authors default-font" href="/list/{{author.name}}" />{{ author.name }}</a><br/>
-        {% endfor %}
-        <div class="spacer-line default-font"></div>
-    </div>
-    <div class="col-xs-12 col-sm-3">
-        <div class="initial">C</div>
-        {% for author in authors %}
-            <a class="authors default-font" href="/list/{{author.name}}" />{{ author.name }}</a><br/>
-        {% endfor %}
-        <div class="spacer-line default-font"></div>
-    </div>
+
     <div class="col-xs-12 col-sm-1">&nbsp;</div>
 </div>
 
