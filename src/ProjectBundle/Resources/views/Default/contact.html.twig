@@ -39,6 +39,14 @@
         textarea {
             resize: none;
         }
+        .form-font {
+            font-size: 14px;
+            color: #303030;
+            text-align: left;
+        }
+        .button-submit {
+            margin-left: 415px;
+        }
         /**Mobile and XS-Screens**/
         @media only screen and (max-width: 767px) {
             .banner {
@@ -110,10 +118,10 @@
         <div>Für Feedback, Hinweise und Anregungen:</div>
         <form id="contact-form">
             <br/><br/>
-            <input type="text" name="firstname" size="50" placeholder="VORNAME"><br/><br/>
-            <input type="text" name="lastname" size="50" placeholder="NACHNAME"><br/><br/>
-            <input type="email" name="mail" size="50" placeholder="EMAIL ADRESSE"><br/><br/>
-            <textarea name="message" form="contact-form" cols="49" rows="10"></textarea><br/><br/>
+            <input class="form-font thin-font" type="text" name="firstname" size="75" placeholder="VORNAME"><br/><br/>
+            <input class="form-font thin-font" type="text" name="lastname" size="75" placeholder="NACHNAME"><br/><br/>
+            <input class="form-font thin-font" type="email" name="mail" size="75" placeholder="EMAIL ADRESSE"><br/><br/>
+            <textarea class="form-font thin-font" name="message" form="contact-form" cols="74" rows="10"></textarea><br/><br/>
             <input type="submit" class="button-submit" value="Absenden" />
         </form>
     </div>

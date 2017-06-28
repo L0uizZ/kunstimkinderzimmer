@@ -1,111 +1,161 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+    <link rel="stylesheet" href="/css/default.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/fontkit/stylesheet.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
-        .default-font {
-            font-family: AktivGrotesk;
-            color: #303030;
-            font-size: 28px;
-            font-weight: 500;
-            text-align: center;
-        }
-        .thin-font {
-            font-family: Cousine;
-            font-size: 14px;
-            letter-spacing: 2.2px;
-            color: #9c9494;
-            text-align: center;
-        }
-        .site {
-            width: 1750px;
-            height: 1863px;
-            background-color: #ffffff;
+        .content-heading {
+            margin-top: 0px;
+            text-align: left;
+            font-size: 50px;
+            margin-bottom: 50px;
+            margin-left: 230px;
         }
         .language {
-            text-align: right;
-            margin-top: 39px;
-            margin-right: 5px;
-        }
-        .navigation {
-            margin-top: 132px;
-        }
-        .content-heading {
-            text-align: left;
-            font-size: 51px;
-            line-height: 60px;
-            margin-top: 10px;
-            margin-left: 225px;
+            margin-top: 90px;
+            margin-right: -35px;
         }
         .content {
-            font-size: 21px;
-            line-height: 31px;
             text-align: left;
+            font-size: 20px;
+            margin-left: 75px;
         }
-        .line-long {
-            border: solid 3px #303030;
-            width: 1290px;
-            height: 0px;
-            margin-top: 270px;
-            margin-bottom: 130px;
+        .line-bottom {
+            margin-top: 150px;
         }
-        .contact-impressum {
-            width: 94px;
-            height: 18px;
-            font-size: 18px;
-            margin-left: 800px;
-            margin-top: -100px;
+        .authors {
+            width: 274px;
+            height: 38px;
+            font-family: AktivGrotesk;
+            font-size: 38px;
+            font-weight: 500;
+            text-align: left;
+            color: #303030;
         }
-        /**MOBILE**/
-        @media only screen and (max-width: 780px) {
-            .Lang{ display: none; }
-            .Nav{ display: none; }
+        .spacer-line {
+            width: 52px;
+            height: 2px;
+            border: solid 2px #303030;
+            margin-top: 37px;
         }
-
+        .initial {
+            width: 110px;
+            height: 150px;
+            font-family: liberation_sansregular;
+            font-size: 150px;
+            font-weight: bold;
+            letter-spacing: 5px;
+            text-align: left;
+            margin-top: 130px;
+            margin-bottom: -55px;
+            color: #303030;
+        }
+        /**Mobile and XS-Screens**/
+        @media only screen and (max-width: 767px) {
+            .banner {
+                margin-left: 50px;
+                margin-bottom: 0px;
+                width: 85%;
+            }
+            .content {
+                text-align: left;
+                margin-left: 2px;
+            }
+            .content-heading {
+                margin-left: 2px;
+                margin-top: 50px;
+                text-align: center;
+            }
+            .line-bottom {
+                margin-top: 100px;
+            }
+        }
     </style>
+    <title>Kunst im Kinderzimmer</title>
 </head>
 <body class="site">
 <div class="language thin-font row">
-    <div class="col-xs-12 col-sm-6 col-md-9">&nbsp;</div>
-    <div class="col-xs-12 col-sm-6 col-md-1">&nbsp;</div>
-    <div class="col-xs-12 col-sm-6 col-md-2">&nbsp;</div>
+    <div class="col-sm-9">&nbsp;</div>
+    <div class="col-sm-1"><a href="">DE</a>/<a href="">EN</a></div>
+    <div class="col-sm-2">&nbsp;</div>
 </div>
-<br/><br/>
-<div class="navigation default-font row">
-    <div class="col-xs-12 col-sm-6 col-md-5"><img src="pagebanner.png"></div>
-    <div class="col-xs-12 col-sm-6 col-md-1">&nbsp;</div>
-    <div class="col-xs-12 col-sm-6 col-md-1"><a href="/">Home</a></div>
-    <div class="col-xs-12 col-sm-6 col-md-1"><a href="/collection">Sammlung</a></div>
-    <div class="col-xs-12 col-sm-6 col-md-1"><a href="/blog">Blog</a></div>
-    <div class="col-xs-12 col-sm-6 col-md-1"><a href="/list"><u>K&uuml;nstler</u></a></div>
-    <div class="col-xs-12 col-sm-6 col-md-2">&nbsp;</div>
-</div>
-    <div class="content-heading default-font">K&uuml;nstlerverzeichnis</div><br/>
-    <div class="content default-font row">
-        <div class="col-xs-12 col-sm-6 col-md-2">&nbsp;</div>
-        <div class="col-xs-12 col-sm-6 col-md-2">
-            <div class="Initial">A</div>
-            <ul>
-                {% for author in authors %}
-                    <li><a href="/list/{{author.name}}" />{{ author.name }}</a></li>
-                {% endfor %}
-            </ul>
-            <div class="default-font">_</div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-1">&nbsp;</div>
+
+
+
+<div class="navigation-mobile">
+    <button class="menu-button">Menu</button>
+    <div class="menu-content">
+        <a href="/">Home</a>
+        <a href="/collection">Sammlung</a>
+        <a href="/blog">Blog</a>
+        <a href="/list">K&uuml;nstler</a>
     </div>
-    <hr class="line-long"/>
-    <div class="contact-impressum"><a href="">Impressum&nbsp;/&nbsp;Kontakt</a></div>
+    <div class="language-mobile">
+        <a href="">DE</a>/<a href="">EN</a>
+    </div>
+</div>
+
+<div class="banner">
+    <img class="banner" src="banner.png">
+</div>
+
+<div class="navigation default-font row">
+    <div class="col-sm-5">&nbsp;</div>
+    <div class="col-sm-1">&nbsp</div>
+    <div class="col-sm-1"><a href="/">Home</a></div>
+    <div class="col-sm-1"><a href="/collection">Sammlung</a></div>
+    <div class="col-sm-1"><a href="/blog">Blog</a></div>
+    <div class="col-sm-1"><u><a href="/list">K&uuml;nstler</a></u></div>
+    <div class="col-sm-2">&nbsp;</div>
+</div>
+
+<hr class="line-top"/>
+
+<div class="content-heading default-font">K&uuml;nstlerverzeichnis</div><br/>
+<div class="content default-font row">
+    <div class="col-xs-12 col-sm-1">&nbsp;</div>
+    <div class="col-xs-12 col-sm-3">
+        <div class="initial">A</div>
+            {% for author in authors %}
+                <a class="authors default-font" href="/list/{{author.name}}" />{{ author.name }}</a><br/>
+            {% endfor %}
+        <div class="spacer-line default-font"></div>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+        <div class="initial">B</div>
+        {% for author in authors %}
+            <a class="authors default-font" href="/list/{{author.name}}" />{{ author.name }}</a><br/>
+        {% endfor %}
+        <div class="spacer-line default-font"></div>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+        <div class="initial">C</div>
+        {% for author in authors %}
+            <a class="authors default-font" href="/list/{{author.name}}" />{{ author.name }}</a><br/>
+        {% endfor %}
+        <div class="spacer-line default-font"></div>
+    </div>
+    <div class="col-xs-12 col-sm-1">&nbsp;</div>
+</div>
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+<hr class="line-bottom"/>
+<div class="contact-impressum default-font"><a href="/contact">Impressum&nbsp;/&nbsp;Kontakt</a></div>
+<br/><br/>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
