@@ -109,7 +109,7 @@
                 font-size: 30px;
             }
             .content {
-                margin-left: 120px;
+                margin-left: 10px;
             }
             .initial {
                 font-size: 80px;
@@ -157,7 +157,7 @@
             {% for letter, authorData in authors %}
                 {% if authorData %}
 
-                    <div class="col-md-4 col-sm-8 col-xs-6">
+                    <div class="col-md-4 col-xs-10">
                         <div class="initial">{{ letter }}</div>
                         {% for author in authorData %}
                                 <div class="authors"><a class="default-font" href="/list/{{author.name}}">{{ author.name }}<br/></a></div>
