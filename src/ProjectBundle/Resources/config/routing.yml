@@ -15,7 +15,7 @@ project_default_contact:
     defaults: { _controller: ProjectBundle:Default:contact }
 
 project_list_index:
-    path:     /list
+    path:     /authors
     defaults: { _controller: ProjectBundle:Author:index }
 
 project_book:

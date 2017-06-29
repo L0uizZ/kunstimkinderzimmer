@@ -29,7 +29,7 @@
         .content {
             text-align: left;
             font-size: 20px;
-            margin-left: 75px;
+            margin-left: 234px;
         }
         .line-bottom {
             margin-top: 150px;
@@ -61,7 +61,7 @@
             margin-bottom: -55px;
             color: #303030;
         }
-        /**Mobile and XS-Screens**/
+        /**Tablet*/
         @media only screen and (max-width: 767px) {
             .banner {
                 margin-left: 50px;
@@ -70,34 +70,55 @@
             }
             .content {
                 text-align: left;
-                margin-left: 200px;
+                margin-left: 100px;
             }
             .content-heading {
                 margin-left: 10px;
                 margin-top: 50px;
                 text-align: center;
+                font-size: 40px;
+            }
+            .language {
+                margin-top: -70px;
+                margin-left: 650px;
             }
             .line-bottom {
                 margin-top: 100px;
             }
-            .language-mobile {
-                margin-left: 680px;
-            }
             .thin-font a{
                 color: #303030;
+            }
+            .initial {
+                font-size: 110px;
+            }
+        }
+        @media only screen and (max-width: 479px) {
+            .banner {
+                margin-left: 40px;
+                margin-bottom: 0px;
+                width: 65%;
+            }
+            .language {
+                margin-top: -70px;
+                margin-left: 70px;
+            }
+            .content-heading {
+                margin-left: 110px;
+                margin-top: 50px;
+                text-align: left;
+                font-size: 30px;
+            }
+            .content {
+                margin-left: 120px;
+            }
+            .initial {
+                font-size: 80px;
             }
         }
     </style>
     <title>Kunst im Kinderzimmer</title>
 </head>
 <body class="site">
-<div class="language thin-font row">
-    <div class="col-sm-9">&nbsp;</div>
-    <div class="col-sm-1"><a href="">DE</a>/<a href="">EN</a></div>
-    <div class="col-sm-2">&nbsp;</div>
-</div>
-
-
 
 <div class="navigation-mobile">
     <button class="menu-button">Menu</button>
@@ -105,11 +126,14 @@
         <a href="/">Home</a>
         <a href="/collection">Sammlung</a>
         <a href="/blog">Blog</a>
-        <a href="/list">K&uuml;nstler</a>
+        <a href="/authors">K&uuml;nstler</a>
     </div>
-    <div class="language-mobile thin-font">
-        <a href="">DE</a>/<a href="">EN</a>
-    </div>
+</div>
+
+<div class="language thin-font row">
+    <div class="col-sm-9">&nbsp;</div>
+    <div class="col-sm-1"><a style="color:#de202c;" href="">DE</a>/<a href="">EN</a></div>
+    <div class="col-sm-2">&nbsp;</div>
 </div>
 
 <div class="banner">
@@ -122,29 +146,26 @@
     <div class="col-sm-1"><a href="/">Home</a></div>
     <div class="col-sm-1"><a href="/collection">Sammlung</a></div>
     <div class="col-sm-1"><a href="/blog">Blog</a></div>
-    <div class="col-sm-1"><u><a href="/list">K&uuml;nstler</a></u></div>
+    <div class="col-sm-1"><u><a href="/authors">K&uuml;nstler</a></u></div>
     <div class="col-sm-2">&nbsp;</div>
 </div>
 
 <hr class="line-top"/>
 
 <div class="content-heading default-font">K&uuml;nstlerverzeichnis</div><br/>
-<div class="content default-font row">
-    <div class="col-xs-12 col-sm-1">&nbsp</div>
-    <div class="col-xs-12 col-sm-4">
+<div class="content row">
             {% for letter, authorData in authors %}
                 {% if authorData %}
-                    <div class="initial">{{ letter }}</div>
-                    {% for author in authorData %}
-                            <a class="authors default-font" href="/list/{{author.name}}">{{ author.name }}<br/></a>
-                    {% endfor %}
-                    <div class="spacer-line default-font"></div>
+
+                    <div class="col-md-4 col-sm-8 col-xs-6">
+                        <div class="initial">{{ letter }}</div>
+                        {% for author in authorData %}
+                                <div class="authors"><a class="default-font" href="/list/{{author.name}}">{{ author.name }}<br/></a></div>
+                        {% endfor %}
+                        <div class="spacer-line default-font"></div>
+                    </div>
                 {% endif %}
             {% endfor %}
-
-    </div>
-
-    <div class="col-xs-12 col-sm-1">&nbsp;</div>
 </div>
 
 
