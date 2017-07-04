@@ -18,6 +18,10 @@ project_list_index:
     path:     /authors
     defaults: { _controller: ProjectBundle:Author:index }
 
+project_default_images:
+    path: /images/{id}
+    defaults: { _controller: ProjectBundle:Default:images }
+
 project_book:
     prefix:   /admin
     resource: "@ProjectBundle/Resources/config/routing/book.yml"
