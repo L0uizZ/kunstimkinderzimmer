@@ -69,8 +69,8 @@
                 width: 85%;
             }
             .content {
-                text-align: left;
-                margin-left: 100px;
+                text-align: center;
+                margin-left: 260px;
             }
             .content-heading {
                 margin-left: 10px;
@@ -109,7 +109,7 @@
                 font-size: 30px;
             }
             .content {
-                margin-left: 10px;
+                margin-left: 120px;
             }
             .initial {
                 font-size: 80px;
@@ -156,8 +156,7 @@
 <div class="content row">
             {% for letter, authorData in authors %}
                 {% if authorData %}
-
-                    <div class="col-md-4 col-xs-10">
+                    <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="initial">{{ letter }}</div>
                         {% for author in authorData %}
                                 <div class="authors"><a class="default-font" href="/list/{{author.name}}">{{ author.name }}<br/></a></div>

@@ -66,7 +66,6 @@
             font-size: 14px;
             letter-spacing: 2.2px;
         }
-        /**Mobile and XS-Screens**/
         @media only screen and (max-width: 767px) {
             .banner {
                 margin-left: 50px;
@@ -79,11 +78,11 @@
                 margin-left: 20px;
             }
             .blog-navigation {
-                margin-left: 290px;
+                margin-left: 310px;
             }
             .content {
                 text-align: center;
-                margin-left: 2px;
+                margin-left: 10px;
             }
             .content-text {
                 font-size: 20px;
@@ -91,10 +90,11 @@
             .content-heading {
                 margin-left: 2px;
                 margin-top: 50px;
-                text-align: center;
+                text-align: left;
             }
             .content-text {
-                text-align: center;
+                margin-left: 2px;
+                text-align: left;
                 line-height: 1.48;
             }
             .language {
@@ -112,6 +112,57 @@
             }
             .thin-font a{
                 color: #303030;
+            }
+        }
+        @media only screen and (max-width: 479px) {
+            .banner {
+                margin-left: 40px;
+                margin-bottom: 0px;
+                width: 65%;
+            }
+            .language {
+                margin-top: -70px;
+                margin-left: 70px;
+            }
+            .blog-entry {
+                text-align: left;
+                margin-left: 20px;
+            }
+            .blog-heading{
+                font-size: 26px;
+            }
+            .blog-text{
+                font-size: 12px;
+            }
+            .blog-navigation {
+                text-align: left;
+                margin-left: 160px;
+            }
+            .content {
+                text-align: left;
+                margin-left: 0px;
+            }
+            .content-text {
+                margin-left: 0px;
+                text-align: left;
+                font-size: 14px;
+            }
+            .content-heading {
+                margin-left: 2px;
+                margin-top: 50px;
+                text-align: left;
+            }
+            .button-reading{
+                margin-left: 0px;
+            }
+            .line {
+                margin-top: 61px;
+                width: 400px;
+                margin-left: 35px;
+                border: solid 2px #303030;
+            }
+            .line-bottom {
+                margin-top: 100px;
             }
         }
     </style>
@@ -154,7 +205,7 @@
 
 <div class="content default-font row">
     <div class="col-sm-1"></div>
-    <div class="col-sm-10">
+    <div class="col-xs-8 col-md-11">
         <div class="content-heading default-font">Blog<br/></div>
         <div class="content-text default-font">
             In diesem Blog finden sich Texte von Barbara Scharioth, der Autorin dieser Website, die Fragen der Terminologie,<br/>
@@ -167,7 +218,7 @@
 
 <div class="blog-entry default-font row">
     <div class="col-sm-1"></div>
-    <div class="col-sm-6 col-xs-11">
+    <div class="col-xs-7 col-sm-6 col-md-6">
         <div class="blog-date thin-font">20.07.2017</div>
         <div class="blog-heading default-font">Das Künstlerbilderbuch<br/></div>
         <div class="blog-text default-font">
@@ -188,7 +239,7 @@
 
 <div class="blog-entry default-font row">
     <div class="col-sm-1"></div>
-    <div class="col-sm-6 col-xs-11">
+    <div class="col-xs-7 col-sm-6 col-md-6">
         <div class="blog-date thin-font">20.07.2017</div>
         <div class="blog-heading default-font">Das Künstlerbilderbuch<br/></div>
         <div class="blog-text default-font">
@@ -209,7 +260,7 @@
 
 <div class="blog-entry default-font row">
     <div class="col-sm-1"></div>
-    <div class="col-sm-6 col-xs-11">
+    <div class="col-xs-7 col-sm-6 col-md-6">
         <div class="blog-date thin-font">20.07.2017</div>
         <div class="blog-heading default-font">Das Künstlerbilderbuch<br/></div>
         <div class="blog-text default-font">
