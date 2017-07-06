@@ -12,4 +12,11 @@ use Doctrine\ORM\EntityRepository;
  */
 class BookRepository extends EntityRepository
 {
+    public function findPicture($id)
+    {
+        $query = $this->createQueryBuilder('n');
+        $query->andWhere('n.name LIKE :firstPicture');
+        $query->setParameter('firstPicture', $id.'%');
+        return $query->getQuery()->getResult();
+    }
 }

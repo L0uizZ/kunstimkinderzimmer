@@ -217,6 +217,16 @@
     </div>
 </div>
 
+{#
+{% for id, picturesData in pictures %}
+    {% if picturesData %}
+        {% for picture in picturesData %}
+            <div class="pictures"><a class="default-font" href="/collection/{{pictures.id}}">{{ pictures.id }}<br/></a></div>
+        {% endfor %}
+    {% endif %}
+{% endfor %}
+#}
+
 <div class="books-tablet">
     <div class="bookrow row">
         <div class="col-xs-2"></div>

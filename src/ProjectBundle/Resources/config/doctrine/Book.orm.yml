@@ -14,9 +14,9 @@ ProjectBundle\Entity\Book:
                 targetEntity: Enhavo\Bundle\MediaBundle\Model\FileInterface
                 orderBy: { 'order': 'ASC' }
                 joinTable:
-                      name: project_book_link
+                      name: project_book_pictures
                       joinColumns:
-                          gallery_id:
+                          book_id:
                                 referencedColumnName: id
                                 onDelete: cascade
                       inverseJoinColumns:

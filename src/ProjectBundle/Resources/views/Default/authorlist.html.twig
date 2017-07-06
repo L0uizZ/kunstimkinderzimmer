@@ -26,7 +26,11 @@
             margin-top: 90px;
             margin-right: -35px;
         }
+        .content-tablet {
+            display: none;
+        }
         .content {
+            display: block;
             text-align: left;
             font-size: 20px;
             margin-left: 234px;
@@ -69,8 +73,12 @@
                 width: 85%;
             }
             .content {
+                display: none;
+            }
+            .content-tablet {
+                display: block;
                 text-align: center;
-                margin-left: 260px;
+                margin-left: 120px;
             }
             .content-heading {
                 margin-left: 10px;
@@ -101,6 +109,14 @@
             .language {
                 margin-top: -70px;
                 margin-left: 70px;
+            }
+            .content-tablet {
+                display: none;
+            }
+            .content {
+                display: block;
+                text-align: center;
+                margin-left: 260px;
             }
             .content-heading {
                 margin-left: 110px;
@@ -156,7 +172,7 @@
 <div class="content row">
             {% for letter, authorData in authors %}
                 {% if authorData %}
-                    <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="col-xs-12 col-md-4">
                         <div class="initial">{{ letter }}</div>
                         {% for author in authorData %}
                                 <div class="authors"><a class="default-font" href="/list/{{author.name}}">{{ author.name }}<br/></a></div>
@@ -165,6 +181,20 @@
                     </div>
                 {% endif %}
             {% endfor %}
+</div>
+
+<div class="content-tablet row">
+    {% for letter, authorData in authors %}
+        {% if authorData %}
+            <div class="col-xs-6">
+                <div class="initial">{{ letter }}</div>
+                {% for author in authorData %}
+                    <div class="authors"><a class="default-font" href="/list/{{author.name}}">{{ author.name }}<br/></a></div>
+                {% endfor %}
+                <div class="spacer-line default-font"></div>
+            </div>
+        {% endif %}
+    {% endfor %}
 </div>
 
 
