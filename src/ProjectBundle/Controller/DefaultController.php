@@ -24,13 +24,4 @@ class DefaultController extends Controller
     {
         return $this->render('ProjectBundle:Default:contact.html.twig');
     }
-    public function imagesAction($id)
-    {
-        $em = $this->get('doctrine')->getManager();
-        $image_obj = $em->getRepository('ProjectBundle:Book')->find($id);
-        return new Response(
-            $image_obj->getImg(),
-            Response::HTTP_OK,
-            array('content-type' => 'image/jpeg'));
-    }
 }

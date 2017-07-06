@@ -21,6 +21,9 @@
             font-size: 50px;
             margin-bottom: 50px;
         }
+        .content-tablet {
+            display: none;
+        }
         .content {
             text-align: left;
             font-size: 20px;
@@ -81,6 +84,10 @@
                 margin-left: 310px;
             }
             .content {
+                display: none;
+            }
+            .content-tablet {
+                display: block;
                 text-align: center;
                 margin-left: 10px;
             }
@@ -138,7 +145,11 @@
                 text-align: left;
                 margin-left: 160px;
             }
+            .content-tablet {
+                display: none;
+            }
             .content {
+                display: block;
                 text-align: left;
                 margin-left: 0px;
             }
@@ -206,6 +217,19 @@
 <div class="content default-font row">
     <div class="col-sm-1"></div>
     <div class="col-xs-8 col-md-11">
+        <div class="content-heading default-font">Blog<br/></div>
+        <div class="content-text default-font">
+            In diesem Blog finden sich Texte von Barbara Scharioth, der Autorin dieser Website, die Fragen der Terminologie,<br/>
+            Abgrenzung und Geschichte des Künstlerbilderbuchs diskutieren und sowohl historische Vorläufer beschreiben als<br/>
+            auch auf besondere, internationale Funde verweisen.
+        </div>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+
+<div class="content-tablet default-font row">
+    <div class="col-sm-1"></div>
+    <div class="col-xs-11">
         <div class="content-heading default-font">Blog<br/></div>
         <div class="content-text default-font">
             In diesem Blog finden sich Texte von Barbara Scharioth, der Autorin dieser Website, die Fragen der Terminologie,<br/>

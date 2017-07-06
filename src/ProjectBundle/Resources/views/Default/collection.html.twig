@@ -25,6 +25,9 @@
             margin-top: 90px;
             margin-right: -35px;
         }
+        .content-tablet {
+            display: none;
+        }
         .content {
             text-align: left;
             font-size: 20px;
@@ -33,6 +36,17 @@
         .line-bottom {
             margin-top: 150px;
         }
+        .books-mobile {
+            display: none;
+        }
+        .books-tablet {
+            display: none;
+        }
+        .books-rectangle {
+            width: 300px;
+            height: 368px;
+        }
+
         /**Mobile and XS-Screens**/
         @media only screen and (max-width: 767px) {
             .banner {
@@ -41,11 +55,11 @@
                 width: 85%;
             }
             .content {
-                text-align: center;
-                margin-left: 2px;
+                display: none;
             }
-            .content-text {
-                text-align: center;
+            .content-tablet {
+                display: block;
+                margin-left: 2px;
             }
             .content-heading {
                 margin-left: 2px;
@@ -54,8 +68,23 @@
                 text-align: left;
             }
             .content-text{
+                margin-left: 0px;
                 text-align: left;
-                font-size: 21px;
+                font-size: 18px;
+                line-height: 1.48;
+            }
+            .books-tablet {
+                display: block;
+            }
+            .books {
+                display: none;
+            }
+            .books-mobile {
+                display: none;
+            }
+            .books-rectangle {
+                width: 240px;
+                height: 288px;
             }
             .line-bottom {
                 margin-top: 100px;
@@ -78,13 +107,38 @@
                 margin-top: -70px;
                 margin-left: 70px;
             }
-            .content-heading{
-                text-align: left;
-                font-size: 40px;
+            .content {
+                display: block;
+                margin-left: 0px;
             }
-            .content-text{
+            .content-text {
+                margin-left: 0px;
                 text-align: left;
-                font-size: 18px;
+                font-size: 14px;
+                line-height: 1.48;
+            }
+            .content-heading {
+                font-size: 32px;
+                margin-left: 0px;
+                margin-top: 50px;
+                text-align: left;
+            }
+            .content-tablet {
+                display: none;
+            }
+            .books-mobile{
+                display: block;
+                margin-left: 125px;
+            }
+            .books {
+                display: none;
+            }
+            .books-tablet {
+                display:none;
+            }
+            .books-rectangle {
+                width: 200px;
+                height: 248px;
             }
         }
     </style>
@@ -133,61 +187,102 @@
         </div>
     </div>
     <div class="col-sm-1"></div>
+</div>
 
+<div class="content-tablet default-font row">
+    <div class="col-sm-1"></div>
+    <div class="col-xs-11">
+        <div class="content-heading default-font">Sammlung<br/></div>
+        <div class="content-text default-font">
+            Diese internationale Sammlung von KünstlerBilderBüchern besteht aus Zufallsfunden in Spezialbibliotheken,
+            Buchhandlungen, Antiquariaten, Archiven und Museen, in Büchern über Kunst und Künstler oder auch durch
+            persönliche Kontakte. Sie umfasst einen Zeitraum von über 100 Jahren und Künstler aus mehr als 20 Ländern.
+        </div>
+    </div>
+    <div class="col-sm-1"></div>
 </div>
 
 <div class="books-mobile">
-    <div class="bookrow-1-mobile row">
-        <div class="col-xs-1">&nbsp;</div>
-        <div class="col-xs-5"><div class="books-rectangle"></div></div>
-        <div class="col-xs-5"><div class="books-rectangle"></div></div>
-        <div class="col-xs-1">&nbsp;</div>
+    <div class="bookrow-mobile row">
+        <div class="col-xs-6">
+            <div class="books-rectangle"></div><br/>
+            <div class="books-rectangle"></div><br/>
+            <div class="books-rectangle"></div><br/>
+            <div class="books-rectangle"></div><br/>
+            <div class="books-rectangle"></div><br/>
+            <div class="books-rectangle"></div><br/>
+            <div class="books-rectangle"></div><br/>
+            <div class="books-rectangle"></div>
+        </div>
     </div>
+</div>
 
-    <div class="bookrow-2-mobile row">
-        <div class="col-xs-1">&nbsp;</div>
-        <div class="col-xs-5"><div class="books-rectangle"></div></div>
-        <div class="col-xs-5"><div class="books-rectangle"></div></div>
-        <div class="col-xs-1">&nbsp;</div>
+<div class="books-tablet">
+    <div class="bookrow row">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-2"><div class="books-rectangle"></div></div>
+        <div class="col-xs-2"></div>
+        <div class="col-xs-2"><div class="books-rectangle"></div></div>
+        <div class="col-xs-1"></div>
     </div>
-
-    <div class="bookrow-3-mobile row">
-        <div class="col-xs-1">&nbsp;</div>
-        <div class="col-xs-5"><div class="books-rectangle"></div></div>
-        <div class="col-xs-5"><div class="books-rectangle"></div></div>
-        <div class="col-xs-1">&nbsp;</div>
+    <br/>
+    <div class="bookrow row">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-2"><div class="books-rectangle"></div></div>
+        <div class="col-xs-2"></div>
+        <div class="col-xs-2"><div class="books-rectangle"></div></div>
+        <div class="col-xs-1"></div>
+    </div>
+    <br/>
+    <div class="bookrow row">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-2"><div class="books-rectangle"></div></div>
+        <div class="col-xs-2"></div>
+        <div class="col-xs-2"><div class="books-rectangle"></div></div>
+        <div class="col-xs-1"></div>
+    </div>
+    <br/>
+    <div class="bookrow row">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-2"><div class="books-rectangle"></div></div>
+        <div class="col-xs-2"></div>
+        <div class="col-xs-2"><div class="books-rectangle"></div></div>
+        <div class="col-xs-1"></div>
     </div>
 </div>
 
 <div class="books">
-    <div class="bookrow-1 row">
+    <div class="bookrow row">
         <div class="col-sm-2"></div>
-        <div class="col-sm-2"><div class="books-rectangle"></div></div>
+        <div class="col-sm-1"><div class="books-rectangle"></div></div>
         <div class="col-sm-1"></div>
-        <div class="col-sm-2"><div class="books-rectangle"></div></div>
+        <div class="col-sm-1"><div class="books-rectangle"></div></div>
         <div class="col-sm-1"></div>
-        <div class="col-sm-2"><div class="books-rectangle"></div></div>
+        <div class="col-sm-1"><div class="books-rectangle"></div></div>
         <div class="col-sm-1"></div>
+        <div class="col-sm-1"><div class="books-rectangle"></div></div>
     </div>
-
-    <div class="bookrow-2 row">
+    <br/>
+    <div class="bookrow row">
         <div class="col-sm-2"></div>
-        <div class="col-sm-2"><div class="books-rectangle"></div></div>
+        <div class="col-sm-1"><div class="books-rectangle"></div></div>
         <div class="col-sm-1"></div>
-        <div class="col-sm-2"><div class="books-rectangle"></div></div>
+        <div class="col-sm-1"><div class="books-rectangle"></div></div>
         <div class="col-sm-1"></div>
-        <div class="col-sm-2"><div class="books-rectangle"></div></div>
+        <div class="col-sm-1"><div class="books-rectangle"></div></div>
         <div class="col-sm-1"></div>
+        <div class="col-sm-1"><div class="books-rectangle"></div></div>
     </div>
-
-    <div class="bookrow-3 row">
+    <br/>
+    <div class="bookrow row">
         <div class="col-sm-2"></div>
-        <div class="col-sm-2"><div class="books-rectangle"></div></div>
+        <div class="col-sm-1"><div class="books-rectangle"></div></div>
         <div class="col-sm-1"></div>
-        <div class="col-sm-2"><div class="books-rectangle"></div></div>
+        <div class="col-sm-1"><div class="books-rectangle"></div></div>
         <div class="col-sm-1"></div>
-        <div class="col-sm-2"><div class="books-rectangle"></div></div>
+        <div class="col-sm-1"><div class="books-rectangle"></div></div>
         <div class="col-sm-1"></div>
+        <div class="col-sm-1"><div class="books-rectangle"></div></div>
     </div>
 </div>
 
