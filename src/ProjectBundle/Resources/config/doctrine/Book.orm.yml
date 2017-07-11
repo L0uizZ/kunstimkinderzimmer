@@ -16,7 +16,7 @@ ProjectBundle\Entity\Book:
                 joinTable:
                       name: project_book_pictures
                       joinColumns:
-                          book_id:
+                          gallery_id:
                                 referencedColumnName: id
                                 onDelete: cascade
                       inverseJoinColumns:

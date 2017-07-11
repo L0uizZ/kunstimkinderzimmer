@@ -13,6 +13,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kunst im Kinderzimmer</title>
 
     <style>
         .content-heading {
@@ -23,7 +24,6 @@
         }
         .language {
             margin-top: 90px;
-            margin-right: -35px;
         }
         .content-tablet {
             display: none;
@@ -35,16 +35,6 @@
         }
         .line-bottom {
             margin-top: 150px;
-        }
-        .books-mobile {
-            display: none;
-        }
-        .books-tablet {
-            display: none;
-        }
-        .books-rectangle {
-            width: 300px;
-            height: 368px;
         }
 
         /**Mobile and XS-Screens**/
@@ -72,19 +62,6 @@
                 text-align: left;
                 font-size: 18px;
                 line-height: 1.48;
-            }
-            .books-tablet {
-                display: block;
-            }
-            .books {
-                display: none;
-            }
-            .books-mobile {
-                display: none;
-            }
-            .books-rectangle {
-                width: 240px;
-                height: 288px;
             }
             .line-bottom {
                 margin-top: 100px;
@@ -126,25 +103,11 @@
             .content-tablet {
                 display: none;
             }
-            .books-mobile{
-                display: block;
-                margin-left: 125px;
-            }
-            .books {
-                display: none;
-            }
-            .books-tablet {
-                display:none;
-            }
-            .books-rectangle {
-                width: 200px;
-                height: 248px;
-            }
         }
     </style>
-    <title>Kunst im Kinderzimmer</title>
 </head>
-<body class="site">
+
+<body>
 <div class="navigation-mobile">
     <button class="menu-button">Menu</button>
     <div class="menu-content">
@@ -202,99 +165,16 @@
     <div class="col-sm-1"></div>
 </div>
 
-<div class="books-mobile">
-    <div class="bookrow-mobile row">
-        <div class="col-xs-6">
-            <div class="books-rectangle"></div><br/>
-            <div class="books-rectangle"></div><br/>
-            <div class="books-rectangle"></div><br/>
-            <div class="books-rectangle"></div><br/>
-            <div class="books-rectangle"></div><br/>
-            <div class="books-rectangle"></div><br/>
-            <div class="books-rectangle"></div><br/>
-            <div class="books-rectangle"></div>
-        </div>
-    </div>
-</div>
-
-{#
-{% for id, picturesData in pictures %}
-    {% if picturesData %}
-        {% for picture in picturesData %}
-            <div class="pictures"><a class="default-font" href="/collection/{{pictures.id}}">{{ pictures.id }}<br/></a></div>
+<div class="container">
+    <div class="books row">
+        {% for i in 1..9 %}
+            <div class="col-xs-12 col-md-4">
+                  <img src="/file/{{ i }}" width="180" height="250"/><br/><br/>
+            </div>
         {% endfor %}
-    {% endif %}
-{% endfor %}
-#}
-
-<div class="books-tablet">
-    <div class="bookrow row">
-        <div class="col-xs-2"></div>
-        <div class="col-xs-2"><div class="books-rectangle"></div></div>
-        <div class="col-xs-2"></div>
-        <div class="col-xs-2"><div class="books-rectangle"></div></div>
-        <div class="col-xs-1"></div>
-    </div>
-    <br/>
-    <div class="bookrow row">
-        <div class="col-xs-2"></div>
-        <div class="col-xs-2"><div class="books-rectangle"></div></div>
-        <div class="col-xs-2"></div>
-        <div class="col-xs-2"><div class="books-rectangle"></div></div>
-        <div class="col-xs-1"></div>
-    </div>
-    <br/>
-    <div class="bookrow row">
-        <div class="col-xs-2"></div>
-        <div class="col-xs-2"><div class="books-rectangle"></div></div>
-        <div class="col-xs-2"></div>
-        <div class="col-xs-2"><div class="books-rectangle"></div></div>
-        <div class="col-xs-1"></div>
-    </div>
-    <br/>
-    <div class="bookrow row">
-        <div class="col-xs-2"></div>
-        <div class="col-xs-2"><div class="books-rectangle"></div></div>
-        <div class="col-xs-2"></div>
-        <div class="col-xs-2"><div class="books-rectangle"></div></div>
-        <div class="col-xs-1"></div>
     </div>
 </div>
 
-<div class="books">
-    <div class="bookrow row">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-1"><div class="books-rectangle"></div></div>
-        <div class="col-sm-1"></div>
-        <div class="col-sm-1"><div class="books-rectangle"></div></div>
-        <div class="col-sm-1"></div>
-        <div class="col-sm-1"><div class="books-rectangle"></div></div>
-        <div class="col-sm-1"></div>
-        <div class="col-sm-1"><div class="books-rectangle"></div></div>
-    </div>
-    <br/>
-    <div class="bookrow row">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-1"><div class="books-rectangle"></div></div>
-        <div class="col-sm-1"></div>
-        <div class="col-sm-1"><div class="books-rectangle"></div></div>
-        <div class="col-sm-1"></div>
-        <div class="col-sm-1"><div class="books-rectangle"></div></div>
-        <div class="col-sm-1"></div>
-        <div class="col-sm-1"><div class="books-rectangle"></div></div>
-    </div>
-    <br/>
-    <div class="bookrow row">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-1"><div class="books-rectangle"></div></div>
-        <div class="col-sm-1"></div>
-        <div class="col-sm-1"><div class="books-rectangle"></div></div>
-        <div class="col-sm-1"></div>
-        <div class="col-sm-1"><div class="books-rectangle"></div></div>
-        <div class="col-sm-1"></div>
-        <div class="col-sm-1"><div class="books-rectangle"></div></div>
-    </div>
-</div>
 
 <hr class="line-bottom"/>
 <div class="contact-impressum default-font"><a href="/contact">Impressum&nbsp;/&nbsp;Kontakt</a></div>

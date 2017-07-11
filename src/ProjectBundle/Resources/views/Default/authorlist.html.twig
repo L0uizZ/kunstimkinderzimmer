@@ -15,25 +15,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
+        .banner {
+            margin-bottom: -56px;
+        }
         .content-heading {
             margin-top: 0px;
             text-align: left;
             font-size: 50px;
             margin-bottom: 50px;
-            margin-left: 230px;
         }
         .language {
-            margin-top: 90px;
-            margin-right: -35px;
-        }
-        .content-tablet {
-            display: none;
         }
         .content {
             display: block;
             text-align: left;
             font-size: 20px;
-            margin-left: 234px;
         }
         .line-bottom {
             margin-top: 150px;
@@ -65,6 +61,7 @@
             margin-bottom: -55px;
             color: #303030;
         }
+
         /**Tablet*/
         @media only screen and (max-width: 767px) {
             .banner {
@@ -75,13 +72,7 @@
             .content {
                 display: none;
             }
-            .content-tablet {
-                display: block;
-                text-align: center;
-                margin-left: 120px;
-            }
             .content-heading {
-                margin-left: 10px;
                 margin-top: 50px;
                 text-align: center;
                 font-size: 40px;
@@ -110,9 +101,6 @@
                 margin-top: -70px;
                 margin-left: 70px;
             }
-            .content-tablet {
-                display: none;
-            }
             .content {
                 display: block;
                 text-align: center;
@@ -134,73 +122,71 @@
     </style>
     <title>Kunst im Kinderzimmer</title>
 </head>
+
 <body class="site">
-
-<div class="navigation-mobile">
-    <button class="menu-button">Menu</button>
-    <div class="menu-content">
-        <a href="/">Home</a>
-        <a href="/collection">Sammlung</a>
-        <a href="/blog">Blog</a>
-        <a href="/authors">K&uuml;nstler</a>
-    </div>
-</div>
-
-<div class="language thin-font row">
-    <div class="col-sm-9">&nbsp;</div>
-    <div class="col-sm-1"><a style="color:#de202c;" href="">DE</a>/<a href="">EN</a></div>
-    <div class="col-sm-2">&nbsp;</div>
-</div>
-
-<div class="banner">
-    <img class="banner" src="banner.png">
-</div>
-
-<div class="navigation default-font row">
-    <div class="col-sm-5">&nbsp;</div>
-    <div class="col-sm-1">&nbsp</div>
-    <div class="col-sm-1"><a href="/">Home</a></div>
-    <div class="col-sm-1"><a href="/collection">Sammlung</a></div>
-    <div class="col-sm-1"><a href="/blog">Blog</a></div>
-    <div class="col-sm-1"><u><a href="/authors">K&uuml;nstler</a></u></div>
-    <div class="col-sm-2">&nbsp;</div>
-</div>
-
-<hr class="line-top"/>
-
-<div class="content-heading default-font">K&uuml;nstlerverzeichnis</div><br/>
-<div class="content row">
-            {% for letter, authorData in authors %}
-                {% if authorData %}
-                    <div class="col-xs-12 col-md-4">
-                        <div class="initial">{{ letter }}</div>
-                        {% for author in authorData %}
-                                <div class="authors"><a class="default-font" href="/list/{{author.name}}">{{ author.name }}<br/></a></div>
-                        {% endfor %}
-                        <div class="spacer-line default-font"></div>
-                    </div>
-                {% endif %}
-            {% endfor %}
-</div>
-
-<div class="content-tablet row">
-    {% for letter, authorData in authors %}
-        {% if authorData %}
-            <div class="col-xs-6">
-                <div class="initial">{{ letter }}</div>
-                {% for author in authorData %}
-                    <div class="authors"><a class="default-font" href="/list/{{author.name}}">{{ author.name }}<br/></a></div>
-                {% endfor %}
-                <div class="spacer-line default-font"></div>
+<header>
+    <div class="container">
+        <div class="navigation-mobile">
+            <button class="menu-button">Menu</button>
+            <div class="menu-content">
+                <a href="/">Home</a>
+                <a href="/collection">Sammlung</a>
+                <a href="/blog">Blog</a>
+                <a href="/authors">K&uuml;nstler</a>
             </div>
-        {% endif %}
-    {% endfor %}
-</div>
+        </div>
+
+        <div class="language thin-font">
+            <a href="">/EN</a><a style="color:#de202c;" href="">DE</a>
+        </div>
+
+        <div class="banner">
+             <img src="banner.png" width="30%">
+        </div>
+
+        <nav class="default-font clearfix">
+             <ul class="navigation">
+                 <li><a href="">Home</a></li>
+                 <li><a href="">Sammlung</a></li>
+                 <li><a href="">Blog</a></li>
+                 <li><a href="">Künstler</a></li>
+             </ul>
+        </nav>
+        <hr class="line-top"/>
+    </div>
+</header>
 
 
-<hr class="line-bottom"/>
-<div class="contact-impressum default-font"><a href="/contact">Impressum&nbsp;/&nbsp;Kontakt</a></div>
-<br/><br/>
+
+<main>
+    <div class="container">
+        <div class="content-heading default-font">K&uuml;nstlerverzeichnis</div><br/>
+        <div class="content row">
+                    {% for letter, authorData in authors %}
+                        {% if authorData %}
+                            <div class="col-xs-12 col-md-4">
+                                <div class="initial">{{ letter }}</div>
+                                {% for author in authorData %}
+                                        <div class="authors"><a class="default-font" href="/list/{{author.name}}">{{ author.name }}<br/></a></div>
+                                {% endfor %}
+                                <div class="spacer-line default-font"></div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+        </div>
+    </div>
+</main>
+
+
+
+<footer>
+    <div class="container">
+        <hr class="line-bottom"/>
+         <div class="contact-impressum default-font"><a href="/contact">Impressum&nbsp;/&nbsp;Kontakt</a></div>
+         <br/><br/>
+    </div>
+</footer>
+
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
