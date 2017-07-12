@@ -15,16 +15,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        .banner {
-            margin-bottom: -56px;
+        .bannermobile {
+            display:none;
         }
         .content-heading {
             margin-top: 0px;
             text-align: left;
             font-size: 50px;
             margin-bottom: 50px;
-        }
-        .language {
         }
         .content {
             display: block;
@@ -33,6 +31,9 @@
         }
         .line-bottom {
             margin-top: 150px;
+        }
+        .language {
+            margin-bottom: 50px;
         }
         .authors {
             width: 274px;
@@ -64,28 +65,22 @@
 
         /**Tablet*/
         @media only screen and (max-width: 767px) {
-            .banner {
-                margin-left: 50px;
-                margin-bottom: 0px;
-                width: 85%;
+            .banner{
+                display:none;
             }
-            .content {
-                display: none;
+            .bannermobile {
+                display: block;
             }
             .content-heading {
                 margin-top: 50px;
                 text-align: center;
                 font-size: 40px;
             }
-            .language {
-                margin-top: -70px;
-                margin-left: 650px;
-            }
-            .line-bottom {
-                margin-top: 100px;
-            }
             .thin-font a{
                 color: #303030;
+            }
+            .language {
+                margin-bottom: 50px;
             }
             .initial {
                 font-size: 110px;
@@ -93,27 +88,22 @@
         }
         @media only screen and (max-width: 479px) {
             .banner {
-                margin-left: 40px;
-                margin-bottom: 0px;
-                width: 65%;
+                display: none;
+            }
+            .bannermobile {
+                display: block;
             }
             .language {
-                margin-top: -70px;
-                margin-left: 70px;
+                margin-bottom: 50px;
             }
             .content {
                 display: block;
                 text-align: center;
-                margin-left: 260px;
             }
             .content-heading {
-                margin-left: 110px;
                 margin-top: 50px;
-                text-align: left;
+                text-align: center;
                 font-size: 30px;
-            }
-            .content {
-                margin-left: 120px;
             }
             .initial {
                 font-size: 80px;
@@ -126,30 +116,21 @@
 <body class="site">
 <header>
     <div class="container">
-        <div class="navigation-mobile">
-            <button class="menu-button">Menu</button>
-            <div class="menu-content">
-                <a href="/">Home</a>
-                <a href="/collection">Sammlung</a>
-                <a href="/blog">Blog</a>
-                <a href="/authors">K&uuml;nstler</a>
-            </div>
-        </div>
 
         <div class="language thin-font">
             <a href="">/EN</a><a style="color:#de202c;" href="">DE</a>
         </div>
-
+        <center><img class="bannermobile" src="banner.png" width="70%"/></center>
         <div class="banner">
-             <img src="banner.png" width="30%">
+             <img class="banner" src="banner.png"/>
         </div>
 
         <nav class="default-font clearfix">
              <ul class="navigation">
-                 <li><a href="">Home</a></li>
-                 <li><a href="">Sammlung</a></li>
-                 <li><a href="">Blog</a></li>
-                 <li><a href="">Künstler</a></li>
+                 <li><a href="/">Home</a></li>
+                 <li><a href="/collection">Sammlung</a></li>
+                 <li><a href="/blog">Blog</a></li>
+                 <li><u><a href="/authors">Künstler</a></u></li>
              </ul>
         </nav>
         <hr class="line-top"/>
@@ -162,21 +143,20 @@
     <div class="container">
         <div class="content-heading default-font">K&uuml;nstlerverzeichnis</div><br/>
         <div class="content row">
-                    {% for letter, authorData in authors %}
-                        {% if authorData %}
-                            <div class="col-xs-12 col-md-4">
-                                <div class="initial">{{ letter }}</div>
-                                {% for author in authorData %}
-                                        <div class="authors"><a class="default-font" href="/list/{{author.name}}">{{ author.name }}<br/></a></div>
-                                {% endfor %}
-                                <div class="spacer-line default-font"></div>
-                            </div>
-                        {% endif %}
-                    {% endfor %}
+            {% for letter, authorData in authors %}
+                {% if authorData %}
+                    <div class="col-xs-12 col-md-4">
+                        <div class="initial">{{ letter }}</div>
+                        {% for author in authorData %}
+                            <div class="authors"><a class="default-font" href="/list/{{author.name}}">{{ author.name }}<br/></a></div>
+                        {% endfor %}
+                        <div class="spacer-line default-font"></div>
+                    </div>
+                {% endif %}
+            {% endfor %}
         </div>
     </div>
 </main>
-
 
 
 <footer>

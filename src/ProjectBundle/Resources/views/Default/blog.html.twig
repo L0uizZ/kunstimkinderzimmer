@@ -15,34 +15,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
+        .bannermobile {
+            display: none;
+        }
         .content-heading {
             margin-top: 0px;
             text-align: left;
             font-size: 50px;
             margin-bottom: 50px;
         }
-        .content-tablet {
-            display: none;
-        }
         .content {
             text-align: left;
             font-size: 20px;
-            margin-left: 75px;
+
         }
         .content-text {
+            text-align: left;
             line-height: 1.48;
             margin-bottom: 35px;
         }
         .language {
-            margin-top: 90px;
-            margin-right: -35px;
+            margin-bottom: 50px;
         }
         .line {
             margin-top: 61px;
             border: solid 2px #303030;
-        }
-        .blog-tablet {
-            display:none;
+            width: 100%;
         }
         .blog {
             display: block;
@@ -61,7 +59,7 @@
         .blog-entry {
             text-align: left;
             font-size: 20px;
-            margin-left: 75px;
+
         }
         .blog-text {
             margin-top: -20px;
@@ -77,53 +75,34 @@
         }
         @media only screen and (max-width: 767px) {
             .banner {
-                margin-left: 50px;
-                margin-bottom: 0px;
-                width: 85%;
+                display: none
             }
-            .blog {
-                display: none;
-            }
-            .blog-tablet {
-                display:block;
+            .bannermobile {
+                display: block;
             }
             .blog-entry {
                 text-align: left;
                 font-size: 20px;
-                margin-left: 20px;
-            }
-            .blog-navigation {
-                margin-left: 310px;
-            }
-            .content {
-                display: none;
-            }
-            .content-tablet {
-                display: block;
-                text-align: center;
-                margin-left: 10px;
             }
             .content-text {
                 font-size: 20px;
             }
             .content-heading {
-                margin-left: 2px;
+
                 margin-top: 50px;
                 text-align: left;
             }
             .content-text {
-                margin-left: 2px;
+
                 text-align: left;
                 line-height: 1.48;
             }
             .language {
-                margin-top: -70px;
-                margin-left: 650px;
+                margin-bottom: 50px;
             }
             .line {
                 margin-top: 61px;
-                width: 670px;
-                margin-left: 35px;
+                width: 100%;
                 border: solid 2px #303030;
             }
             .line-bottom {
@@ -135,23 +114,19 @@
         }
         @media only screen and (max-width: 479px) {
             .banner {
-                margin-left: 40px;
-                margin-bottom: 0px;
-                width: 65%;
+                display: none;
+            }
+            .bannermobile {
+                display: block;
             }
             .language {
-                margin-top: -70px;
-                margin-left: 70px;
-            }
-            .blog-tablet {
-                display:none;
+                margin-bottom: 50px;
             }
             .blog {
                 display: block;
             }
             .blog-entry {
                 text-align: left;
-                margin-left: 20px;
             }
             .blog-heading{
                 font-size: 26px;
@@ -159,35 +134,20 @@
             .blog-text{
                 font-size: 12px;
             }
-            .blog-navigation {
-                text-align: left;
-                margin-left: 160px;
-            }
-            .content-tablet {
-                display: none;
-            }
             .content {
                 display: block;
                 text-align: left;
-                margin-left: 0px;
             }
             .content-text {
-                margin-left: 0px;
                 text-align: left;
                 font-size: 14px;
             }
             .content-heading {
-                margin-left: 2px;
                 margin-top: 50px;
                 text-align: left;
             }
-            .button-reading{
-                margin-left: 0px;
-            }
             .line {
                 margin-top: 61px;
-                width: 400px;
-                margin-left: 35px;
                 border: solid 2px #303030;
             }
             .line-bottom {
@@ -198,56 +158,33 @@
     <title>Kunst im Kinderzimmer</title>
 </head>
 <body class="site">
+<header>
+    <div class="container">
 
-<div class="navigation-mobile">
-    <button class="menu-button">Menu</button>
-    <div class="menu-content">
-        <a href="/">Home</a>
-        <a href="/collection">Sammlung</a>
-        <a href="/blog">Blog</a>
-        <a href="/authors">K&uuml;nstler</a>
-    </div>
-</div>
-
-<div class="language thin-font row">
-    <div class="col-sm-9">&nbsp;</div>
-    <div class="col-sm-1"><a style="color:#de202c;" href="">DE</a>/<a href="">EN</a></div>
-    <div class="col-sm-2">&nbsp;</div>
-</div>
-
-
-<div class="banner">
-    <img class="banner" src="banner.png">
-</div>
-
-<div class="navigation default-font row">
-    <div class="col-sm-5">&nbsp;</div>
-    <div class="col-sm-1">&nbsp</div>
-    <div class="col-sm-1"><a href="/">Home</a></div>
-    <div class="col-sm-1"><a href="/collection">Sammlung</a></div>
-    <div class="col-sm-1"><u><a href="/blog">Blog</a></u></div>
-    <div class="col-sm-1"><a href="/authors">K&uuml;nstler</a></div>
-    <div class="col-sm-2">&nbsp;</div>
-</div>
-
-<hr class="line-top"/>
-
-<div class="content default-font row">
-    <div class="col-sm-1"></div>
-    <div class="col-xs-8 col-md-11">
-        <div class="content-heading default-font">Blog<br/></div>
-        <div class="content-text default-font">
-            In diesem Blog finden sich Texte von Barbara Scharioth, der Autorin dieser Website, die Fragen der Terminologie,<br/>
-            Abgrenzung und Geschichte des Künstlerbilderbuchs diskutieren und sowohl historische Vorläufer beschreiben als<br/>
-            auch auf besondere, internationale Funde verweisen.
+        <div class="language thin-font">
+            <a href="">/EN</a><a style="color:#de202c;" href="">DE</a>
         </div>
-    </div>
-    <div class="col-sm-1"></div>
-</div>
+        <center><img class="bannermobile" src="banner.png" width="70%"/></center>
+        <div class="banner">
+            <img class="banner" src="banner.png"/>
+        </div>
 
-<div class="content-tablet default-font row">
-    <div class="col-sm-1"></div>
-    <div class="col-xs-11">
+        <nav class="default-font clearfix">
+            <ul class="navigation">
+                <li><a href="/">Home</a></li>
+                <li><a href="/collection">Sammlung</a></li>
+                <li><u><a href="/blog">Blog</a></u></li>
+                <li><a href="/authors">Künstler</a></li>
+            </ul>
+        </nav>
+        <hr class="line-top"/>
+    </div>
+</header>
+
+<main>
+<div class="container">
+    <div class="content default-font row">
+    <div class="col-xs-12 col-md-11">
         <div class="content-heading default-font">Blog<br/></div>
         <div class="content-text default-font">
             In diesem Blog finden sich Texte von Barbara Scharioth, der Autorin dieser Website, die Fragen der Terminologie,
@@ -255,13 +192,10 @@
             auch auf besondere, internationale Funde verweisen.
         </div>
     </div>
-    <div class="col-sm-1"></div>
 </div>
-
 <div class="blog">
     <div class="blog-entry default-font row">
-            <div class="col-sm-1"></div>
-            <div class="col-xs-7 col-sm-6 col-md-6">
+            <div class="col-xs-10 col-sm-10 col-md-10">
             <div class="blog-date thin-font">20.07.2017</div>
             <div class="blog-heading default-font">Das Künstlerbilderbuch<br/></div>
             <div class="blog-text default-font">
@@ -275,126 +209,59 @@
             <br/>
             <input type="submit" class="button-reading" value="Weiterlesen" />
         </div>
-        <div class="col-sm-1"></div>
     </div>
-
+    <hr class="line">
+    <div class="blog-entry default-font row">
+        <div class="col-xs-10 col-sm-10 col-md-10">
+            <div class="blog-date thin-font">20.07.2017</div>
+            <div class="blog-heading default-font">Das Künstlerbilderbuch<br/></div>
+            <div class="blog-text default-font">
+                Donec rutrum congue leo eget malesuada. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo,
+                lacinia eget consectetur sed, convallis at tellus. Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor
+                risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci
+                luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet
+                ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed porttitor lectus nibh.
+                Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
+            </div>
+            <br/>
+            <input type="submit" class="button-reading" value="Weiterlesen" />
+        </div>
+    </div>
+    <hr class="line">
+    <div class="blog-entry default-font row">
+        <div class="col-xs-10 col-sm-10 col-md-10">
+            <div class="blog-date thin-font">20.07.2017</div>
+            <div class="blog-heading default-font">Das Künstlerbilderbuch<br/></div>
+            <div class="blog-text default-font">
+                Donec rutrum congue leo eget malesuada. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo,
+                lacinia eget consectetur sed, convallis at tellus. Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor
+                risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci
+                luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet
+                ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed porttitor lectus nibh.
+                Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
+            </div>
+            <br/>
+            <input type="submit" class="button-reading" value="Weiterlesen" />
+        </div>
+    </div>
+    </div>
     <hr class="line">
 
-    <div class="blog-entry default-font row">
-        <div class="col-sm-1"></div>
-        <div class="col-xs-7 col-sm-6 col-md-6">
-            <div class="blog-date thin-font">20.07.2017</div>
-            <div class="blog-heading default-font">Das Künstlerbilderbuch<br/></div>
-            <div class="blog-text default-font">
-                Donec rutrum congue leo eget malesuada. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo,
-                lacinia eget consectetur sed, convallis at tellus. Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor
-                risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci
-                luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet
-                ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed porttitor lectus nibh.
-                Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
-            </div>
-            <br/>
-            <input type="submit" class="button-reading" value="Weiterlesen" />
-        </div>
-        <div class="col-sm-1"></div>
-    </div>
-
-    <hr class="line">
-
-    <div class="blog-entry default-font row">
-        <div class="col-sm-1"></div>
-        <div class="col-xs-7 col-sm-6 col-md-6">
-            <div class="blog-date thin-font">20.07.2017</div>
-            <div class="blog-heading default-font">Das Künstlerbilderbuch<br/></div>
-            <div class="blog-text default-font">
-                Donec rutrum congue leo eget malesuada. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo,
-                lacinia eget consectetur sed, convallis at tellus. Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor
-                risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci
-                luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet
-                ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed porttitor lectus nibh.
-                Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
-            </div>
-            <br/>
-            <input type="submit" class="button-reading" value="Weiterlesen" />
-        </div>
-        <div class="col-sm-1"></div>
+    <div class="blog-navigation">
+        <a href="" class="blog-site-button">1</a>
+        <a href="" class="blog-site-button" style="background-color: #E8E8E8; color: #000000;">2</a>
+        <a href="" class="blog-site-button" style="background-color: #E8E8E8; color: #000000">3</a>
     </div>
 </div>
+</main>
 
-<div class="blog-tablet">
-    <div class="blog-entry default-font row">
-        <div class="col-sm-1"></div>
-        <div class="col-xs-11">
-            <div class="blog-date thin-font">20.07.2017</div>
-            <div class="blog-heading default-font">Das Künstlerbilderbuch<br/></div>
-            <div class="blog-text default-font">
-                Donec rutrum congue leo eget malesuada. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo,
-                lacinia eget consectetur sed, convallis at tellus. Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor
-                risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci
-                luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet
-                ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed porttitor lectus nibh.
-                Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
-            </div>
-            <br/>
-            <input type="submit" class="button-reading" value="Weiterlesen" />
-        </div>
-        <div class="col-sm-1"></div>
+<footer>
+    <div class="container">
+        <hr class="line-bottom"/>
+        <div class="contact-impressum default-font"><a href="/contact">Impressum&nbsp;/&nbsp;Kontakt</a></div>
+        <br/><br/>
     </div>
-
-    <hr class="line">
-
-    <div class="blog-entry default-font row">
-        <div class="col-sm-1"></div>
-        <div class="col-xs-11">
-            <div class="blog-date thin-font">20.07.2017</div>
-            <div class="blog-heading default-font">Das Künstlerbilderbuch<br/></div>
-            <div class="blog-text default-font">
-                Donec rutrum congue leo eget malesuada. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo,
-                lacinia eget consectetur sed, convallis at tellus. Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor
-                risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci
-                luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet
-                ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed porttitor lectus nibh.
-                Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
-            </div>
-            <br/>
-            <input type="submit" class="button-reading" value="Weiterlesen" />
-        </div>
-        <div class="col-sm-1"></div>
-    </div>
-
-    <hr class="line">
-
-    <div class="blog-entry default-font row">
-        <div class="col-sm-1"></div>
-        <div class="col-xs-11">
-            <div class="blog-date thin-font">20.07.2017</div>
-            <div class="blog-heading default-font">Das Künstlerbilderbuch<br/></div>
-            <div class="blog-text default-font">
-                Donec rutrum congue leo eget malesuada. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo,
-                lacinia eget consectetur sed, convallis at tellus. Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor
-                risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci
-                luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet
-                ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed porttitor lectus nibh.
-                Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
-            </div>
-            <br/>
-            <input type="submit" class="button-reading" value="Weiterlesen" />
-        </div>
-        <div class="col-sm-1"></div>
-    </div>
-</div>
-
-<hr class="line">
-
-<div class="blog-navigation">
-    <a href="" class="blog-site-button">1</a>
-    <a href="" class="blog-site-button" style="background-color: #E8E8E8; color: #000000;">2</a>
-    <a href="" class="blog-site-button" style="background-color: #E8E8E8; color: #000000">3</a>
-</div>
-
-<hr class="line-bottom"/>
-<div class="contact-impressum default-font"><a href="/contact">Impressum&nbsp;/&nbsp;Kontakt</a></div>
-<br/><br/>
+</footer>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->

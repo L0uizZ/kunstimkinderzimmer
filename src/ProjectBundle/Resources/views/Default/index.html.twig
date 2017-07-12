@@ -11,18 +11,24 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Kunst im Kinderzimmer</title>
     <style>
+        .bannermobile {
+            display: none;
+        }
         .content{
             font-size: 21px;
             text-align: left;
         }
         .language {
-            margin-top: 90px;
-            margin-right: -35px;
+            margin-bottom: 50px;
+        }
+        .navigation {
+            display: block;
+            margin-left: 0px;
+            margin-top: -20px;
         }
         .content-heading {
             font-size: 51px;
@@ -33,30 +39,33 @@
         .content-text {
             margin-left: 50px;
         }
+        .slider-div{
+            margin-left: 5px;
+        }
         @media only screen and (max-width: 767px) {
             .banner {
-                margin-left: 50px;
-                margin-bottom: 0px;
-                width: 85%;
+                display: none
             }
-            .slider-div-mobile {
+            .bannermobile {
                 display: block;
-                background-color: #f4f8fa;
             }
-            .slider {
-                background-color: #ffffff;
+            .content-heading{
+                font-size: 36px;
+                text-align: center;
+
+            }
+            .navigation {
+                margin-left: 20px;
             }
             .content {
-                margin-left: 2px;
+                margin-left: -20px;
                 text-align: center;
             }
             .content-text {
-                margin-left: 2px;
                 text-align: center;
             }
             .language {
-                margin-top: -70px;
-                margin-left: 610px;
+                margin-bottom: 50px;
             }
             .thin-font a{
                 color: #303030;
@@ -64,91 +73,71 @@
         }
         @media only screen and (max-width: 479px) {
             .banner {
-                margin-left: 40px;
-                margin-bottom: 0px;
-                width: 65%;
+                display: none
             }
-
+            .bannermobile {
+                display: block;
+            }
+            .navigation {
+                margin-left: 20px;
+            }
             .language {
-                margin-top: -70px;
-                margin-left: 70px;
-            }
-            .slider{
-                margin-left: 0px;
-                width:110px;
-                height:140px;
-            }
-            .slider-div-mobile{
-                width: 478px;
+                margin-bottom: 50px;
             }
             .content-heading{
-                font-size: 30px;
+                font-size: 36px;
                 text-align: center;
-                margin-left: -240px;
             }
             .line-short{
-                margin-left: 180px;
+
             }
             .content-text{
-                margin-left:-245px;
                 font-size: 18px;
             }
         }
     </style>
 </head>
 <body class="site">
+<header>
+    <div class="container">
 
-<div class="navigation-mobile">
-    <button class="menu-button">Menu</button>
-    <div class="menu-content">
-        <a href="/">Home</a>
-        <a href="/collection">Sammlung</a>
-        <a href="/blog">Blog</a>
-        <a href="/authors">K&uuml;nstler</a>
+        <div class="language thin-font">
+            <a href="">/EN</a><a style="color:#de202c;" href="">DE</a>
+        </div>
+        <center><img class="bannermobile" src="banner.png" width="70%"/></center>
+        <div class="banner">
+            <img class="banner" src="banner.png"/>
+        </div>
+
+        <center><button class="navigation-mobile" onclick="myFunction()">M E N U</button></center><br/>
+
+        <nav class="default-font clearfix">
+            <ul class="navigation" id="navigation">
+                <li><u><a href="/">Home</a></u></li>
+                <li><a href="/collection">Sammlung</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/authors">Künstler</a></li>
+            </ul>
+        </nav>
+        <hr class="line-top"/>
     </div>
-</div>
+</header>
 
-<div class="language thin-font row">
-    <div class="col-sm-9">&nbsp;</div>
-    <div class="col-sm-1"><a style="color:#de202c;" href="">DE</a>/<a href="">EN</a></div>
-    <div class="col-sm-2">&nbsp;</div>
-</div>
+<main>
+    <div class="container">
+        <div class="slider-div row">
+             <div class="col-sm-2">&nbsp;</div>
+             <div class="col-sm-2"></div>
+             <div class="col-sm-2"></div>
+             <div class="col-sm-2"></div>
+             <div class="col-sm-2"></div>
+             <div class="col-sm-2">&nbsp;</div>
+        </div>
 
-    <div class="banner">
-        <img class="banner" src="banner.png">
-    </div>
-
-    <div class="navigation default-font row">
-        <div class="col-sm-5">&nbsp;</div>
-        <div class="col-sm-1">&nbsp</div>
-        <div class="col-sm-1"><u><a href="/">Home</a></u></div>
-        <div class="col-sm-1"><a href="/collection">Sammlung</a></div>
-        <div class="col-sm-1"><a href="/blog">Blog</a></div>
-        <div class="col-sm-1"><a href="/authors">K&uuml;nstler</a></div>
-        <div class="col-sm-2">&nbsp;</div>
-    </div>
-
-    <div class="slider-div-mobile row">
-            <div class="col-xs-3"></div>
-            <div class="col-xs-3"><div class="slider">Book1</div></div>
-            <div class="col-xs-3"><div class="slider">Book2</div></div>
-            <div class="col-xs-3"></div>
-    </div>
-
-    <div class="slider-div row">
-        <div class="col-sm-2">&nbsp;</div>
-        <div class="col-sm-2"><div class="slider">Book1</div></div>
-        <div class="col-sm-2"><div class="slider">Book2</div></div>
-        <div class="col-sm-2"><div class="slider">Book3</div></div>
-        <div class="col-sm-2"><div class="slider">Book4</div></div>
-        <div class="col-sm-2">&nbsp;</div>
-    </div>
-
-    <div class="content default-font row">
-        <div class="content-heading default-font">Gelegentlich kommt die Kunst<br/>ins Kinderzimmer</div>
-        <hr class="line-short"/>
-        <div class="col-sm-2">&nbsp;</div>
-        <div class="col-sm-4"><div class="default-font content-text">
+        <div class="content default-font row">
+            <div class="content-heading default-font">Gelegentlich kommt die Kunst<br/>ins Kinderzimmer</div>
+            <hr class="line-short"/>
+            <div class="col-sm-6"><div class="default-font content-text">
                 Bildende Künstlerinnen und Künstler greifen zu<br/>
                 Zeichenstift oder Pinsel, um als gänzlich freie Arbeit<br/>
                 ein Buch oder eine Bildermappe für ein bestimmtes<br/>
@@ -165,9 +154,9 @@
                 anderen für die Umsetzung ihrer bildnerischen<br/>
                 Ideen an, beispielsweise Maurice Sendak, Kveta<br/>
                 Pacovska oder Shaun Tan.
+                </div>
             </div>
-        </div>
-        <div class="col-sm-4"><div class="default-font content-text">
+        <div class="col-sm-6"><div class="default-font content-text">
                 Diese Sammlung von KünstlerBilderBüchern stellt<br/>
                 außergewöhnliche Bilderbücher vor, erzählt von<br/>
                 vielen die Geschichte ihrer Entstehung und<br/>
@@ -182,14 +171,30 @@
                 Galeriebesuch eines Kindes gleich.
             </div>
         </div>
-        <div class="col-sm-2">&nbsp;</div>
     </div>
-    <hr class="line-bottom"/>
-    <div class="contact-impressum default-font"><a href="/contact">Impressum&nbsp;/&nbsp;Kontakt</a></div>
-    <br/><br/>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <hr class="line-bottom"/>
+        <div class="contact-impressum default-font"><a href="/contact">Impressum&nbsp;/&nbsp;Kontakt</a></div>
+        <br/><br/>
+    </div>
+</footer>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script>
+        function myFunction() {
+            var x = document.getElementById('navigation');
+            if (x.style.display === 'none') {
+                x.style.display = 'block';
+            } else {
+                x.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>

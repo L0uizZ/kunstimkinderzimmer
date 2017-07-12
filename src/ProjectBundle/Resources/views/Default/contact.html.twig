@@ -15,12 +15,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        .site{
-            height: 600px;
+        .bannermobile {
+            display: none;
         }
         .language {
-            margin-top: 90px;
-            margin-right: -35px;
+            margin-bottom: 50px;
         }
         .content-heading {
             margin-top: 0px;
@@ -37,7 +36,6 @@
         .content {
             text-align: left;
             font-size: 20px;
-            margin-left: 75px;
         }
         .contact-form-mobile{
             display:none;
@@ -57,7 +55,7 @@
             text-align: left;
         }
         .button-submit {
-            margin-left: 415px;
+            margin-left: 335px;
         }
         /**Mobile and XS-Screens**/
         @media only screen and (max-width: 767px) {
@@ -158,80 +156,77 @@
     <title>Kunst im Kinderzimmer</title>
 </head>
 <body class="site">
-<div class="navigation-mobile">
-    <button class="menu-button">Menu</button>
-    <div class="menu-content">
-        <a href="/">Home</a>
-        <a href="/collection">Sammlung</a>
-        <a href="/blog">Blog</a>
-        <a href="/authors">K&uuml;nstler</a>
-    </div>
-</div>
+<header>
+    <div class="container">
 
-<div class="language thin-font row">
-    <div class="col-sm-9">&nbsp;</div>
-    <div class="col-sm-1"><a style="color:#de202c;" href="">DE</a>/<a href="">EN</a></div>
-    <div class="col-sm-2">&nbsp;</div>
-</div>
-
-
-<div class="banner">
-    <img class="banner" src="banner.png">
-</div>
-
-<div class="navigation default-font row">
-    <div class="col-sm-5">&nbsp;</div>
-    <div class="col-sm-1">&nbsp</div>
-    <div class="col-sm-1"><a href="/">Home</a></div>
-    <div class="col-sm-1"><a href="/collection">Sammlung</a></div>
-    <div class="col-sm-1"><a href="/blog">Blog</a></div>
-    <div class="col-sm-1"><a href="/authors">K&uuml;nstler</a></div>
-    <div class="col-sm-2">&nbsp;</div>
-</div>
-
-<hr class="line-top"/>
-
-<div class="content default-font row">
-    <div class="col-sm-1"></div>
-    <div class="col-sm-5">
-        <div class="content-heading ">Kontaktformular</div>
-        <div class="content-description">Für Feedback, Hinweise und Anregungen:</div>
-        <form class="contact-form-mobile">
-            <br/><br/>
-            <input class="form-font thin-font" type="text" name="firstname" size="53" placeholder="VORNAME"><br/><br/>
-            <input class="form-font thin-font" type="text" name="lastname" size="53" placeholder="NACHNAME"><br/><br/>
-            <input class="form-font thin-font" type="email" name="mail" size="53" placeholder="EMAIL ADRESSE"><br/><br/>
-            <textarea class="form-font thin-font" name="message" form="contact-form" cols="52" rows="10"></textarea><br/><br/>
-            <input type="submit" class="button-submit" value="Absenden" />
-        </form>
-        <form class="contact-form">
-            <br/><br/>
-            <input class="form-font thin-font" type="text" name="firstname" size="75" placeholder="VORNAME"><br/><br/>
-            <input class="form-font thin-font" type="text" name="lastname" size="75" placeholder="NACHNAME"><br/><br/>
-            <input class="form-font thin-font" type="email" name="mail" size="75" placeholder="EMAIL ADRESSE"><br/><br/>
-            <textarea class="form-font thin-font" name="message" form="contact-form" cols="74" rows="10"></textarea><br/><br/>
-            <input type="submit" class="button-submit" value="Absenden" />
-        </form>
-    </div>
-    <div class="col-sm-5">
-        <div class="impressum-heading default-font">Impressum</div>
-        <div class="default-font impressum-text">
-            © Alle Texte dieser Website sind urheberrechtlich geschützt.<br/><br/>
-            Die Bildrechte liegen bei den Verlagen, bzw. den Künstlern und<br/>
-            ihren Rechtsnachfolgern.<br/><br/>
-            Die Rechte an den Texten liegen bei Barbara Scharioth/<br/>
-            KunstimKinderzimmer.<br/><br/>
-            Für die Inhalte externer Links wird trotz sorgfältiger inhaltlicher<br/>
-            Kontrolle keine Haftung übernommen.
+        <div class="language thin-font">
+            <a href="">/EN</a><a style="color:#de202c;" href="">DE</a>
         </div>
+        <center><img class="bannermobile" src="banner.png" width="70%"/></center>
+        <div class="banner">
+            <img class="banner" src="banner.png"/>
+        </div>
+
+        <nav class="default-font clearfix">
+            <ul class="navigation">
+                <li><a href="/">Home</a></li>
+                <li><a href="/collection">Sammlung</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/authors">Künstler</a></li>
+            </ul>
+        </nav>
+        <hr class="line-top"/>
     </div>
-    <div class="col-sm-2"></div>
+</header>
 
-</div>
+<main>
+ <div class="container">
+    <div class="content default-font row">
+        <div class="col-sm-5">
+            <div class="content-heading ">Kontaktformular</div>
+            <div class="content-description">Für Feedback, Hinweise und Anregungen:</div>
+            <form class="contact-form-mobile">
+                <br/><br/>
+                <input class="form-font thin-font" type="text" name="firstname" size="53" placeholder="VORNAME"><br/><br/>
+                <input class="form-font thin-font" type="text" name="lastname" size="53" placeholder="NACHNAME"><br/><br/>
+                <input class="form-font thin-font" type="email" name="mail" size="53" placeholder="EMAIL ADRESSE"><br/><br/>
+                <textarea class="form-font thin-font" name="message" form="contact-form" cols="52" rows="10"></textarea><br/><br/>
+                <input type="submit" class="button-submit" value="Absenden" />
+            </form>
+            <form class="contact-form">
+                <br/><br/>
+                <input class="form-font thin-font" type="text" name="firstname" size="65" placeholder="VORNAME"><br/><br/>
+                <input class="form-font thin-font" type="text" name="lastname" size="65" placeholder="NACHNAME"><br/><br/>
+                <input class="form-font thin-font" type="email" name="mail" size="65" placeholder="EMAIL ADRESSE"><br/><br/>
+                <textarea class="form-font thin-font" name="message" form="contact-form" cols="64" rows="10"></textarea><br/><br/>
+                <input type="submit" class="button-submit" value="Absenden" />
+            </form>
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-6">
+            <div class="impressum-heading default-font">Impressum</div>
+            <div class="default-font impressum-text">
+                © Alle Texte dieser Website sind urheberrechtlich geschützt.<br/><br/>
+                Die Bildrechte liegen bei den Verlagen, bzw. den Künstlern und<br/>
+                ihren Rechtsnachfolgern.<br/><br/>
+                Die Rechte an den Texten liegen bei Barbara Scharioth/<br/>
+                KunstimKinderzimmer.<br/><br/>
+                Für die Inhalte externer Links wird trotz sorgfältiger inhaltlicher<br/>
+                Kontrolle keine Haftung übernommen.
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+ </div>
+</main>
 
-<hr class="line-bottom"/>
-<div class="contact-impressum default-font"><u><a href="/contact">Impressum&nbsp;/&nbsp;Kontakt</a></u></div>
-<br/><br/>
+<footer>
+    <div class="container">
+        <hr class="line-bottom"/>
+        <div class="contact-impressum default-font"><u><a href="/contact">Impressum&nbsp;/&nbsp;Kontakt</a></u></div>
+        <br/><br/>
+    </div>
+</footer>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
