@@ -15,9 +15,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        .bannermobile {
-            display: none;
-        }
         .content-heading {
             margin-top: 0px;
             text-align: left;
@@ -35,7 +32,14 @@
             margin-bottom: 35px;
         }
         .language {
-            margin-bottom: 50px;
+            margin-top: 99px;
+        }
+        .navigation {
+            display: block;
+            margin-top: 79px;
+            margin-left: 0px;
+            color: #605959;
+            font-weight: 400;
         }
         .line {
             margin-top: 61px;
@@ -74,15 +78,17 @@
             letter-spacing: 2.2px;
         }
         @media only screen and (max-width: 767px) {
-            .banner {
-                display: none
-            }
-            .bannermobile {
-                display: block;
-            }
             .blog-entry {
                 text-align: left;
                 font-size: 20px;
+            }
+            .navigation {
+                display: none;
+                margin-top: 5px;
+                margin-left: 20px;
+            }
+            .button-navigation-mobile {
+                margin-top: -10px;
             }
             .content-text {
                 font-size: 20px;
@@ -113,14 +119,16 @@
             }
         }
         @media only screen and (max-width: 479px) {
-            .banner {
-                display: none;
-            }
-            .bannermobile {
-                display: block;
-            }
             .language {
                 margin-bottom: 50px;
+            }
+            .navigation {
+                display: none;
+                margin-top: 5px;
+                margin-left: 20px;
+            }
+            .button-navigation-mobile {
+                margin-top: -10px;
             }
             .blog {
                 display: block;
@@ -164,13 +172,11 @@
         <div class="language thin-font">
             <a href="">/EN</a><a style="color:#de202c;" href="">DE</a>
         </div>
-        <center><img class="bannermobile" src="banner.png" width="70%"/></center>
-        <div class="banner">
-            <img class="banner" src="banner.png"/>
-        </div>
+
+        <button class="button-navigation-mobile" onclick="mobileNav()">&#9776;</button><br/>
 
         <nav class="default-font clearfix">
-            <ul class="navigation">
+            <ul class="navigation" id="navigation">
                 <li><a href="/">Home</a></li>
                 <li><a href="/collection">Sammlung</a></li>
                 <li><u><a href="/blog">Blog</a></u></li>
@@ -266,5 +272,15 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
+<script>
+    function mobileNav() {
+        var x = document.getElementById('navigation');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
 </body>
 </html>

@@ -15,20 +15,19 @@
 
     <title>Kunst im Kinderzimmer</title>
     <style>
-        .bannermobile {
-            display: none;
-        }
         .content{
             font-size: 21px;
             text-align: left;
         }
         .language {
-            margin-bottom: 50px;
+            margin-top: 99px;
         }
         .navigation {
             display: block;
+            margin-top: 79px;
             margin-left: 0px;
-            margin-top: -20px;
+            color: #605959;
+            font-weight: 400;
         }
         .content-heading {
             font-size: 51px;
@@ -38,24 +37,27 @@
         }
         .content-text {
             margin-left: 50px;
+            text-align: left;
+            color: #303030;
+            line-height: 1.48;
         }
         .slider-div{
             margin-left: 5px;
         }
+
         @media only screen and (max-width: 767px) {
-            .banner {
-                display: none
-            }
-            .bannermobile {
-                display: block;
-            }
             .content-heading{
                 font-size: 36px;
                 text-align: center;
 
             }
             .navigation {
+                display: none;
+                margin-top: 5px;
                 margin-left: 20px;
+            }
+            .button-navigation-mobile {
+                margin-top: -10px;
             }
             .content {
                 margin-left: -20px;
@@ -70,16 +72,19 @@
             .thin-font a{
                 color: #303030;
             }
+            .line-bottom {
+                margin-bottom: 5px;
+                margin-top: 200px;
+            }
         }
         @media only screen and (max-width: 479px) {
-            .banner {
-                display: none
-            }
-            .bannermobile {
-                display: block;
-            }
             .navigation {
+                display: none;
+                margin-top: 5px;
                 margin-left: 20px;
+            }
+            .button-navigation-mobile {
+                margin-top: -10px;
             }
             .language {
                 margin-bottom: 50px;
@@ -88,11 +93,12 @@
                 font-size: 36px;
                 text-align: center;
             }
-            .line-short{
-
-            }
             .content-text{
                 font-size: 18px;
+            }
+            .line-bottom {
+                margin-bottom: 5px;
+                margin-top: 200px;
             }
         }
     </style>
@@ -104,12 +110,8 @@
         <div class="language thin-font">
             <a href="">/EN</a><a style="color:#de202c;" href="">DE</a>
         </div>
-        <center><img class="bannermobile" src="banner.png" width="70%"/></center>
-        <div class="banner">
-            <img class="banner" src="banner.png"/>
-        </div>
 
-        <center><button class="navigation-mobile" onclick="myFunction()">M E N U</button></center><br/>
+        <button class="button-navigation-mobile" onclick="mobileNav()">&#9776;</button><br/>
 
         <nav class="default-font clearfix">
             <ul class="navigation" id="navigation">
@@ -134,9 +136,9 @@
              <div class="col-sm-2">&nbsp;</div>
         </div>
 
+        <article>
         <div class="content default-font row">
             <div class="content-heading default-font">Gelegentlich kommt die Kunst<br/>ins Kinderzimmer</div>
-            <hr class="line-short"/>
             <div class="col-sm-6"><div class="default-font content-text">
                 Bildende Künstlerinnen und Künstler greifen zu<br/>
                 Zeichenstift oder Pinsel, um als gänzlich freie Arbeit<br/>
@@ -171,7 +173,8 @@
                 Galeriebesuch eines Kindes gleich.
             </div>
         </div>
-    </div>
+        </div>
+        </article>
     </div>
 </main>
 
@@ -182,19 +185,19 @@
         <br/><br/>
     </div>
 </footer>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script>
-        function myFunction() {
-            var x = document.getElementById('navigation');
-            if (x.style.display === 'none') {
-                x.style.display = 'block';
-            } else {
-                x.style.display = 'none';
-            }
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script>
+    function mobileNav() {
+        var x = document.getElementById('navigation');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
         }
-    </script>
+    }
+</script>
 </body>
 </html>
