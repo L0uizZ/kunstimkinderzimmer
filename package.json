@@ -1,0 +1,10 @@
+{
+  "name": "enhavo",
+  "dependencies": {},
+  "license": "MIT",
+  "devDependencies": {
+    "compass-importer": "^0.4.1",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
