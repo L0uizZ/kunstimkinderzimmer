@@ -1,7 +1,7 @@
 ProjectBundle\Entity\Link:
     type: entity
     table: project_link
-    repositoryClass: ProjectBundle\Repository\LinksRepository
+    repositoryClass: ProjectBundle\Repository\LinkRepository
     id:
         id:
             type: integer
@@ -12,6 +12,13 @@ ProjectBundle\Entity\Link:
         name:
             type: string
             length: 255
+        link:
+            type: string
+            length: 255
+        position:
+            type: integer
+            nullable: true
+
 
     manyToOne:
         book:

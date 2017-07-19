@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <link rel="stylesheet" href="/css/default.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/fontkit/stylesheet.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .content-heading {
+            margin-top: 0px;
+            text-align: left;
+            font-size: 50px;
+            margin-bottom: 50px;
+        }
+        .content {
+            text-align: left;
+            font-size: 20px;
+
+        }
+        .content-text {
+            text-align: left;
+            line-height: 1.48;
+            margin-bottom: 35px;
+        }
+        .language {
+            margin-top: 99px;
+        }
+        .navigation {
+            display: block;
+            margin-top: 79px;
+            margin-left: 0px;
+            color: #605959;
+            font-weight: 400;
+        }
+        .line {
+            margin-top: 61px;
+            border: solid 2px #303030;
+            width: 100%;
+        }
+        .blog {
+            display: block;
+        }
+        .blog-date {
+            margin-top: 80px;
+            text-align: left;
+            font-size: 20px;
+            margin-bottom: 35px;
+        }
+        .blog-heading {
+            text-align: left;
+            font-size: 30px;
+            margin-bottom: 21px;
+        }
+        .blog-entry {
+            text-align: left;
+            font-size: 20px;
+
+        }
+        .blog-text {
+            margin-top: -20px;
+            font-size: 15px;
+            text-align: left;
+        }
+        .line-bottom {
+            margin-top: 150px;
+        }
+        .thin-font{
+            font-size: 14px;
+            letter-spacing: 2.2px;
+        }
+        @media only screen and (max-width: 767px) {
+            .blog-entry {
+                text-align: left;
+                font-size: 20px;
+            }
+            .navigation {
+                display: none;
+                margin-top: 5px;
+                margin-left: 20px;
+            }
+            .button-navigation-mobile {
+                margin-top: -10px;
+            }
+            .content-text {
+                font-size: 20px;
+            }
+            .content-heading {
+
+                margin-top: 50px;
+                text-align: left;
+            }
+            .content-text {
+
+                text-align: left;
+                line-height: 1.48;
+            }
+            .language {
+                margin-bottom: 50px;
+            }
+            .line {
+                margin-top: 61px;
+                width: 100%;
+                border: solid 2px #303030;
+            }
+            .line-bottom {
+                margin-top: 100px;
+            }
+            .thin-font a{
+                color: #303030;
+            }
+        }
+        @media only screen and (max-width: 479px) {
+            .language {
+                margin-bottom: 50px;
+            }
+            .navigation {
+                display: none;
+                margin-top: 5px;
+                margin-left: 20px;
+            }
+            .button-navigation-mobile {
+                margin-top: -10px;
+            }
+            .blog {
+                display: block;
+            }
+            .blog-entry {
+                text-align: left;
+            }
+            .blog-heading{
+                font-size: 26px;
+            }
+            .blog-text{
+                font-size: 12px;
+            }
+            .content {
+                display: block;
+                text-align: left;
+            }
+            .content-text {
+                text-align: left;
+                font-size: 14px;
+            }
+            .content-heading {
+                margin-top: 50px;
+                text-align: left;
+            }
+            .line {
+                margin-top: 61px;
+                border: solid 2px #303030;
+            }
+            .line-bottom {
+                margin-top: 100px;
+            }
+        }
+    </style>
+    <title>Kunst im Kinderzimmer</title>
+</head>
+<body class="site">
+<header>
+    <div class="container">
+
+        <div class="language thin-font">
+            <a href="">/EN</a><a style="color:#de202c;" href="">DE</a>
+        </div>
+
+        <button class="button-navigation-mobile" onclick="mobileNav()">&#9776;</button><br/>
+
+        <nav class="default-font clearfix">
+            <ul class="navigation" id="navigation">
+                <li><a href="/">Home</a></li>
+                <li><a href="/collection">Sammlung</a></li>
+                <li><u><a href="/blog">Blog</a></u></li>
+                <li><a href="/authors">Künstler</a></li>
+            </ul>
+        </nav>
+        <hr class="line-top"/>
+    </div>
+</header>
+
+<main>
+<div class="container">
+    <div class="content default-font row">
+    <div class="col-xs-12 col-md-11">
+        <div class="content-heading default-font">Blog<br/></div>
+        <div class="content-text default-font">
+            In diesem Blog finden sich Texte von Barbara Scharioth, der Autorin dieser Website, die Fragen der Terminologie,
+            Abgrenzung und Geschichte des Künstlerbilderbuchs diskutieren und sowohl historische Vorläufer beschreiben als
+            auch auf besondere, internationale Funde verweisen.
+        </div>
+    </div>
+</div>
+<div class="blog">
+    <div class="blog-entry default-font row">
+            <div class="col-xs-10 col-sm-10 col-md-10">
+            <div class="blog-date thin-font">20.07.2017</div>
+            <div class="blog-heading default-font">Das Künstlerbilderbuch<br/></div>
+            <div class="blog-text default-font">
+                Donec rutrum congue leo eget malesuada. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo,
+                lacinia eget consectetur sed, convallis at tellus. Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor
+                risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci
+                luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet
+                ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed porttitor lectus nibh.
+                Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
+            </div>
+            <br/>
+            <input type="submit" class="button-reading" value="Weiterlesen" />
+        </div>
+    </div>
+    <hr class="line">
+    <div class="blog-entry default-font row">
+        <div class="col-xs-10 col-sm-10 col-md-10">
+            <div class="blog-date thin-font">20.07.2017</div>
+            <div class="blog-heading default-font">Das Künstlerbilderbuch<br/></div>
+            <div class="blog-text default-font">
+                Donec rutrum congue leo eget malesuada. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo,
+                lacinia eget consectetur sed, convallis at tellus. Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor
+                risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci
+                luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet
+                ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed porttitor lectus nibh.
+                Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
+            </div>
+            <br/>
+            <input type="submit" class="button-reading" value="Weiterlesen" />
+        </div>
+    </div>
+    <hr class="line">
+    <div class="blog-entry default-font row">
+        <div class="col-xs-10 col-sm-10 col-md-10">
+            <div class="blog-date thin-font">20.07.2017</div>
+            <div class="blog-heading default-font">Das Künstlerbilderbuch<br/></div>
+            <div class="blog-text default-font">
+                Donec rutrum congue leo eget malesuada. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo,
+                lacinia eget consectetur sed, convallis at tellus. Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor
+                risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci
+                luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet
+                ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed porttitor lectus nibh.
+                Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
+            </div>
+            <br/>
+            <input type="submit" class="button-reading" value="Weiterlesen" />
+        </div>
+    </div>
+    </div>
+    <hr class="line">
+
+    <div class="blog-navigation">
+        <a href="" class="blog-site-button">1</a>
+        <a href="" class="blog-site-button" style="background-color: #E8E8E8; color: #000000;">2</a>
+        <a href="" class="blog-site-button" style="background-color: #E8E8E8; color: #000000">3</a>
+    </div>
+</div>
+</main>
+
+<footer>
+    <div class="container">
+        <hr class="line-bottom"/>
+        <div class="contact-impressum default-font"><a href="/contact">Impressum&nbsp;/&nbsp;Kontakt</a></div>
+        <br/><br/>
+    </div>
+</footer>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script>
+    function mobileNav() {
+        var x = document.getElementById('navigation');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+</body>
+</html>

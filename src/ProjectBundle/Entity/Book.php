@@ -7,6 +7,7 @@ use Enhavo\Bundle\MediaBundle\Model\FileInterface;
 use Doctrine\ORM\Mapping as ORM;
 use Enhavo\Bundle\ContentBundle\Entity\Content;
 
+
 /**
  * Book
  */
@@ -39,7 +40,7 @@ class Book extends Content implements ResourceInterface
     private $author;
 
     /**
-     * @var \stdClass
+     * @var string
      */
     private $link;
 
@@ -105,27 +106,13 @@ class Book extends Content implements ResourceInterface
     }
 
     /**
-     * Add author
-     *
-     * @param \Enhavo\Bundle\ProjectBundle\Entity\Content $author
-     * @return Book
+     * @param \stdClass $author
      */
-    public function addAuthor(\Enhavo\Bundle\ProjectBundle\Entity\Content $author)
+    public function setAuthor($author)
     {
-        $this->author[] = $author;
-
-        return $this;
+        $this->author = $author;
     }
 
-    /**
-     * Remove author
-     *
-     * @param \Enhavo\Bundle\ProjectBundle\Entity\Content $author
-     */
-    public function removeAuthor(\Enhavo\Bundle\ProjectBundle\Entity\Content $author)
-    {
-        $this->author->removeElement($author);
-    }
 
     /**
      * Get author
@@ -137,15 +124,18 @@ class Book extends Content implements ResourceInterface
         return $this->author;
     }
 
+
+
     /**
      * Add link
      *
-     * @param \Enhavo\Bundle\ProjectBundle\Entity\Content $link
-     * @return Book
+     * @param \ProjectBundle\Entity\Link $link
+     * @return Link
      */
-    public function addLink(\Enhavo\Bundle\ProjectBundle\Entity\Content $link)
+    public function addLink(\ProjectBundle\Entity\Link $link)
     {
         $this->link[] = $link;
+        $link->setBook($this);
 
         return $this;
     }
@@ -153,12 +143,15 @@ class Book extends Content implements ResourceInterface
     /**
      * Remove link
      *
-     * @param \Enhavo\Bundle\ProjectBundle\Entity\Content $link
+     * @param \ProjectBundle\Entity\Link $link
      */
-    public function removeLink(\Enhavo\Bundle\ProjectBundle\Entity\Content $link)
+    public function removeLink(\ProjectBundle\Entity\Link $link)
     {
         $this->link->removeElement($link);
+        $link->setLink(null);
     }
+
+
 
     /**
      * Get link

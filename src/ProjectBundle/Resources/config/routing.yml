@@ -2,6 +2,30 @@ project_default_index:
     path:     /
     defaults: { _controller: ProjectBundle:Default:index }
 
+project_default_collection:
+    path:     /collection
+    defaults: { _controller: ProjectBundle:Default:collection }
+
+project_default_blog:
+    path:     /blog
+    defaults: { _controller: ProjectBundle:Default:blog }
+
+project_default_contact:
+    path:     /contact
+    defaults: { _controller: ProjectBundle:Default:contact }
+
+project_list_index:
+    path:     /authors
+    defaults: { _controller: ProjectBundle:Author:index }
+
+project_default_images:
+    path: /images/{id}
+    defaults: { _controller: ProjectBundle:Default:images }
+
 project_book:
     prefix:   /admin
-    resource: "@ProjectBundle/Resources/config/routing.yml"
+    resource: "@ProjectBundle/Resources/config/routing/book.yml"
+
+project_author:
+    prefix:   /admin
+    resource: "@ProjectBundle/Resources/config/routing/author.yml"

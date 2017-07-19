@@ -1,0 +1,75 @@
+project_author_index:
+    options:
+        expose: true
+    path: /project/author/index
+    methods: [GET]
+    defaults:
+        _controller: project.controller.author:indexAction
+        _sylius:
+            viewer:
+
+project_author_create:
+    options:
+        expose: true
+    path: /project/author/create
+    methods: [GET,POST]
+    defaults:
+        _controller: project.controller.author:createAction
+        _sylius:
+            viewer:
+
+project_author_update:
+    options:
+        expose: true
+    path: /project/author/update/{id}
+    methods: [GET,POST]
+    defaults:
+        _controller: project.controller.author:updateAction
+        _sylius:
+            viewer:
+
+project_author_table:
+    options:
+        expose: true
+    path: /project/author/table
+    methods: [GET]
+    defaults:
+        _controller: project.controller.author:tableAction
+        _sylius:
+            viewer:
+
+project_author_delete:
+    options:
+        expose: true
+    path: /project/author/delete/{id}
+    methods: [DELETE]
+    defaults:
+        _controller: project.controller.author:deleteAction
+
+project_author_batch:
+    options:
+        expose: true
+    path: /project/author/batch
+    methods: [POST]
+    defaults:
+        _controller: project.controller.author:batchAction
+        _sylius:
+            paginate: false
+            criteria:
+                id: $ids
+            batches:
+                delete:
+                    type: delete
+
+project_author_preview:
+    options:
+        expose: true
+    path: /project/author/preview
+    methods: [POST]
+    defaults:
+        _controller: project.controller.author:previewAction
+        _sylius:
+            viewer:
+
+
+

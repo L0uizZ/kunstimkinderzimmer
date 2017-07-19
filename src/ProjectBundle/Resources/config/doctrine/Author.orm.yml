@@ -1,6 +1,6 @@
 ProjectBundle\Entity\Author:
     type: entity
-    table: null
+    table: project_author
     repositoryClass: ProjectBundle\Repository\AuthorRepository
     id:
         id:

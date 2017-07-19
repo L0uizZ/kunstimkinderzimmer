@@ -3,12 +3,12 @@
 namespace ProjectBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Sylius\Component\Resource\Model\ResourceInterface;
 
 /**
  * Author
  */
-class Author
-{
+class Author implements ResourceInterface{
     /**
      * @var int
      */
@@ -16,18 +16,18 @@ class Author
 
     /**
      * @var string
+     *
      */
     private $name;
-
 
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
-        return $this->id;
+       return $this->id;
     }
 
     /**
@@ -46,7 +46,7 @@ class Author
     /**
      * Get name
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
@@ -80,4 +80,5 @@ class Author
     {
         return $this->condition;
     }
+
 }

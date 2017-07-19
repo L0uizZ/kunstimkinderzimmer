@@ -12,4 +12,11 @@ use Doctrine\ORM\EntityRepository;
  */
 class AuthorRepository extends EntityRepository
 {
+    public function findWithStartLetter($firstLetter)
+    {
+        $query = $this->createQueryBuilder('n');
+        $query->andWhere('n.name LIKE :firstLetter');
+        $query->setParameter('firstLetter', $firstLetter.'%');
+        return $query->getQuery()->getResult();
+    }
 }

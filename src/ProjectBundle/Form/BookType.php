@@ -1,13 +1,19 @@
 <?php
 
-namespace ProjectBundle\Form\Type;
+namespace ProjectBundle\Form;
 
+
+use Doctrine\ORM\EntityRepository;
 use Enhavo\Bundle\AppBundle\Form\Type\ListType;
 use Enhavo\Bundle\GridBundle\Form\Type\GridType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\AbstractType;
 use ProjectBundle\Entity\Book;
+use ProjectBundle\Form\LinkType;
+use ProjectBundle\Entity\Link;
 
 class BookType extends AbstractType
 {
@@ -15,21 +21,32 @@ class BookType extends AbstractType
     {
         $builder->add('title', TextType::class, array('label' => 'Title'));
         $builder->add('year', TextType::class, array('label' => 'Year'));
-        $builder->add('pictures', 'enhavo_files', array('label' => 'Pictures',
+        $builder->add('pictures', 'enhavo_files', array(
+            'label' => 'Pictures',
             'translation_domain' => 'FileInterface',
-            'information' => array(
-                'You can upload your files here'),
+            'information' => array('You can upload your pictures here'),
             'multiple' => true,
-            'fields' => array(
-                'title' => array(
-                    'label' => 'media.form.label.title',
-                    'translationDomain' => 'FileInterface'
-                ))));
+            'fields' => array('title' => array(
+                'label' => 'media.form.label.title',
+                'translationDomain' => 'FileInterface'
+            ))
+        ));
         $builder->add('content', GridType::class, array('label' => 'Content'));
         $builder->add('biography', GridType::class, array('label' => 'Biography'));
-        #$builder->add('author', GridType::class, array('label' => 'Content'));
-        $builder->add('link', ListType::class, array('label' => 'Links'));
-        $builder->getForm();
+        $builder->add('author', EntityType::class, array(
+            'class' => 'ProjectBundle:Author',
+            'query_builder' => function(EntityRepository $er) {
+                return $er->createQueryBuilder('u')->orderBy('u.name', 'ASC');
+            },
+            'choice_label' => 'name'
+        ));
+
+        $builder->add('link', ListType::class, array(
+            'label' => 'Links',
+            'sortable' => true,
+            'border' => true,
+            'type' => 'project_link'
+        ));
     }
 
     public function configureOptions(OptionsResolver $resolver)

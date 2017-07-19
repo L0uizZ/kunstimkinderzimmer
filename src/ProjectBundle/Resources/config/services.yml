@@ -3,3 +3,11 @@ services:
         class:  ProjectBundle\Form\BookType
         tags:
             - { name: form.type, alias: 'project_book' }
+    project.form.author:
+        class:  ProjectBundle\Form\AuthorType
+        tags:
+            - { name: form.type, alias: 'project_author' }
+    project.form.link:
+        class:  ProjectBundle\Form\LinkType
+        tags:
+            - { name: form.type, alias: 'project_link' }
