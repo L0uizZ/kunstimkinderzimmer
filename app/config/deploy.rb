@@ -3,7 +3,7 @@ lock '3.4.0'
 
 set :application, 'kunstimkinderzimmer.com'
 set :repo_url, 'ssh://git@bitbucket-external.xq-web.de:7999/cms/kunstimkinderzimmer.com.git'
-set :deploy_to, '/www/htdocs/w0170a4d/htdocs/www.subkultur-ffb.de'
+set :deploy_to, '/www/htdocs/w0170a4d/htdocs/kunstimkinderzimmer.com'
 set :linked_files, fetch(:linked_files, []).push('app/config/parameters.yml')
 set :linked_dirs, fetch(:linked_dirs, []).push('app/media')
 set :keep_releases, 5

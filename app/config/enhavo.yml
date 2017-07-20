@@ -1,5 +1,5 @@
 parameters:
-  locale: en
+  locale: de
 
 enhavo_app:
     menu:
@@ -13,24 +13,8 @@ enhavo_app:
             type: article
         page:
             type: page
-        category:
-            type: category
-        download:
-            type: download
-        slider:
-            type: slider
-        newsletter:
-            type: newsletter_newsletter
-        subscriber:
-            type: newsletter_subscriber
-        calendar:
-            type: calendar
-        product:
-            type: shop_product
-        order:
-            type: shop_order
-        setting:
-            type: setting
+#        slider:
+#            type: slider
         translation-strings:
             type: translation
         book:
@@ -83,3 +67,9 @@ sylius_resource:
                 controller: Enhavo\Bundle\AppBundle\Controller\ResourceController
                 form:
                     default: ProjectBundle\Form\AuthorType
+
+enhavo_translation:
+    translate: true
+    locales:
+        de:
+        en:
