@@ -1,3 +1,11 @@
+.authortitle-description{
+    font-size: 16px;
+    font-family: Helvetica Neue;
+    color: #303030;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.48;
+}
 .banner {
     display: block;
     margin-bottom: -56px;
@@ -35,8 +43,9 @@
 .books {
     display: block;
     text-align: center;
-    margin-top: 50px;
-    margin-left: -80px;
+    margin-top: 88px;
+    margin-bottom: 52px;
+    margin-left: 0px;
 }
 
 .books-mobile {
@@ -52,23 +61,23 @@
 }
 .button-reading {
     background-color: #ffffff;
-    border: solid 3px #303030;
-    font-weight: bold;
+    border: none;
+    font-weight: normal;
     color: black;
-    padding: 5px 60px;
+    padding: 5px 5px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
 }
-.button-submit {
+.button-submit:hover{
     background-color: #ffffff;
     border: solid 3px #303030;
     font-weight: bold;
     color: black;
     padding: 5px 60px;
     text-align: center;
-    text-decoration: none;
+    text-decoration: underline;
     display: inline-block;
     margin-left: 365px;
     font-size: 16px;
@@ -113,7 +122,7 @@
 
 }
 .line {
-    border: solid 1px #303030;
+    border: solid 1px #dbdbdb;
     width: 100%;
     height: 0px;
     margin-top: 0px;
@@ -130,7 +139,10 @@
     width: 100%;
     margin-bottom: 95px;
 }
-
+.line-spacer {
+    width: 100%;
+    border: solid 1px #dbdbdb;
+}
 nav ul {
     float: right;
 }
@@ -173,10 +185,30 @@ nav ul li:last-child a {
     margin-top: 25px;
     width: 100%;
     height: 294px;
-    background-color: #B0B0B0;
+    background-color: #ffffff;
 }
-.slider-div-mobile {
-    display: none;
+.slider-dot{
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    background: #303030;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+}
+.slider-arrow-left {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 15px 8px 0;
+    border-color: transparent #303030 transparent transparent;
+}
+.slider-arrow-right {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 0 8px 15px;
+    border-color: transparent transparent transparent #303030;
 }
 .thin-font {
     font-family: cousineregular;

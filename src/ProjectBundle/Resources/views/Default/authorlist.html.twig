@@ -21,6 +21,10 @@
             font-size: 50px;
             margin-bottom: 50px;
         }
+        .block {
+            width: 100%;
+            margin-right:300px;
+        }
         .language {
             margin-top: 99px;
         }
@@ -34,10 +38,10 @@
         }
         .authors {
             width: 200px;
-            font-size: 18px;
+            font-size: 25px;
             font-family: HelveticaNeue;
-            font-weight: 300;
             text-align: left;
+            font-weight: normal;
             color: #303030;
         }
         .initial {
@@ -100,11 +104,12 @@
             }
             .content-heading {
                 margin-top: 50px;
-                text-align: center;
+                text-align: left;
                 font-size: 30px;
             }
             .initial {
                 font-size: 80px;
+                margin-left: 130px;
             }
         }
     </style>
@@ -140,10 +145,12 @@
             {% for letter, authorData in authors %}
                 {% if authorData %}
                     <div class="col-xs-12 col-sm-6 col-md-2">
+                        <div class="block">
                         <div class="initial">{{ letter }}</div>
                         {% for author in authorData %}
-                            <div class="authors"><a class="default-font" href="/list/{{author.name}}">{{ author.name }}<br/></a></div>
+                            <a class="default-font authors" href="/list/{{author.name}}">{{ author.name }}<br/></a>
                         {% endfor %}
+                        </div>
                     </div>
                 {% endif %}
             {% endfor %}

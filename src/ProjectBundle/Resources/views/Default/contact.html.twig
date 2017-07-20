@@ -53,6 +53,11 @@
             font-size: 14px;
             color: #303030;
             text-align: left;
+            border: none;
+        }
+
+        .input {
+            border-bottom: 1px solid #CCC;
         }
         .button-submit {
             margin-left: 335px;
@@ -193,12 +198,13 @@
                 <textarea class="form-font thin-font" name="message" form="contact-form" cols="52" rows="10"></textarea><br/><br/>
                 <input type="submit" class="button-submit" value="Absenden" />
             </form>
+
             <form class="contact-form">
                 <br/><br/>
-                <input class="form-font thin-font" type="text" name="firstname" size="65" placeholder="VORNAME"><br/><br/>
-                <input class="form-font thin-font" type="text" name="lastname" size="65" placeholder="NACHNAME"><br/><br/>
-                <input class="form-font thin-font" type="email" name="mail" size="65" placeholder="EMAIL ADRESSE"><br/><br/>
-                <textarea class="form-font thin-font" name="message" form="contact-form" cols="64" rows="10"></textarea><br/><br/>
+                <input class="form-font thin-font input" type="text" name="firstname" size="65" placeholder="VORNAME"><br/><br/>
+                <input class="form-font thin-font input" type="text" name="lastname" size="65" placeholder="NACHNAME"><br/><br/>
+                <input class="form-font thin-font input" type="email" name="mail" size="65" placeholder="EMAIL ADRESSE"><br/><br/>
+                <textarea class=" thin-font" name="message" form="contact-form" cols="64" rows="10"></textarea><br/><br/>
                 <input type="submit" class="button-submit" value="Absenden" />
             </form>
         </div>
