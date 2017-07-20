@@ -1,0 +1,163 @@
+/**Mobile and XS-Screens**/
+@media only screen and (max-width: 767px) {
+    .site {
+        width: 100%;
+    }
+    .container {
+        width:90%;
+    }
+    .banner {
+        display: block;
+        float: inherit;
+    }
+    .default-font {
+        font-family: Helvetica Neue;
+        /**font-family: AktivGrotesk;**/
+        color: #303030;
+        font-size: 24px;
+        font-weight: 300;
+        text-align: center;
+    }
+    .books-tablet {
+        display: block;
+        margin-left: 0px;
+        margin-top: 50px;
+    }
+    .blog-navigation {
+        margin-top: 150px;
+    }
+    .contact-impressum a {
+        color: #303030;
+        width: 94px;
+        height: 18px;
+        font-size: 18px;
+        margin-left: 0px;
+    }
+    .content {
+        font-size: 19px;
+        line-height: 31px;
+        text-align: center;
+        width: 100%;
+    }
+    .content-heading {
+        font-size: 38px;
+        line-height: 60px;
+        margin-left: 50px;
+        margin-top: 100px;
+    }
+    .content-text {
+        font-size: 22px;
+        text-align: left;
+    }
+    .impressum-text {
+        text-align: center;
+        font-size: 21px;
+    }
+    .line-bottom {
+        border: solid 1px #605959;
+        width: 100%;
+        margin-top: 800px;
+        margin-bottom: 5px;
+    }
+    .line-short {
+        border: solid 3px #303030;
+        width: 88px;
+        height: 0px;
+        margin-top: 30px;
+        margin-bottom: 70px;
+    }
+    .line-top {
+        border: solid 1px #605959;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    nav ul {
+        float: inherit;
+    }
+    nav ul li {
+        list-style:none;
+        float:  inherit;
+    }
+    nav ul li a {
+        margin-right: 67px;
+    }
+    nav ul li:last-child a {
+        margin-right: 60px;
+    }
+    .button-navigation-mobile {
+        background-color: #ffffff;
+        color: #585858;
+        padding: 5px 15px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        float: inherit;
+        margin-top: 30px;
+        border-radius: 10px;
+        border: double;
+    }
+    .navigation {
+        display: none;
+        text-align: center;
+    }
+    .site {
+        width: 100%;
+        height: 863px;
+        background-color: #ffffff;
+    }
+    .slider{
+        width: 150px;
+        height: 150px;
+        background-color: #ffffff;
+        margin-top: 50px;
+    }
+    .slider-div {
+        margin-top: 0px;
+    }
+    .thin-font {
+        font-family: cousineregular;
+        font-size: 14px;
+        letter-spacing: 2.2px;
+        color: #9c9494;
+        text-align: center;
+        font-size: 14px;
+        letter-spacing: 2.2px;
+    }
+}
+@media only screen and (max-width: 479px) {
+    .container {
+        width: 100%;
+    }
+    .button-navigation-mobile {
+        background-color: #ffffff;
+        color: #585858;
+        padding: 5px 15px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        float: inherit;
+        border-radius: 10px;
+    }
+    .navigation {
+        display: none;
+        text-align: center;
+    }
+    .line-top {
+        border: solid 1px #605959;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .slider-div {
+        margin-top: 0px;
+    }
+    .line-bottom {
+        border: solid 1px #605959;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .books-mobile {
+        display: block;
+        margin-left: 0px;
+        margin-top: 50px;
+    }
+}
