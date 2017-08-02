@@ -1,0 +1,192 @@
+{% extends 'ProjectBundle:Theme:base.html.twig' %}
+
+{% block style %}
+    <style>
+       .content{
+            font-size: 21px;
+            text-align: left;
+        }
+        .language {
+            margin-top: 99px;
+        }
+        .navigation {
+            display: block;
+            margin-top: 79px;
+            margin-left: 0px;
+            color: #605959;
+            font-weight: 400;
+        }
+        .content-heading {
+            font-size: 51px;
+        }
+        .line-bottom {
+            margin-top: 300px;
+        }
+        .content-text {
+            margin-left: 50px;
+            text-align: left;
+            color: #303030;
+            line-height: 1.48;
+        }
+        .slider-div{
+            margin-left: 5px;
+        }
+
+        @media only screen and (max-width: 767px) {
+            .content-heading{
+                font-size: 36px;
+                text-align: center;
+
+            }
+            .navigation {
+                display: none;
+                margin-top: 5px;
+                margin-left: 20px;
+            }
+            .button-navigation-mobile {
+                margin-top: -10px;
+            }
+            .content {
+                margin-left: -20px;
+                text-align: center;
+            }
+            .content-text {
+                text-align: center;
+                font-size: 18px;
+            }
+            .language {
+                margin-bottom: 50px;
+            }
+            .thin-font a{
+                color: #303030;
+            }
+            .line-bottom {
+                margin-bottom: 5px;
+                margin-top: 200px;
+            }
+            .pic1 {
+                height: 250px;
+            }
+            .pic2 {
+                height: 300px;
+            }
+            .pic3 {
+                display: none;
+            }
+            .pic4 {
+                display: none;
+            }
+            .pic5 {
+                display: none;
+            }
+            .pic6 {
+                display: none;
+            }
+        }
+        @media only screen and (max-width: 479px) {
+            .navigation {
+                display: none;
+                margin-top: 5px;
+                margin-left: 20px;
+            }
+            .button-navigation-mobile {
+                margin-top: -10px;
+            }
+            .language {
+                margin-bottom: 50px;
+            }
+            .content-heading{
+                font-size: 32px;
+                text-align: center;
+            }
+            .content-text{
+                font-size: 15px;
+            }
+            .line-bottom {
+                margin-bottom: 5px;
+                margin-top: 200px;
+            }
+            .pic1 {
+                width: 100%;
+                height: 200px;
+            }
+            .pic2 {
+                width: 100%;
+                height: 200px;
+            }
+            .pic3 {
+                display:none;
+            }
+            .pic4 {
+                display: none;
+            }
+            .pic5 {
+                display: none;
+            }
+            .pic6 {
+                display: none;
+            }
+        }
+    </style>
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <div class="slider-div row">
+            {% for i in 1..6 %}
+                <div class="col-xs-6 col-sm-2 col-md-2">
+                    <img src="/file/{{ i }}" class="pic{{ i }}" width="100%"/><br/>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="slider-arrow-left" align="left">&nbsp;</div>
+        <div class="slider-arrow-right" align="right">&nbsp;</div>
+
+        <div class="slider-nav">
+            <div class="slider-dot">&nbsp;</div>
+            <div class="slider-dot">&nbsp;</div>
+            <div class="slider-dot">&nbsp;</div>
+        </div>
+
+        <article>
+            <div class="content default-font row">
+                <div class="content-heading default-font">Gelegentlich kommt die Kunst<br/>ins Kinderzimmer</div>
+                <div class="col-sm-6"><div class="default-font content-text">
+                        Bildende Künstlerinnen und Künstler greifen zu<br/>
+                        Zeichenstift oder Pinsel, um als gänzlich freie Arbeit<br/>
+                        ein Buch oder eine Bildermappe für ein bestimmtes<br/>
+                        Kind zu gestalten, wie das zum Beispiel für Leonora<br/>
+                        Carrington, Otto Dix oder Keith Haring belegt ist.<br/>
+                        Oder aus einer spielerischen Fingerübung für das<br/>
+                        Kind in sich  - Tomi Ungerer hat es einmal so<br/>
+                        beschrieben -  entsteht eine kunstvolle Text- und<br/>
+                        Bildfolge, die mit etwas Glück den Weg ins<br/>
+                        gedruckte Bilderbuch findet. <br/><br/>
+
+                        Nicht selten sehen Künstler das gedruckte<br/>
+                        Bilderbuch auch als ein Medium unter vielen<br/>
+                        anderen für die Umsetzung ihrer bildnerischen<br/>
+                        Ideen an, beispielsweise Maurice Sendak, Kveta<br/>
+                        Pacovska oder Shaun Tan.
+                    </div>
+                </div>
+                <div class="col-sm-6"><div class="default-font content-text">
+                        Diese Sammlung von KünstlerBilderBüchern stellt<br/>
+                        außergewöhnliche Bilderbücher vor, erzählt von<br/>
+                        vielen die Geschichte ihrer Entstehung und<br/>
+                        beschreibt sie im Kontext des Werks der Künstler.<br/>
+                        Sie existiert als Privatbibliothek und wird fortlaufend<br/>
+                        weitergeführt. Bei manchen Künstlerbilderbüchern<br/>
+                        findet sich auch ein Blick ins Innere. Es werden<br/>
+                        einzelne, besonders eindrucksvolle Seiten gezeigt,<br/>
+                        die die Formulierung der tschechischen Künstlerin<br/>
+                        Kveta Pacovska unterstreichen. Sie setzt das<br/>
+                        Anschauen eines Bilderbuchs mit dem ersten<br/>
+                        Galeriebesuch eines Kindes gleich.
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+{% endblock %}

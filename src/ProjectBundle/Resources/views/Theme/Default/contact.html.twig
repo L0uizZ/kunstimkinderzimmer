@@ -1,19 +1,6 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <link rel="stylesheet" href="/css/default.css">
-    <link rel="stylesheet" href="/css/responsive.css">
-    <link rel="stylesheet" href="/fontkit/stylesheet.css">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+{% extends 'ProjectBundle:Theme:base.html.twig' %}
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+{% block style %}
     <style>
         .bannermobile {
             display: none;
@@ -158,33 +145,9 @@
             }
         }
     </style>
-    <title>Kunst im Kinderzimmer</title>
-</head>
-<body class="site">
-<header>
-    <div class="container">
+{% endblock %}
 
-        <div class="language thin-font">
-            <a href="">/EN</a><a style="color:#de202c;" href="">DE</a>
-        </div>
-        <center><img class="bannermobile" src="banner.png" width="70%"/></center>
-        <div class="banner">
-            <img class="banner" src="banner.png"/>
-        </div>
-
-        <nav class="default-font clearfix">
-            <ul class="navigation">
-                <li><a href="/">Home</a></li>
-                <li><a href="/collection">Sammlung</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/authors">Künstler</a></li>
-            </ul>
-        </nav>
-        <hr class="line-top"/>
-    </div>
-</header>
-
-<main>
+{% block main %}
  <div class="container">
     <div class="content default-font row">
         <div class="col-sm-5">
@@ -224,18 +187,4 @@
         <div class="col-sm-2"></div>
     </div>
  </div>
-</main>
-
-<footer>
-    <div class="container">
-        <hr class="line-bottom"/>
-        <div class="contact-impressum default-font"><u><a href="/contact">Impressum&nbsp;/&nbsp;Kontakt</a></u></div>
-        <br/><br/>
-    </div>
-</footer>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
-</body>
-</html>
+{% endblock %}
