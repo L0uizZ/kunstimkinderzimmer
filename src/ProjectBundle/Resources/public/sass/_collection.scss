@@ -1,0 +1,79 @@
+.collection-page {
+  .content-heading {
+    margin-top: 0px;
+    text-align: left;
+    font-size: 50px;
+    margin-bottom: 50px;
+  }
+
+  .content-text {
+    text-align: left;
+  }
+
+  .content {
+    text-align: left;
+    font-size: 20px;
+  }
+
+  .line-bottom {
+    margin-top: 150px;
+  }
+
+  /**Mobile and XS-Screens**/
+  @media only screen and (max-width: 1023px) {
+    .content-heading {
+      margin-left: 2px;
+      margin-top: 50px;
+      font-size: 40px;
+      text-align: left;
+    }
+
+    .content-text{
+      margin-left: 0px;
+      text-align: left;
+      font-size: 18px;
+      line-height: 1.48;
+    }
+
+    .line-bottom {
+      margin-top: 100px;
+    }
+
+    .language {
+      margin-bottom: 50px;
+    }
+
+    .navigation {
+      display: none;
+      margin-top: 5px;
+      margin-left: 20px;
+    }
+
+    .thin-font a{
+      color: #303030;
+    }
+
+  }
+  @media only screen and (max-width: 767px) {
+
+    .content {
+      display: block;
+      margin-left: 0px;
+    }
+
+    .content-text {
+      margin-left: 0px;
+      text-align: left;
+      font-size: 14px;
+      line-height: 1.48;
+    }
+
+    .content-heading {
+      font-size: 32px;
+      margin-left: 0px;
+      margin-top: 50px;
+      text-align: left;
+    }
+
+  }
+}

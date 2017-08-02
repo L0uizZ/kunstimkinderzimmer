@@ -1,0 +1,162 @@
+.contact-page {
+  .content {
+    text-align: left;
+    font-size: 20px;
+  }
+
+  .content-heading {
+    margin-top: 0px;
+    text-align: left;
+    font-size: 50px;
+    margin-bottom: 50px;
+  }
+
+  .contact-form{
+    display:block;
+  }
+
+  .contact-form-mobile{
+    display:none;
+  }
+
+  .form-font {
+    font-size: 14px;
+    color: #303030;
+    text-align: left;
+    border: none;
+  }
+
+  .impressum-heading{
+    margin-top: 15px;
+    text-align: left;
+    font-size: 50px;
+    margin-bottom: 50px;
+  }
+
+  .input {
+    border-bottom: 1px solid #CCC;
+  }
+
+  .line-bottom {
+    margin-top: 150px;
+  }
+
+  textarea {
+    resize: none;
+    text-align: left;
+  }
+
+  .button-submit {
+    background-color: #ffffff;
+    border: none;
+    font-weight: normal;
+    color: black;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: underline;
+    display: inline-block;
+    font-size: 21px;
+    margin-left: 370px;
+  }
+  /**Mobile and XS-Screens**/
+  @media only screen and (max-width: 1023px) {
+    .content {
+      text-align: left;
+      margin-left: 0px;
+    }
+
+    .content-heading {
+      margin-left: 70px;
+      margin-top: 50px;
+      font-size: 45px;
+      text-align: left;
+    }
+
+    .contact-form-mobile {
+      display: block;
+    }
+
+    .input {
+      border-bottom: 1px solid #CCC;
+    }
+
+    .content-description{
+      text-align: left;
+      margin-left: 60px;
+    }
+
+    .impressum-heading{
+      margin-top: 100px;
+      text-align: left;
+      margin-left: 120px;
+      font-size: 45px;
+      margin-bottom: 50px;
+    }
+
+    .impressum-text{
+      font-size:18px;
+      text-align: left;
+      margin-left: 0px;
+    }
+
+    .contact-form{
+      display:none;
+    }
+
+    .button-submit{
+      margin-left:370px;
+    }
+
+    .line-bottom {
+      margin-top: 100px;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    .thin-font a{
+      color: #303030;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .content {
+      margin-left: 2px;
+    }
+
+    .content-description{
+      text-align: left;
+      margin-left:0px;
+    }
+
+    .content-heading{
+      text-align: left;
+      font-size: 38px;
+      margin-left: 0px;
+    }
+
+    .contact-form-mobile{
+      display: block;
+      text-align: left;
+    }
+
+    .impressum-heading{
+      margin-top: 100px;
+      text-align: left;
+      margin-left: 0px;
+      font-size: 40px;
+      margin-bottom: 50px;
+    }
+
+    .impressum-text{
+      margin-left: 2px;
+      text-align: left;
+      font-size:15px;
+    }
+
+    .input {
+      border-bottom: 1px solid #CCC;
+    }
+
+  }
+}

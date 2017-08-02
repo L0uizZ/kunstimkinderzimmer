@@ -1,178 +1,23 @@
 {% extends 'ProjectBundle:Theme:base.html.twig' %}
 
-{% block style %}
-    <style>
-        .bannermobile {
-            display: none;
-        }
-        .language {
-            margin-bottom: 50px;
-        }
-        .content-heading {
-            margin-top: 0px;
-            text-align: left;
-            font-size: 50px;
-            margin-bottom: 50px;
-        }
-        .impressum-heading{
-            margin-top: 15px;
-            text-align: left;
-            font-size: 50px;
-            margin-bottom: 50px;
-        }
-        .content {
-            text-align: left;
-            font-size: 20px;
-        }
-        .contact-form-mobile{
-            display:none;
-        }
-        .contact-form{
-            display:block;
-        }
-        .line-bottom {
-            margin-top: 150px;
-        }
-        textarea {
-            resize: none;
-        }
-        .form-font {
-            font-size: 14px;
-            color: #303030;
-            text-align: left;
-            border: none;
-        }
-
-        .input {
-            border-bottom: 1px solid #CCC;
-        }
-        .button-submit {
-            margin-left: 335px;
-        }
-        /**Mobile and XS-Screens**/
-        @media only screen and (max-width: 767px) {
-            .banner {
-                margin-left: 50px;
-                margin-bottom: 0px;
-                width: 85%;
-            }
-            .content {
-                text-align: center;
-                margin-left: 20px;
-            }
-            .content-heading {
-                margin-left: 120px;
-                margin-top: 50px;
-                font-size: 45px;
-                text-align: left;
-            }
-            .content-description{
-                text-align: left;
-                margin-left:120px;
-            }
-            .impressum-heading{
-                margin-top: 100px;
-                text-align: left;
-                margin-left: 120px;
-                font-size: 45px;
-                margin-bottom: 50px;
-            }
-            .impressum-text{
-                font-size:18px;
-                text-align: left;
-                margin-left: 120px;
-            }
-            .contact-form{
-                display:none;
-            }
-            .button-submit{
-                margin-left:240px;
-            }
-            .contact-form-mobile{
-                display: block;
-            }
-            .line-bottom {
-                margin-top: 100px;
-            }
-            textarea {
-                resize: none;
-            }
-            .language {
-                margin-top: -70px;
-                margin-left: 610px;
-            }
-            .thin-font a{
-                color: #303030;
-            }
-        }
-        @media only screen and (max-width: 479px) {
-            .banner {
-                margin-left: 40px;
-                margin-bottom: 0px;
-                width: 65%;
-            }
-            .language {
-                margin-top: -70px;
-                margin-left: 70px;
-            }
-            .content {
-                margin-left: 2px;
-            }
-            .contact-form-mobile{
-                display: block;
-                text-align: left;
-            }
-            .content-heading{
-                text-align: left;
-                font-size: 38px;
-                margin-left: 0px;
-            }
-            .content-description{
-                text-align: left;
-                margin-left:0px;
-            }
-            .impressum-heading{
-                margin-top: 100px;
-                text-align: left;
-                margin-left: 0px;
-                font-size: 40px;
-                margin-bottom: 50px;
-            }
-            .impressum-text{
-                margin-left: 2px;
-                text-align: left;
-                font-size:15px;
-            }
-        }
-    </style>
-{% endblock %}
-
 {% block main %}
- <div class="container">
+ <div class="container contact-page">
     <div class="content default-font row">
-        <div class="col-sm-5">
+        <div class="col-xs-12 col-sm-9 col-md-6">
             <div class="content-heading ">Kontaktformular</div>
             <div class="content-description">Für Feedback, Hinweise und Anregungen:</div>
-            <form class="contact-form-mobile">
-                <br/><br/>
-                <input class="form-font thin-font" type="text" name="firstname" size="53" placeholder="VORNAME"><br/><br/>
-                <input class="form-font thin-font" type="text" name="lastname" size="53" placeholder="NACHNAME"><br/><br/>
-                <input class="form-font thin-font" type="email" name="mail" size="53" placeholder="EMAIL ADRESSE"><br/><br/>
-                <textarea class="form-font thin-font" name="message" form="contact-form" cols="52" rows="10"></textarea><br/><br/>
-                <input type="submit" class="button-submit" value="Absenden" />
-            </form>
 
             <form class="contact-form">
                 <br/><br/>
-                <input class="form-font thin-font input" type="text" name="firstname" size="65" placeholder="VORNAME"><br/><br/>
-                <input class="form-font thin-font input" type="text" name="lastname" size="65" placeholder="NACHNAME"><br/><br/>
-                <input class="form-font thin-font input" type="email" name="mail" size="65" placeholder="EMAIL ADRESSE"><br/><br/>
-                <textarea class=" thin-font" name="message" form="contact-form" cols="64" rows="10"></textarea><br/><br/>
+                <input class="form-font thin-font input" type="text" name="firstname" size="65" placeholder="V o r n a m e"><br/><br/>
+                <input class="form-font thin-font input" type="text" name="lastname" size="65" placeholder="N a c h n a m e"><br/><br/>
+                <input class="form-font thin-font input" type="email" name="mail" size="65" placeholder="E m a i l   A d r e s s e"><br/><br/>
+                <textarea class="txt-area thin-font" name="message" form="contact-form" cols="64" rows="10"></textarea><br/><br/>
                 <input type="submit" class="button-submit" value="Absenden" />
             </form>
+
         </div>
-        <div class="col-sm-1"></div>
-        <div class="col-sm-6">
+        <div class="col-xs-12 col-sm-9 col-md-6">
             <div class="impressum-heading default-font">Impressum</div>
             <div class="default-font impressum-text">
                 © Alle Texte dieser Website sind urheberrechtlich geschützt.<br/><br/>

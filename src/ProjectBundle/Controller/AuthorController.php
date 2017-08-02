@@ -15,7 +15,7 @@ class AuthorController extends Controller
             $authors[$letter] = $repository->findWithStartLetter($letter);
         }
 
-        return $this->render('ProjectBundle:Default:authorlist.html.twig', [
+        return $this->render('ProjectBundle:Theme/Default:authorlist.html.twig', [
             'authors' => $authors
         ]);
     }

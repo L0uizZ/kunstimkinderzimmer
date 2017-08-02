@@ -1,0 +1,155 @@
+.index-page {
+  .content {
+    font-size: 21px;
+    text-align: left;
+  }
+
+  .content-heading {
+    font-size: 51px;
+  }
+
+  .content-text {
+    margin-left: 50px;
+    text-align: left;
+    color: #303030;
+    line-height: 1.48;
+  }
+
+  .line-bottom {
+    margin-top: 100px;
+  }
+
+  .slider-div {
+    margin-left: 5px;
+  }
+
+  .slider-nav {
+    text-align: center;
+  }
+
+  .slider-arrow-left {
+    margin-top: -240px;
+    left: -7%;
+    position: relative;
+    float: left;
+  }
+
+  .slider-arrow-right {
+    margin-top: -240px;
+    left: 7%;
+    position: relative;
+    float: right;
+  }
+
+  @media only screen and (max-width: 1023px) {
+    .content {
+      margin-left: -20px;
+      text-align: center;
+    }
+
+    .content-heading {
+      font-size: 36px;
+      text-align: center;
+    }
+
+    .content-text {
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .line-bottom {
+      margin-bottom: 5px;
+      margin-top: 200px;
+    }
+
+    .pic1 {
+      height: auto;
+      width: 100%;
+    }
+
+    .pic2 {
+      height: auto;
+      width: 100%;
+    }
+
+    .pic3 {
+
+      height: auto;
+      width: 100%;
+    }
+
+    .pic4 {
+
+      height: auto;
+      width: 100%;
+    }
+
+    .pic5 {
+
+      height: auto;
+      width: 100%;
+    }
+
+    .pic6 {
+      height: auto;
+      width: 100%;
+    }
+
+    .thin-font a{
+      color: #303030;
+    }
+
+  }
+  @media only screen and (max-width: 767px) {
+
+    .content-heading{
+      font-size: 32px;
+      text-align: center;
+    }
+
+    .content-text{
+      font-size: 15px;
+    }
+
+    .line-bottom {
+      margin-bottom: 5px;
+      margin-top: 200px;
+    }
+
+    .pic1 {
+      margin-left: 50px;
+      width: 70%;
+      height: auto;
+    }
+
+    .pic2 {
+      width: 70%;
+      height: auto;
+    }
+
+    .pic3 {
+      display: none;
+    }
+
+    .pic4 {
+      display: none;
+    }
+
+    .pic5 {
+      display: none;
+    }
+
+    .pic6 {
+      display: none;
+    }
+
+    .slider-arrow-left {
+      left: 0%;
+    }
+
+    .slider-arrow-right {
+      left: 0%;
+    }
+
+  }
+}
