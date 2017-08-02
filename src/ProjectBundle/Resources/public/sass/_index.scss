@@ -1,45 +1,26 @@
 .index-page {
-  .content {
-    font-size: 21px;
-    text-align: left;
-  }
 
-  .content-heading {
-    font-size: 51px;
-  }
+  .content-heading {text-align:center; margin-bottom:53px;}
 
   .content-text {
-    margin-left: 50px;
     text-align: left;
     color: #303030;
     line-height: 1.48;
   }
 
-  .line-bottom {
-    margin-top: 100px;
+  .line-bottom {margin-top: 100px;}
+
+  .head-slider {
+    margin-bottom: 51px;margin-top: 25px; position:relative;
+    .slider-nav {
+      text-align: center;
+      .slider-dot {display: inline-block;width: 9px;height: 9px;background: #303030;border-radius: 50px; margin:0 4px;}
+    }
+    .slider-div {width: 100%;height: 294px;}
+    .slider-arrow-left {width: 0;height: 0;border-style: solid;border-width: 7px 10px 7px 0;border-color: transparent #303030 transparent transparent; position:absolute; left:-75px; top:50%; margin-top:-7px;}
+    .slider-arrow-right {width: 0; height: 0; border-style: solid; border-width: 7px 0 7px 10px; border-color: transparent transparent transparent #303030; position:absolute; right:-75px; top:50%; margin-top:-7px;}
   }
 
-  .slider-div {
-    margin-left: 5px;
-  }
-
-  .slider-nav {
-    text-align: center;
-  }
-
-  .slider-arrow-left {
-    margin-top: -240px;
-    left: -7%;
-    position: relative;
-    float: left;
-  }
-
-  .slider-arrow-right {
-    margin-top: -240px;
-    left: 7%;
-    position: relative;
-    float: right;
-  }
 
   @media only screen and (max-width: 1023px) {
     .content {

@@ -1,140 +1,103 @@
-.blog-page{
-  .content {
-    text-align: left;
-    font-size: 20px;
-  }
+.blog-page {
+  .content-heading { margin-bottom:15px;}
+}
 
-  .content-heading {
-    margin-top: 0px;
-    text-align: left;
-    font-size: 50px;
-    margin-bottom: 50px;
-  }
-
-  .content-text {
-    text-align: left;
-    line-height: 1.48;
-    margin-bottom: 35px;
-  }
-
-  .line {
-    margin-top: 61px;
-    border: solid 1px #dbdbdb;
-    width: 100%;
-  }
-
-  .blog {
-    display: block;
-  }
-
-  .blog-date {
-    margin-top: 80px;
-    text-align: left;
-    font-size: 20px;
-    margin-bottom: 35px;
-  }
-
-  .blog-heading {
-    text-align: left;
-    font-size: 30px;
-    margin-bottom: 21px;
-  }
-
+.blog {
+  margin-top:75px;
   .blog-entry {
-    text-align: left;
-    font-size: 20px;
-
-  }
-
-  .blog-text {
-    margin-top: -20px;
-    font-size: 15px;
-    text-align: left;
-  }
-
-  .line-bottom {
-    margin-top: 150px;
-  }
-
-  .thin-font{
-    font-size: 14px;
-    letter-spacing: 2.2px;
-  }
-
-  @media only screen and (max-width: 1023px) {
-    .button-navigation-mobile {
-      margin-top: -10px;
-    }
-
-    .blog-entry {
-      text-align: left;
-      font-size: 20px;
-    }
-
-    .content-text {
-      font-size: 20px;
-      text-align: left;
-      line-height: 1.48;
-    }
-    .content-heading {
-      margin-top: 50px;
-      text-align: left;
-    }
-
-    .line {
-      margin-top: 61px;
-      width: 100%;
-      border: solid 1px #dbdbdb;
-    }
-
-    .line-bottom {
-      margin-top: 100px;
-    }
-
-    .thin-font a{
-      color: #303030;
-    }
-
-  }
-  @media only screen and (max-width: 767px) {
-    .blog {
-      display: block;
-    }
-
-    .blog-entry {
-      text-align: left;
-    }
-
-    .blog-heading{
-      font-size: 26px;
-    }
-
-    .blog-text{
-      font-size: 12px;
-    }
-
-    .content {
-      display: block;
-      text-align: left;
-    }
-
-    .content-text {
-      text-align: left;
-      font-size: 14px;
-    }
-
-    .content-heading {
-      margin-top: 50px;
-      text-align: left;
-    }
-
-    .line {
-      margin-top: 61px;
-      border: solid 1px #dbdbdb;
-    }
-
-    .line-bottom {
-      margin-top: 100px;
-    }
+    padding-bottom:35px; margin-bottom:65px; border-bottom:1px solid #dbdbdb;
+    .blog-heading {font-size: 38px;margin-bottom: 21px; font-weight:300;}
+    .button-reading {text-decoration:underline; font-weight:500; margin-top:50px; display:inline-block;}
+    .blog-date {font-size: 14px; color:#9c9494;margin-bottom: 35px; letter-spacing:1px;}
+    .blog-text { max-width:1050px; width:100%;}
   }
 }
+
+.blog-pagination {
+  padding:0; margin:0;
+  li {
+    display:inline-block; margin-right:8px;
+    a { font-size:18px;}
+    &.active {
+      a {text-decoration:underline; font-weight:500;}
+    }
+    &:last-child { margin-right:0;}
+  }
+}
+
+//@media only screen and (max-width: 1023px) {
+//  .button-navigation-mobile {
+//    margin-top: -10px;
+//  }
+//
+//  .blog-entry {
+//    text-align: left;
+//    font-size: 20px;
+//  }
+//
+//  .content-text {
+//    font-size: 20px;
+//    text-align: left;
+//    line-height: 1.48;
+//  }
+//  .content-heading {
+//    margin-top: 50px;
+//    text-align: left;
+//  }
+//
+//  .line {
+//    margin-top: 61px;
+//    width: 100%;
+//    border: solid 1px #dbdbdb;
+//  }
+//
+//  .line-bottom {
+//    margin-top: 100px;
+//  }
+//
+//  .thin-font a{
+//    color: #303030;
+//  }
+//
+//}
+//@media only screen and (max-width: 767px) {
+//  .blog {
+//    display: block;
+//  }
+//
+//  .blog-entry {
+//    text-align: left;
+//  }
+//
+//  .blog-heading{
+//    font-size: 26px;
+//  }
+//
+//  .blog-text{
+//    font-size: 12px;
+//  }
+//
+//  .content {
+//    display: block;
+//    text-align: left;
+//  }
+//
+//  .content-text {
+//    text-align: left;
+//    font-size: 14px;
+//  }
+//
+//  .content-heading {
+//    margin-top: 50px;
+//    text-align: left;
+//  }
+//
+//  .line {
+//    margin-top: 61px;
+//    border: solid 1px #dbdbdb;
+//  }
+//
+//  .line-bottom {
+//    margin-top: 100px;
+//  }
+//}
