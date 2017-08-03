@@ -11,7 +11,7 @@
         {% spaceless %}
             <ul class="books">{% for book in books %}
                 <li class="book">
-                    <a>
+                    <a href="{{ path('project_theme_book_show', {slug: book.slug}) }}">
                         <div class="image">
                             <img src="{% if book.cover %}{{ media_url(book.cover) }}{% endif %}" />
                         </div>

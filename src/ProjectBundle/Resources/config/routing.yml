@@ -22,6 +22,10 @@ project_default_images:
     path: /images/{id}
     defaults: { _controller: ProjectBundle:Default:images }
 
+project_theme_book_show:
+    path: /book/show/{slug}
+    defaults: { _controller: ProjectBundle:Book:show }
+
 project_book:
     prefix:   /admin
     resource: "@ProjectBundle/Resources/config/routing/book.yml"

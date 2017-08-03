@@ -2,12 +2,15 @@
   margin-left:-35px; margin-right:-35px; margin-top:85px; position:relative; padding:0;
   .book {
     display:inline-block; width:25%;text-align: center; border-bottom:1px solid #dbdbdb; padding-bottom:60px; margin-bottom:75px;
-    a { text-decoration:none; display:block; padding:0 35px;}
+    a {text-decoration:none; display:block; padding:0 35px;}
     .image {
       img { width:100%;}
     }
     .title { margin-top:25px;}
     .author { color:#9c9494;}
+    &:hover {
+      a { text-decoration:underline;}
+    }
   }
 }
 .collection-page {
