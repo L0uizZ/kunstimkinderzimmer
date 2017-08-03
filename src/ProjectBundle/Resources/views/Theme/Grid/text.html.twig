@@ -1,0 +1,14 @@
+<div class="enhavo_grid">
+    <div class="enhavo_grid_text">
+        {% if data.title %}
+            <div class="title">{{ data.title|raw }}</div>
+        {% endif %}
+        {% if data.text %}
+            <div>
+                <div class="enhavo_grid_text" data-grid-text>
+                {{ data.text|raw }}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</div>

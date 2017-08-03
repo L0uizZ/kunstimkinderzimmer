@@ -2,16 +2,32 @@
 
 
 {% block main %}
-    <div class="container page">
+    <div class="container book-page">
+        <section class="book-header">
+            <div class="row">
+                <div class="col-sm-4">
+                    {% if book.pictures %}
+                    <ul class="book-slider" data-book-slider>
+                        {% for picture in book.pictures %}
+                        <li data-slider-page>
+                            <img src="{{ media_url(picture) }}" />
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
+                <div class="col-sm-8">
+                    <h1 class="content-heading">{{ book.title }}</h1>
+                    <h2 class="content-heading">{{ book.author.name }}</h2>
+                    <div class="bio">{{ grid_render(book.biography) }}</div>
+                </div>
+            </div>
+        </section>
         <article>
-            {#<div class="publication-date">#}
-                {#{{ article.publicationDate|date('d.m.Y') }}#}
-            {#</div>#}
-            {#<h1 class="article-title">{{ article.title }}</h1>#}
-            <div>
-                <p>{{ grid_render(book.content) }}</p>
+            <div class="content-grid">
+                {{ grid_render(book.content) }}
             </div>
         </article>
-        {#<a class="btn c2 inline" href="{{ path('marketplace_theme_article_index') }}"><i class="icon-keyboard_arrow_left before-text"></i>Zurück</a>#}
+        <a href="{{ path('project_default_collection') }}" class="back">Zurück zur Sammlung</a>
     </div>
 {% endblock %}

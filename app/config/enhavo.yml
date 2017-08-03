@@ -32,26 +32,28 @@ enhavo_app:
 
 enhavo_grid:
     items:
-        picture:
-            type: picture
-        picture_picture:
-            type: picture_picture
-        three_picture:
-            type: three_picture
-        gallery:
-            type: gallery
+#        picture:
+#            type: picture
+#        picture_picture:
+#            type: picture_picture
+#        three_picture:
+#            type: three_picture
+#        gallery:
+#            type: gallery
         text:
             type: text
-        text_picture:
-            type: text_picture
+            template: ProjectBundle:Theme:Grid/text.html.twig
+#        text_picture:
+#            type: text_picture
         text_text:
             type: text_text
-        cite_text:
-            type: cite_text
-        download:
-            type: download
-        video:
-            type: video
+            template: ProjectBundle:Theme:Grid/text_text.html.twig
+#        cite_text:
+#            type: cite_text
+#        download:
+#            type: download
+#        video:
+#            type: video
 
 sylius_resource:
     resources:

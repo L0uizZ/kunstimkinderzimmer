@@ -1,0 +1,77 @@
+<div class="enhavo_grid">
+    <div class="enhavo_grid_texttext">
+        {% if data.title %}
+            <div class="title">{{ data.title }}</div>
+        {% endif %}
+        {% if data.layout == 1 %}
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="enhavo_grid_text" data-grid-text>
+                        {% if data.titleLeft %}
+                            <p class="title">{{ data.titleLeft }}</p>
+                        {% endif %}
+                        {% if data.textLeft %}
+                            {{ data.textLeft|raw }}
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="enhavo_grid_text" data-grid-text>
+                        {% if data.titleRight %}
+                            <p class="title">{{ data.titleRight }}</p>
+                        {% endif %}
+                        {% if data.textRight %}
+                            {{ data.textRight|raw }}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% elseif data.layout == 2 %}
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="enhavo_grid_text" data-grid-text>
+                        {% if data.titleLeft %}
+                            <p class="title">{{ data.titleLeft }}</p>
+                        {% endif %}
+                        {% if data.textLeft %}
+                            {{ data.textLeft|raw }}
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="enhavo_grid_text" data-grid-text>
+                        {% if data.titleRight %}
+                            <p class="title">{{ data.titleRight }}</p>
+                        {% endif %}
+                        {% if data.textRight %}
+                            {{ data.textRight|raw }}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% elseif data.layout == 0 %}
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="enhavo_grid_text" data-grid-text>
+                    {% if data.titleLeft %}
+                        <p class="title">{{ data.titleLeft }}</p>
+                    {% endif %}
+                    {% if data.textLeft %}
+                        {{ data.textLeft|raw }}
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="enhavo_grid_text" data-grid-text>
+                    {% if data.titleRight %}
+                        <p class="title">{{ data.titleRight }}</p>
+                    {% endif %}
+                    {% if data.textRight %}
+                        {{ data.textRight|raw }}
+                    {% endif %}
+                </div>
+            </div>
+        {% endif %}
+        </div>
+    </div>
+</div>
