@@ -3,21 +3,24 @@
 {% block main %}
 
     <div class="container author-page">
-        <div class="content-heading default-font">K&uuml;nstlerverzeichnis</div><br/>
-        <div class="content row">
+        <h1 class="content-heading">K&uuml;nstlerverzeichnis</h1>
+        <ul class="authorlist">
             {% for letter, authorData in authors %}
-                {% if authorData %}
-                    <div class="col-xs-12 col-sm-6 col-md-2">
-                        <div class="block">
+                {% if loop.index0 %4 == 0 %}
+                    <div class="author-row clearfix">
+                {% endif %}
+                    <li>
                         <div class="initial">{{ letter }}</div>
                         {% for author in authorData %}
                             <a class="default-font authors" href="/list/{{author.name}}">{{ author.name }}<br/></a>
                         {% endfor %}
-                        </div>
+                    </li>
+                {% if loop.last or loop.index0 %4 == 3 %}
                     </div>
                 {% endif %}
             {% endfor %}
-        </div>
+            <span class="no-line"></span>
+        </ul>
     </div>
 
 {% endblock %}

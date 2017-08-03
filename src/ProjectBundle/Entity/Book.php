@@ -22,6 +22,11 @@ class Book extends Content implements ResourceInterface
     /**
      * @var FileInterface
      */
+    private $cover;
+
+    /**
+     * @var FileInterface
+     */
     private $pictures;
 
     /**
@@ -240,5 +245,21 @@ class Book extends Content implements ResourceInterface
     public function getPictures()
     {
         return $this->pictures;
+    }
+
+    /**
+     * @return FileInterface
+     */
+    public function getCover()
+    {
+        return $this->cover;
+    }
+
+    /**
+     * @param FileInterface $cover
+     */
+    public function setCover($cover)
+    {
+        $this->cover = $cover;
     }
 }

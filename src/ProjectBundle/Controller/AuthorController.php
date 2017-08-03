@@ -12,7 +12,10 @@ class AuthorController extends Controller
         $repository = $this->getDoctrine()->getRepository('ProjectBundle:Author');
         $letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         foreach(str_split($letters) as $letter) {
-            $authors[$letter] = $repository->findWithStartLetter($letter);
+            $authorData = $repository->findWithStartLetter($letter);
+            if($authorData) {
+                $authors[$letter] = $authorData;
+            }
         }
 
         return $this->render('ProjectBundle:Theme/Default:authorlist.html.twig', [

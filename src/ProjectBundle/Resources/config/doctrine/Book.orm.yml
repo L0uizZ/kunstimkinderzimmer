@@ -31,7 +31,9 @@ ProjectBundle\Entity\Book:
             biography:
                 cascade: ['persist', 'refresh', 'remove']
                 targetEntity: Enhavo\Bundle\GridBundle\Model\GridInterface
-
+            cover:
+                cascade: ['persist', 'refresh', 'remove']
+                targetEntity: Enhavo\Bundle\MediaBundle\Model\FileInterface
     manyToOne:
             author:
                 cascade: ['persist']

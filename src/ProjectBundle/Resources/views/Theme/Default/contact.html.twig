@@ -2,34 +2,30 @@
 
 {% block main %}
  <div class="container contact-page">
-    <div class="content default-font row">
-        <div class="col-xs-12 col-sm-9 col-md-6">
-            <div class="content-heading ">Kontaktformular</div>
-            <div class="content-description">Für Feedback, Hinweise und Anregungen:</div>
-
-            <form class="contact-form">
-                <br/><br/>
-                <input class="form-font thin-font input" type="text" name="firstname" size="65" placeholder="V o r n a m e"><br/><br/>
-                <input class="form-font thin-font input" type="text" name="lastname" size="65" placeholder="N a c h n a m e"><br/><br/>
-                <input class="form-font thin-font input" type="email" name="mail" size="65" placeholder="E m a i l   A d r e s s e"><br/><br/>
-                <textarea class="txt-area thin-font" name="message" form="contact-form" cols="64" rows="10"></textarea><br/><br/>
+     <div class="row">
+        <div class="col-md-6">
+            <h1 class="content-heading ">Kontaktformular</h1>
+            <form class="clearfix">
+                <input type="text" name="firstname" placeholder="Vorname">
+                <input type="text" name="lastname" placeholder="Nachname">
+                <input type="email" name="mail" placeholder="Email Adresse">
+                <textarea name="message"></textarea>
+                <span class="form-msg">Vielen Dank für deine Nachricht.</span>
                 <input type="submit" class="button-submit" value="Absenden" />
             </form>
-
         </div>
-        <div class="col-xs-12 col-sm-9 col-md-6">
-            <div class="impressum-heading default-font">Impressum</div>
-            <div class="default-font impressum-text">
-                © Alle Texte dieser Website sind urheberrechtlich geschützt.<br/><br/>
-                Die Bildrechte liegen bei den Verlagen, bzw. den Künstlern und<br/>
-                ihren Rechtsnachfolgern.<br/><br/>
-                Die Rechte an den Texten liegen bei Barbara Scharioth/<br/>
-                KunstimKinderzimmer.<br/><br/>
-                Für die Inhalte externer Links wird trotz sorgfältiger inhaltlicher<br/>
+        <div class="col-md-6">
+            <h2 class="content-heading">Impressum</h2>
+            <p>
+                © Alle Texte dieser Website sind urheberrechtlich geschützt.
+                Die Bildrechte liegen bei den Verlagen, bzw. den Künstlern und
+                ihren Rechtsnachfolgern.
+                Die Rechte an den Texten liegen bei Barbara Scharioth/
+                Kunst im Kinderzimmer.<br/><br/>
+                Für die Inhalte externer Links wird trotz sorgfältiger inhaltlicher
                 Kontrolle keine Haftung übernommen.
-            </div>
+            </p>
         </div>
-        <div class="col-sm-2"></div>
     </div>
  </div>
 {% endblock %}

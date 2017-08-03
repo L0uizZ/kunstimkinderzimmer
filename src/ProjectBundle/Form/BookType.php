@@ -20,6 +20,7 @@ class BookType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('title', TextType::class, array('label' => 'Title'));
+        $builder->add('cover', 'enhavo_files', array('label' => 'Cover', 'multiple' => false));
         $builder->add('year', TextType::class, array('label' => 'Year'));
         $builder->add('pictures', 'enhavo_files', array(
             'label' => 'Pictures',

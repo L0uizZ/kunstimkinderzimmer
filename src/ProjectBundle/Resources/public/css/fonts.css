@@ -1,0 +1,39 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3431915, 2017-08-03T08:01:48-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: HelveticaNeueLTStd-Lt by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/neue-helvetica/helvetica-45-light/
+ * 
+ * Webfont: HelveticaNeueLTStd-Roman by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/neue-helvetica/helvetica-55-roman/
+ * 
+ * Webfont: HelveticaNeueLTStd-Md by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/neue-helvetica/helvetica-65-medium/
+ * 
+ * 
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3431915
+ * Licensed pageviews: 250,000
+ * Webfonts copyright: Copyright &#x00A9; 1988, 1990, 1993, 2002 Adobe Systems Incorporated.  All Rights Reserved. &#x00A9; 1981, 2002 Heidelberger Druckmaschinen AG. All rights reserved.
+ * 
+ * © 2017 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/345deb");
+
+  
+@font-face {font-family: 'HelveticaNeueLTStd-Lt';src: url('../fonts/345DEB_0_0.eot');src: url('../fonts/345DEB_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/345DEB_0_0.woff2') format('woff2'),url('../fonts/345DEB_0_0.woff') format('woff'),url('../fonts/345DEB_0_0.ttf') format('truetype');}
+
+  
+@font-face {font-family: 'HelveticaNeueLTStd-Roman';src: url('../fonts/345DEB_1_0.eot');src: url('../fonts/345DEB_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/345DEB_1_0.woff2') format('woff2'),url('../fonts/345DEB_1_0.woff') format('woff'),url('../fonts/345DEB_1_0.ttf') format('truetype');}
+
+  
+@font-face {font-family: 'HelveticaNeueLTStd-Md';src: url('../fonts/345DEB_2_0.eot');src: url('../fonts/345DEB_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/345DEB_2_0.woff2') format('woff2'),url('../fonts/345DEB_2_0.woff') format('woff'),url('../fonts/345DEB_2_0.ttf') format('truetype');}

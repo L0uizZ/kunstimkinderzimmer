@@ -1,74 +1,13 @@
 .author-page {
-  .authors {
-    width: 200px;
-    font-size: 25px;
-    font-family: HelveticaNeue;
-    text-align: left;
-    font-weight: normal;
-    color: #303030;
-  }
-
-  .block {
-    width: 100%;
-    margin-right:300px;
-  }
-
-  .content-heading {
-    margin-top: 0px;
-    text-align: left;
-    font-size: 50px;
-    margin-bottom: 50px;
-  }
-
-  .initial {
-    width: 110px;
-    height: 150px;
-    font-family: HelveticaNeue;
-    font-size: 65px;
-    font-weight: 200;
-    letter-spacing: 5px;
-    text-align: left;
-    margin-top: 130px;
-    margin-bottom: -55px;
-    color: #303030;
-  }
-
-  .line-bottom {
-    margin-top: 150px;
-  }
-
-  /**Tablet*/
-  @media only screen and (max-width: 1023px) {
-    .content-heading {
-      margin-top: 50px;
-      text-align: center;
-      font-size: 40px;
-    }
-
-    .initial {
-      font-size: 110px;
-    }
-
-    .thin-font a{
-      color: #303030;
-    }
-
-  }
-  @media only screen and (max-width: 767px) {
-    .content {
-      display: block;
-      text-align: center;
-    }
-
-    .content-heading {
-      margin-top: 50px;
-      text-align: left;
-      font-size: 30px;
-    }
-
-    .initial {
-      font-size: 80px;
-      margin-left: 130px;
-    }
+  .content-heading { margin-bottom:65px;}
+  .no-line { bottom:0;}
+}
+.authorlist {
+  width:100%; padding:0; position:relative;
+  .author-row { border-bottom:1px solid #dbdbdb;margin-bottom:35px; padding-bottom:35px; }
+  li {
+    width:25%; float:left;list-style:none; padding: 0 15px 0 0;
+    &:nth-child(5n) { clear:both;}
   }
 }
+.initial {font-size: 65px;margin-bottom: 0;}

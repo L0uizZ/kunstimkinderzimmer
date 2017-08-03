@@ -9,12 +9,18 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('ProjectBundle:Theme/Default:index.html.twig');
+        $books =  $this->get('project.repository.book')->findBy([]);
+        return $this->render('ProjectBundle:Theme/Default:index.html.twig', [
+            'books' => $books
+        ]);
     }
 
     public function collectionAction()
     {
-        return $this->render('ProjectBundle:Theme/Default:collection.html.twig');
+        $books =  $this->get('project.repository.book')->findBy([]);
+        return $this->render('ProjectBundle:Theme/Default:collection.html.twig', [
+            'books' => $books
+        ]);
     }
 
     public function blogAction()

@@ -9,19 +9,17 @@
             persönliche Kontakte. Sie umfasst einen Zeitraum von über 100 Jahren und Künstler aus mehr als 20 Ländern.
         </p>
         {% spaceless %}
-            <ul class="books">
-                {% for i in 1..10 %}
+            <ul class="books">{% for book in books %}
                 <li class="book">
                     <a>
-                        {#<img src="/file/{{ i }}" />#}
                         <div class="image">
-                            <img src="https://d1ovtcjitiy70m.cloudfront.net/vi-1/images/homepage/2016/homeblock_main_desktop_de_DE_v01.jpg" />
+                            <img src="{% if book.cover %}{{ media_url(book.cover) }}{% endif %}" />
                         </div>
-                        <div class="title">Title</div>
-                        <div class="author">Author</div>
+                        <div class="title">{% if book.title %}{{ book.title }}{% endif %}</div>
+                        <div class="author">{% if book.author %}{{ book.author.name }}{% endif %}</div>
                     </a>
-                </li>
-                {% endfor %}
+                </li>{% endfor %}
+                <span class="no-line"></span>
             </ul>
         {% endspaceless %}
     </div>
