@@ -90,12 +90,10 @@
     li {width:100%; float:none; margin-bottom:25px;}
     .author-row {border-bottom:0; margin-bottom:0; padding-bottom:0;}
   }
-  .author-page {
-    .content-heading {margin-bottom: 35px;}
-  }
   .books {
     .book {width: 33.333%;}
   }
+  .book-header {margin-bottom:25px;}
   .contact-page {
     .content-heading {margin-bottom: 45px;}
     [class*=col-md-] {
@@ -138,6 +136,23 @@
     padding: 20px 0 0 0;
     .contact-impressum { margin-bottom:40px;}
   }
+  .back { display:block; text-align:center;}
+  .book-page {
+    .content-grid{
+      .enhavo_grid {
+        .enhavo_grid_texttext, .enhavo_grid_text{
+          .title{
+            text-align:center; font-size:32px; display:block; margin-bottom:15px;
+            &:after { width: 29px;height: 16px;}
+          }
+        }
+      }
+    }
+  }
+  .book-header {
+    .bio { text-align:center;}
+    .content-heading { font-size:32px; text-align:center;}
+  }
   .blog {
     margin-top:45px;
     .blog-entry {
@@ -155,6 +170,9 @@
   }
   .container {width: 100%;}
   .content-heading { font-size:32px;}
+  .content-grid {
+    .enhavo_grid { text-align:center;}
+  }
   .index-page {
     .content-heading {
       margin-bottom:35px;
