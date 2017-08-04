@@ -1,0 +1,4 @@
+form.contact.error.email: Bitte gebe eine gültige Email Addresse an.
+form.contact.error.firstName: Bitte gebe deinen Vornamen an.
+form.contact.error.lastName: Bitte gebe deinen Nachnamen an.
+form.contact.error.message: Hinterlasse bitte eine Nachricht.

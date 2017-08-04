@@ -8,6 +8,7 @@ book:
 
 contact:
   firstName: First name
-  lastName: last name
+  lastName: Last name
   email: Email
   message: Message
+

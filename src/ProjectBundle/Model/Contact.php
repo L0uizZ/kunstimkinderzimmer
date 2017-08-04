@@ -8,7 +8,9 @@
 
 namespace ProjectBundle\Model;
 
-class Contact implements
+use Enhavo\Bundle\ContactBundle\Model\ContactInterface;
+
+class Contact implements ContactInterface
 {
     /**
      * @var string

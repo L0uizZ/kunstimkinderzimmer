@@ -84,3 +84,19 @@ enhavo_translation:
       - blog.teaser
       - blog.back
       - book.back
+      - contact.send
+      - contact.success
+
+enhavo_contact:
+    forms:
+        contact:
+            model: ProjectBundle\Model\Contact
+            form: ProjectBundle\Form\ContactType
+            recipient: '%mailer_to%'
+            from: '%mailer_from%'
+            sender_name: '%mailer_name%'
+            template:
+                form: 'ProjectBundle:Theme/Contact:form.html.twig'
+                recipient: 'ProjectBundle:Theme/Contact:recipient.html.twig'
+                confirm: 'ProjectBundle:Theme/Contact:confirm.html.twig'
+                page: 'ProjectBundle:Theme/Home:contact.html.twig'

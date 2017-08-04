@@ -1,0 +1,15 @@
+{% form_theme form 'ProjectBundle:Theme/Contact:form-widget.html.twig' %}
+
+<form class="clearfix" method="post" action="{{ path('enhavo_contact_submit', { name: name, _locale : resolve_locale() }) }}" data-contact-form novalidate>
+    {#<input type="hidden" name="_redirect_route" value="project_theme_home_contact_{{ resolve_locale() }}"/>#}
+
+    {{ form_widget(form.email, {'attr': {'type': 'text','placeholder': 'email', 'name': 'email', 'id': 'email'}}) }}
+    {{ form_widget(form.firstName, {'attr': {'type': 'text','placeholder': 'firstname', 'name': 'firstname', 'id': 'firstname'}}) }}
+    {{ form_widget(form.lastName, {'attr': {'type': 'text','placeholder': 'lastname', 'name': 'lastname', 'id': 'lastname'}}) }}
+    {{ form_widget(form.message, {'attr': {'name': 'message','id': 'message'}}) }}
+    {{ form_widget(form._token) }}
+    <span class="form-msg">{{ translate_string('contact.success') }}</span>
+    <span class="form-error-msg"></span>
+    <input type="submit" class="button-submit" value="{{ translate_string('contact.send') }}" />
+</form>
+

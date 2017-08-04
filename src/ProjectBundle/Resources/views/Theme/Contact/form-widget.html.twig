@@ -1,0 +1,7 @@
+{% block text_widget %}
+    <input type="text" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %}/>
+{% endblock %}
+
+{% block textarea_widget %}
+    <textarea {{ block('widget_attributes') }} >{% if value is not empty %}{{ value }}{% endif %}</textarea>
+{% endblock %}

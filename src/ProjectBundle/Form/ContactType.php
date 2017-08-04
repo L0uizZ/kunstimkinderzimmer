@@ -9,13 +9,11 @@
 namespace ProjectBundle\Form;
 
 
-use Enhavo\Bundle\GridBundle\Form\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use ProjectBundle\Model\Contact;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\Form\FormInterface;
-use Symfony\Component\Form\FormView;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class ContactType extends AbstractType
@@ -38,9 +36,9 @@ class ContactType extends AbstractType
 
     public function configureOptions(OptionsResolver $resolver)
     {
-        $resolver->setDefault([
+        $resolver->setDefaults([
             'data_class' => Contact::class
-        ])
+        ]);
     }
 
     public function getName()
