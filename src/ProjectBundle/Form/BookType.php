@@ -19,29 +19,27 @@ class BookType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('title', TextType::class, array('label' => 'Title'));
+        $builder->add('title', TextType::class, array('label' => 'Titel', 'translation' => true));
+        $builder->add('year', TextType::class, array('label' => 'Jahr'));
         $builder->add('cover', 'enhavo_files', array('label' => 'Cover', 'multiple' => false));
-        $builder->add('year', TextType::class, array('label' => 'Year'));
         $builder->add('pictures', 'enhavo_files', array(
-            'label' => 'Pictures',
-            'translation_domain' => 'FileInterface',
-            'information' => array('You can upload your pictures here'),
+            'label' => 'Bilder',
             'multiple' => true,
             'fields' => array('title' => array(
                 'label' => 'media.form.label.title',
                 'translationDomain' => 'FileInterface'
             ))
         ));
-        $builder->add('content', GridType::class, array('label' => 'Content'));
-        $builder->add('biography', GridType::class, array('label' => 'Biography'));
         $builder->add('author', EntityType::class, array(
             'class' => 'ProjectBundle:Author',
             'query_builder' => function(EntityRepository $er) {
                 return $er->createQueryBuilder('u')->orderBy('u.name', 'ASC');
             },
+            'label' => 'Autor',
             'choice_label' => 'name'
         ));
-
+        $builder->add('content', GridType::class, array('label' => 'Inhalt'));
+        $builder->add('biography', GridType::class, array('label' => 'Biografie'));
         $builder->add('link', ListType::class, array(
             'label' => 'Links',
             'sortable' => true,

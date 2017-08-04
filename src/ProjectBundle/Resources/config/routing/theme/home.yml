@@ -1,0 +1,28 @@
+project_theme_home_locate:
+    path: /
+    defaults:
+        _controller: ProjectBundle:Home:locate
+
+project_theme_home_index_de:
+    path: /de
+    defaults:
+        _controller: ProjectBundle:Home:index
+        _locale: de
+
+project_theme_home_index_en:
+    path: /en
+    defaults:
+        _controller: ProjectBundle:Home:index
+        _locale: en
+
+project_theme_home_contact_de:
+    path:     /de/kontakt
+    defaults:
+        _controller: ProjectBundle:Home:contact
+        _locale: de
+
+project_theme_home_contact_en:
+    path:     /en/contact
+    defaults:
+      _controller: ProjectBundle:Home:contact
+      _locale: en

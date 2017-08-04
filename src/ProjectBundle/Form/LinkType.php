@@ -14,7 +14,7 @@ class LinkType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('name', TextType::class, array('label' => 'Name'));
+        $builder->add('name', TextType::class, array('label' => 'Name', 'translation' => true));
         $builder->add('link', TextType::class, array('label' => 'Link'));
         $builder->add('position', PositionType::class);
     }

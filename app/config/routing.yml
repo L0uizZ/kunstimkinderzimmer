@@ -112,5 +112,5 @@ _liip_imagine:
 # project
 #
 project:
-    resource: "@ProjectBundle/Resources/config/routing.yml"
+    resource: "@ProjectBundle/Resources/config/routing/routing.yml"
     prefix:   /

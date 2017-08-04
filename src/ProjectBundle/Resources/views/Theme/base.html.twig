@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="{{ resolve_locale() }}">
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('bundles/project/css/fonts.css') }}">
@@ -13,17 +13,29 @@
     <header>
         <div class="container">
             <ul class="language">
-                <li class="active"><a href="">DE</a></li>
+                <li class="{% if resolve_locale() == 'de' %}active{% endif %}">
+                    <a href="{{ path('project_theme_home_index_de') }}">DE</a>
+                </li>
                 <li>/</li>
-                <li><a href="">EN</a></li>
+                <li class="{% if resolve_locale() == 'en' %}active{% endif %}">
+                    <a href="{{ path('project_theme_home_index_en') }}">EN</a>
+                </li>
             </ul>
             <a class="menu-btn" data-menu-btn></a>
             <nav>
                 <ul class="clearfix" data-menu-items>
-                    <li class="active"><a href="/">Home</a></li>
-                    <li><a href="{{ path('project_default_collection') }}">Sammlung</a></li>
-                    <li><a href="{{ path('project_default_blog') }}">Blog</a></li>
-                    <li><a href="{{ path('project_author_index') }}">Künstler</a></li>
+                    <li class="{% if navigation is defined and navigation == 'home' %}active{% endif %}">
+                        <a href="{{ path('project_theme_home_index_' ~ resolve_locale()) }}">{{ translate_string('navigation.home') }}</a>
+                    </li>
+                    <li class="{% if navigation is defined and navigation == 'book' %}active{% endif %}">
+                        <a href="{{ path('project_theme_book_index_' ~ resolve_locale()) }}">{{ translate_string('navigation.book') }}</a>
+                    </li>
+                    <li class="{% if navigation is defined and navigation == 'blog' %}active{% endif %}">
+                        <a href="{{ path('project_theme_blog_index_' ~ resolve_locale()) }}">{{ translate_string('navigation.blog') }}</a>
+                    </li>
+                    <li class="{% if navigation is defined and navigation == 'author' %}active{% endif %}">
+                        <a href="{{ path('project_theme_author_index_' ~ resolve_locale()) }}">{{ translate_string('navigation.author') }}</a>
+                    </li>
                 </ul>
             </nav>
             <hr class="line-top"/>
@@ -35,7 +47,7 @@
     <footer>
         <div class="container">
             <hr class="line-bottom"/>
-            <div class="contact-impressum"><a href="/contact">Impressum&nbsp;/&nbsp;Kontakt</a></div>
+            <div class="contact-impressum"><a href="{{ path('project_theme_home_contact_' ~ resolve_locale()) }}">{{ translate_string('navigation.contact') }}</a></div>
         </div>
     </footer>
     <script src="{{ asset('/bundles/project/js/jquery.min.js') }}" type="text/javascript"></script>

@@ -18,7 +18,7 @@ class AuthorController extends Controller
             }
         }
 
-        return $this->render('ProjectBundle:Theme/Default:authorlist.html.twig', [
+        return $this->render('ProjectBundle:Theme/Author:index.html.twig', [
             'authors' => $authors
         ]);
     }

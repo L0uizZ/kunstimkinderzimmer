@@ -1,0 +1,31 @@
+{% extends 'ProjectBundle:Theme:base.html.twig' %}
+
+{% block main %}
+     <div class="container contact-page">
+         <div class="row">
+            <div class="col-md-6">
+                <h1 class="content-heading ">Kontaktformular</h1>
+                <form class="clearfix">
+                    <input type="text" name="firstname" placeholder="Vorname">
+                    <input type="text" name="lastname" placeholder="Nachname">
+                    <input type="email" name="mail" placeholder="Email Adresse">
+                    <textarea name="message"></textarea>
+                    <span class="form-msg">Vielen Dank für deine Nachricht.</span>
+                    <input type="submit" class="button-submit" value="Absenden" />
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h2 class="content-heading">Impressum</h2>
+                <p>
+                    © Alle Texte dieser Website sind urheberrechtlich geschützt.
+                    Die Bildrechte liegen bei den Verlagen, bzw. den Künstlern und
+                    ihren Rechtsnachfolgern.
+                    Die Rechte an den Texten liegen bei Barbara Scharioth/
+                    Kunst im Kinderzimmer.<br/><br/>
+                    Für die Inhalte externer Links wird trotz sorgfältiger inhaltlicher
+                    Kontrolle keine Haftung übernommen.
+                </p>
+            </div>
+        </div>
+     </div>
+{% endblock %}

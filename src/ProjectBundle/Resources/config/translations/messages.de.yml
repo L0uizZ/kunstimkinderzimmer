@@ -1,0 +1,13 @@
+author:
+  label:
+    author: Autor
+
+book:
+  label:
+    book: Buch
+
+contact:
+  firstName: Vorname
+  lastName: Nachname
+  email: Email Addresse
+  message: Nachricht

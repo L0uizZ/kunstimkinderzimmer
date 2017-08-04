@@ -1,0 +1,23 @@
+project_theme_book_index_de:
+    path: /de/kinder-buecher
+    defaults:
+        _controller: ProjectBundle:Book:index
+        _locale: de
+
+project_theme_book_index_en:
+    path: /en/child-books
+    defaults:
+        _controller: ProjectBundle:Book:index
+        _locale: de
+
+project_theme_book_show_de:
+    path: /de/kinder-buecher/{slug}
+    defaults:
+        _controller: ProjectBundle:Book:show
+        _locale: de
+
+project_theme_book_show_en:
+    path: /en/child-books/{slug}
+    defaults:
+        _controller: ProjectBundle:Book:show
+        _locale: en

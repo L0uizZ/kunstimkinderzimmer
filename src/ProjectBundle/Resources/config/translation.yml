@@ -1,0 +1,7 @@
+ProjectBundle\Entity\Book:
+    properties:
+        title:
+
+ProjectBundle\Entity\Link:
+    properties:
+        name:

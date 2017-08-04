@@ -28,6 +28,6 @@
                 {{ grid_render(book.content) }}
             </div>
         </article>
-        <a href="{{ path('project_default_collection') }}" class="back">Zurück zur Sammlung</a>
+        <a href="{{ path('project_theme_book_index_' ~ resolve_locale()) }}" class="back">{{ translate_string('book.back') }}</a>
     </div>
 {% endblock %}
