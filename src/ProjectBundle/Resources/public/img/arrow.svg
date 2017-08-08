@@ -1,15 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="41px" height="23px" viewBox="0 0 41 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
-    <title>Group</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Collapsed-Content" transform="translate(-276.000000, -10.000000)" stroke="#000000" stroke-width="2">
-            <g id="Group" transform="translate(296.000000, 21.000000) rotate(180.000000) translate(-296.000000, -21.000000) translate(276.000000, 10.000000)">
-                <path d="M18.7500073,1.67786784 L0,20.4278751" id="Path-2"></path>
-                <path d="M18.3449973,0.365910591 L39.0467602,20.8885606" id="Path-3"></path>
-            </g>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="38.914px" height="20.871px" viewBox="1.793 0.865 38.914 20.871" enable-background="new 1.793 0.865 38.914 20.871"
+	 xml:space="preserve">
+<title>Group</title>
+<desc>Created with Sketch.</desc>
+<path id="Path-2_1_" fill="none" stroke="#000000" stroke-width="2" d="M2.5,1.572l18.75,18.75L40,1.572"/>
 </svg>

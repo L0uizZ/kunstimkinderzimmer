@@ -49,6 +49,15 @@ function Base() {
       adaptiveHeight: true
     });
 
+    $('[data-book-slider]').slickLightbox({
+      src: 'src',
+      itemSelector: '.slick-slide img',
+      slick: {
+        prevArrow: '<div class="slider-arrow-left"></div>',
+        nextArrow: '<div class="slider-arrow-right"></div>'
+      }
+    });
+
   }
 
   this.handleMenu = function () {

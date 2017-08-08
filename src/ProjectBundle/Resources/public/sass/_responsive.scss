@@ -87,7 +87,7 @@
     }
   }
   .authorlist {
-    li {width:100%; float:none; margin-bottom:25px;}
+    .authors {width:100%; float:none; margin-bottom:25px;}
     .author-row {border-bottom:0; margin-bottom:0; padding-bottom:0;}
   }
   .books {
@@ -190,6 +190,10 @@
     }
   }
   .line-top {margin-bottom: 20px;}
+  .underline-hover {
+    &:hover { text-decoration:underline;}
+    &:after { content:normal;}
+  }
 }
 
 @media only screen and (max-width: 479px) {

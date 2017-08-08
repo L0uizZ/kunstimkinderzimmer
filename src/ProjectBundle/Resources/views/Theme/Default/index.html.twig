@@ -7,7 +7,9 @@
                 {% for book in books %}
                     {% spaceless %}
                     <li class="head-slider-item" data-slider-item>
-                        <img src="{% if book.cover %}{{ media_url(book.cover) }}{% endif %}" width="100%"/>
+                        <a href="{{ path('project_theme_book_show', {slug: book.slug}) }}">
+                            <img src="{% if book.cover %}{{ media_url(book.cover) }}{% endif %}" width="100%"/>
+                        </a>
                     </li>
                     {% endspaceless %}
                 {% endfor %}

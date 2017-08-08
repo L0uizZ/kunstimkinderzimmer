@@ -5,9 +5,19 @@
 .authorlist {
   width:100%; padding:0; position:relative;
   .author-row { border-bottom:1px solid #dbdbdb;margin-bottom:35px; padding-bottom:35px; }
-  li {
+  .authors {
     width:25%; float:left;list-style:none; padding: 0 15px 0 0;
     &:nth-child(5n) { clear:both;}
+    ul {
+      padding:0;
+      li {
+        display:block;list-style:none;line-height: 1.3em;
+        a { display:inline-block;}
+      }
+    }
+    &:hover {
+      .initial {color:#FFF;-webkit-text-stroke-width: 2px;-webkit-text-stroke-color: #303030;@include transition(all .3s);}
+    }
   }
 }
-.initial {font-size: 65px;margin-bottom: 0;}
+.initial {font-size: 65px;margin-bottom: 0;@include transition(all .3s);}

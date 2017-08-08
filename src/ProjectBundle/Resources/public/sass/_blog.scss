@@ -7,7 +7,7 @@
   .blog-entry {
     padding-bottom:35px; margin-bottom:65px; border-bottom:1px solid #dbdbdb;
     .blog-heading {font-size: 38px;margin-bottom: 21px; font-family:$lightFontFamily;}
-    .button-reading {text-decoration:underline; font-family:$boldFontFamily; margin-top:50px; display:inline-block;}
+    .button-reading {font-family:$boldFontFamily; margin-top:50px; display:inline-block;}
     .blog-date {font-size: 14px; color:#9c9494;margin-bottom: 35px; letter-spacing:1px;}
     .blog-text { max-width:1050px; width:100%;}
   }

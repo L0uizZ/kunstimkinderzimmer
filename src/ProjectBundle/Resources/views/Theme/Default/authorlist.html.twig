@@ -9,10 +9,14 @@
                 {% if loop.index0 %4 == 0 %}
                     <div class="author-row clearfix">
                 {% endif %}
-                    <li>
+                    <li class="authors">
                         <div class="initial">{{ letter }}</div>
                         {% for author in authorData %}
-                            <a class="default-font authors" href="/list/{{author.name}}">{{ author.name }}<br/></a>
+                            <ul>
+                                <li>
+                                    <a class="underline-hover" href="/list/{{author.name}}">{{ author.name }}</a>
+                                </li>
+                            </ul>
                         {% endfor %}
                     </li>
                 {% if loop.last or loop.index0 %4 == 3 %}
