@@ -13,7 +13,7 @@
                     <div class="blog-date">{% if resolve_locale() == 'de' %}{{ article.publicationDate|date('d.m.Y') }}{% else %}}{{ article.publicationDate|date('Y-m-d') }}{% endif %}</div>
                     <div class="blog-heading">{{ article.title }}</div>
                     <p class="blog-text">{{ article.teaser }}</p>
-                    <a class="button-reading" href="{{ path('project_theme_blog_show_' ~ resolve_locale(), {slug: article.slug}) }}">{{ translate_string('blog.more') }}</a>
+                    <a class="button-reading underline-hover" href="{{ path('project_theme_blog_show_' ~ resolve_locale(), {slug: article.slug}) }}">{{ translate_string('blog.more') }}</a>
                 </div>
             {% endfor %}
 

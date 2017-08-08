@@ -1,12 +1,12 @@
 {% extends '@Project/Theme/base.html.twig' %}
 
 {% block main %}
-    <div class="container book-page">
-        <article>
-            <div class="content-grid">
+    <article>
+        <div class="content-grid">
+            <div class="container">
                 {{ grid_render(article.grid) }}
+                <a href="{{ path('project_theme_blog_index_' ~ resolve_locale()) }}" class="back underline-hover">{{ translate_string('blog.back') }}</a>
             </div>
-        </article>
-        <a href="{{ path('project_theme_blog_index_' ~ resolve_locale()) }}" class="back">{{ translate_string('blog.back') }}</a>
-    </div>
+        </div>
+    </article>
 {% endblock %}

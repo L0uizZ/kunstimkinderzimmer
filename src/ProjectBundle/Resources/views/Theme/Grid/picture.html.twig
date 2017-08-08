@@ -1,0 +1,15 @@
+<div class="enhavo_grid">
+    <div class="enhavo_grid_picture">
+        {% if data.title %}
+            <div class="title">{{ data.title|raw }}</div>
+        {% endif %}
+        {% if data.file %}
+            <figure>
+                <img class="enhavo_grid_img" src="{{ media_url(data.file,960) }}">
+            </figure>
+        {% endif %}
+        {% if data.caption %}
+            <figcaption class="picture_caption">{{ data.caption }}</figcaption>
+        {% endif %}
+    </div>
+</div>

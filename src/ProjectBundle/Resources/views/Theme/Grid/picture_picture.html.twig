@@ -1,0 +1,29 @@
+<div class="enhavo_grid">
+    <div class="enhavo_grid_picturepicture">
+        {% if data.title %}
+            <div class="title">{{ data.title|raw }}</div>
+        {% endif %}
+        <div class="row">
+            <div class="col-sm-6">
+                {% if data.fileLeft %}
+                    <figure>
+                        <img class="enhavo_grid_img" src="{{ media_url(data.fileLeft,960) }}">
+                    </figure>
+                {% endif %}
+                {% if data.captionLeft %}
+                    <figcaption class="picture_caption">{{ data.captionLeft }}</figcaption>
+                {% endif %}
+            </div>
+            <div class="col-sm-6">
+                {% if data.fileRight %}
+                    <figure>
+                        <img class="enhavo_grid_img" src="{{ media_url(data.fileRight,960) }}">
+                    </figure>
+                {% endif %}
+                {% if data.captionRight %}
+                    <figcaption class="picture_caption">{{ data.captionRight }}</figcaption>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

@@ -7,7 +7,7 @@
                 {% for book in books %}
                     {% spaceless %}
                     <li class="head-slider-item" data-slider-item>
-                        <a href="{{ path('project_theme_book_show', {slug: book.slug}) }}">
+                        <a href="{{ path('project_theme_book_show_' ~ resolve_locale(), {slug: book.slug}) }}">
                             <img src="{% if book.cover %}{{ media_url(book.cover) }}{% endif %}" width="100%"/>
                         </a>
                     </li>

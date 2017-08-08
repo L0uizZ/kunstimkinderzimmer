@@ -116,6 +116,9 @@
 }
 
 @media only screen and (max-width: 767px) {
+  [class*=col-sm-] {
+    + [class*=col-sm-] { margin-top:25px;}
+  }
   body { font-size:18px;}
   header {
     padding-top:25px;
@@ -172,6 +175,15 @@
   .content-heading { font-size:32px;}
   .content-grid {
     .enhavo_grid { text-align:center;}
+  }
+  .enhavo_grid {
+    ul {
+      li {
+        &:before {position:initial;margin-right: 6px;}
+      }
+    }
+    .title {font-size: 24px; font-family:$boldFontFamily; margin-bottom:0;}
+    +.enhavo_grid {margin-top: 45px;}
   }
   .index-page {
     .content-heading {
