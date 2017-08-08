@@ -1,0 +1,4 @@
+form.contact.error.email: Please us a valid email address.
+form.contact.error.firstName: Please fill in first name.
+form.contact.error.lastName: Please fill in last name.
+form.contact.error.message: Please fill in message.

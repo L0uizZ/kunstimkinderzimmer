@@ -1,0 +1,23 @@
+project_theme_blog_index_de:
+    path: /de/blog
+    defaults:
+        _controller: ProjectBundle:Blog:index
+        _locale: de
+
+project_theme_blog_index_en:
+    path: /en/blog
+    defaults:
+        _controller: ProjectBundle:Blog:index
+        _locale: de
+
+project_theme_blog_show_de:
+    path: /de/blog/{slug}
+    defaults:
+        _controller: ProjectBundle:Blog:show
+        _locale: de
+
+project_theme_blog_show_en:
+    path: /en/blog/{slug}
+    defaults:
+        _controller: ProjectBundle:Blog:show
+        _locale: en

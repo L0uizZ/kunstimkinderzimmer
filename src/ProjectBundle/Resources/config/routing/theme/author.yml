@@ -1,0 +1,11 @@
+project_theme_author_index_de:
+    path: /de/kinder-buech-autoren
+    defaults:
+        _controller: ProjectBundle:Author:index
+        _locale: de
+
+project_theme_author_index_en:
+    path: /en/kinder-buech-authors
+    defaults:
+        _controller: ProjectBundle:Author:index
+        _locale: en

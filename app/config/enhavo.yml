@@ -13,19 +13,17 @@ enhavo_app:
             type: article
         page:
             type: page
-#        slider:
-#            type: slider
         translation-strings:
             type: translation
         book:
             type: base
-            label: Book
+            label: Buch
             route: project_book_index
             role: ROLE_ENHAVO_PROJECT_BOOK_INDEX
             icon: book
         author:
             type: base
-            label: Author
+            label: Autor
             route: project_author_index
             role: ROLE_ENHAVO_PROJECT_AUTHOR_INDEX
             icon: book
@@ -75,3 +73,30 @@ enhavo_translation:
     locales:
         de:
         en:
+    translation_strings:
+      - navigation.home
+      - navigation.book
+      - navigation.blog
+      - navigation.author
+      - navigation.contact
+      - author.title
+      - blog.title
+      - blog.teaser
+      - blog.back
+      - book.back
+      - contact.send
+      - contact.success
+
+enhavo_contact:
+    forms:
+        contact:
+            model: ProjectBundle\Model\Contact
+            form: ProjectBundle\Form\ContactType
+            recipient: '%mailer_to%'
+            from: '%mailer_from%'
+            sender_name: '%mailer_name%'
+            template:
+                form: 'ProjectBundle:Theme/Contact:form.html.twig'
+                recipient: 'ProjectBundle:Theme/Contact:recipient.html.twig'
+                confirm: 'ProjectBundle:Theme/Contact:confirm.html.twig'
+                page: 'ProjectBundle:Theme/Home:contact.html.twig'

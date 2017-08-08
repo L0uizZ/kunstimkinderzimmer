@@ -1,0 +1,23 @@
+project_theme_author:
+    prefix: /
+    resource: "@ProjectBundle/Resources/config/routing/theme/author.yml"
+
+project_theme_book:
+    prefix: /
+    resource: "@ProjectBundle/Resources/config/routing/theme/book.yml"
+
+project_theme_home:
+    prefix: /
+    resource: "@ProjectBundle/Resources/config/routing/theme/home.yml"
+
+project_theme_blog:
+    prefix: /
+    resource: "@ProjectBundle/Resources/config/routing/theme/blog.yml"
+
+project_book:
+    prefix:   /admin
+    resource: "@ProjectBundle/Resources/config/routing/admin/book.yml"
+
+project_author:
+    prefix:   /admin
+    resource: "@ProjectBundle/Resources/config/routing/admin/author.yml"

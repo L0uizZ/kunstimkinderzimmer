@@ -11,7 +11,7 @@
         {% spaceless %}
             <ul class="books">{% for book in books %}
                 <li class="book">
-                    <a href="{{ path('project_theme_book_show', {slug: book.slug}) }}">
+                    <a href="{{ path('project_theme_book_show_' ~ resolve_locale(), {slug: book.slug}) }}">
                         <div class="image">
                             <img src="{% if book.cover %}{{ media_url(book.cover) }}{% endif %}" />
                         </div>

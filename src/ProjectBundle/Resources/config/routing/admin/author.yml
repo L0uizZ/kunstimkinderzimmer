@@ -37,6 +37,11 @@ project_author_table:
         _controller: project.controller.author:tableAction
         _sylius:
             viewer:
+                columns:
+                    name:
+                        label: Name
+                        property: name
+                        with: 12
 
 project_author_delete:
     options:

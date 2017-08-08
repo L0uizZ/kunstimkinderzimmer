@@ -1,0 +1,33 @@
+{% extends 'ProjectBundle:Theme:base.html.twig' %}
+
+{% block main %}
+    <div class="container blog-page">
+        <h1 class="content-heading">{{ translate_string('blog.title') }}</h1>
+        <p>
+            {{ translate_string('blog.teaser') }}
+        </p>
+        <div class="blog">
+
+            {% for article in articles %}
+                <div class="blog-entry">
+                    <div class="blog-date">{% if resolve_locale() == 'de' %}{{ article.publicationDate|date('d.m.Y') }}{% else %}}{{ article.publicationDate|date('Y-m-d') }}{% endif %}</div>
+                    <div class="blog-heading">{{ article.title }}</div>
+                    <p class="blog-text">{{ article.teaser }}</p>
+                    <a class="button-reading" href="{{ path('project_theme_blog_show_' ~ resolve_locale(), {slug: article.slug}) }}">{{ translate_string('blog.more') }}</a>
+                </div>
+            {% endfor %}
+
+            <ul class="blog-pagination">
+                {% if articles.getNbPages() > 1 %}
+                    <div class="pagination">
+                        {% for page in 1..articles.getNbPages() %}
+                           <li {% if loop.index == resources.currentPage %}class="active"{% endif %}>
+                               <a href="{{ path('project_theme_blog_index_' ~ resolve_locale(), { page: loop.index }) }}" data-page="{{ loop.index }}">{{ loop.index }}</a>
+                           </li>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}

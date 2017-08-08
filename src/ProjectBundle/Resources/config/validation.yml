@@ -1,0 +1,10 @@
+ProjectBundle\Model\Contact:
+    properties:
+        email:
+            - Email: { message: form.contact.error.email }
+        firstName:
+            - NotBlank: { message: form.contact.error.firstName }
+        lastName:
+            - NotBlank: { message: form.contact.error.lastName }
+        message:
+            - NotBlank: { message: form.contact.error.message }
